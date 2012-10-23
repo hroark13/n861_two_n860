@@ -136,10 +136,10 @@ void msm7x30_ts_init(void);
 #else
 #define MSM_FB_SIZE            0x500000
 #endif
-#define MSM_PMEM_ADSP_SIZE      0x3200000//PMEM ->5M
-#define MSM_FLUID_PMEM_ADSP_SIZE	0x2800000
+#define MSM_PMEM_ADSP_SIZE      0x0 // 0x3200000//PMEM ->5M
+#define MSM_FLUID_PMEM_ADSP_SIZE	0x0 // 0x2800000
 #define PMEM_KERNEL_EBI0_SIZE   0x600000
-#define MSM_PMEM_AUDIO_SIZE     0x200000
+#define MSM_PMEM_AUDIO_SIZE     0x0 // 0x200000
 
 #define MSM_FB_OVERLAY0_WRITEBACK_SIZE roundup((544 * 960 * 3 * 2), 4096)
 #define PMIC_GPIO_INT		27
