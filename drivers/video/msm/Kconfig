@@ -197,10 +197,10 @@ config FB_MSM_LCDC_PRISM_WVGA
 	select FB_MSM_LCDC_PANEL
 	default n
 	
-config  FB_MSM_LCDC_HVGA_SEAN
+config  FB_MSM_LCDC_WVGA_ARTHUR
 	bool 
 	select FB_MSM_LCDC_PANEL	
-	default n
+	default y
 	
 config  FB_MSM_LCDC_QHD_WARP2
 	bool 
@@ -353,12 +353,12 @@ config FB_MSM_LCDC_CHIMEI_WXGA_PANEL
 	---help---
 	  Support for LCDC Chimei WXGA 
 	  
-config FB_MSM_LCDC_HVGA_PANEL_SEAN
+config FB_MSM_LCDC_WVGA_PANEL_ARTHUR
 	depends on FB_MSM_LCDC_HW
-	bool "LCDC HVGA Panel SEAN"
-	select FB_MSM_LCDC_HVGA_SEAN
+	bool "LCDC HIMAX WVGA Panel ARTHUR"
+	select FB_MSM_LCDC_WVGA_ARTHUR
 	---help---
-	Support for LCDC HVGA (320x480) panel panel
+	Support for LCDC ARTHUR WVGA (480x800) panel
 	
 config FB_MSM_LCDC_QHD_PANEL_WARP2
 	depends on FB_MSM_LCDC_HW

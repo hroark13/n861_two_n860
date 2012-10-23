@@ -246,7 +246,7 @@ obj-$(CONFIG_MACH_APQ8064_RUMI3) += board-8064-all.o board-8064-regulator.o
 obj-$(CONFIG_ARCH_MSM9615) += board-9615.o devices-9615.o board-9615-regulator.o board-9615-gpiomux.o board-9615-storage.o
 obj-$(CONFIG_ARCH_MSM9615) += clock-local.o clock-9615.o acpuclock-9615.o clock-rpm.o
 obj-$(CONFIG_ARCH_MSMCOPPER) += board-copper.o board-dt.o
-obj-$(CONFIG_MACH_SEAN) += board-zte-wifi.o board-zte-ts.o
+obj-$(CONFIG_MACH_ARTHUR) += board-zte-wifi.o board-zte-ts.o
 obj-$(CONFIG_MACH_WARP2) += board-zte-wifi.o board-zte-ts.o
 
 obj-$(CONFIG_MACH_SAPPHIRE) += board-sapphire.o board-sapphire-gpio.o
@@ -319,5 +319,5 @@ obj-$(CONFIG_ARCH_MSM8960) += mdm2.o mdm_common.o
 obj-$(CONFIG_MSM_RTB) += msm_rtb.o
 obj-$(CONFIG_MSM_CACHE_ERP) += cache_erp.o
 obj-$(CONFIG_MSM_CACHE_DUMP) += msm_cache_dump.o
-obj-$(CONFIG_MACH_SEAN) += msm_vibrator.o
+obj-$(CONFIG_MACH_ARTHUR) += msm_vibrator.o
 obj-$(CONFIG_MACH_WARP2) += msm_vibrator.o

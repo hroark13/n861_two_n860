@@ -486,13 +486,13 @@ config MACH_ARTHUR
        help
          Support for the ZTE ARTHUR.
 
-config MACH_SEAN
+config MACH_ARTHUR
        depends on ARCH_MSM7X30
        depends on !MSM_STACKED_MEMORY
        default n
-       bool "MSM7x30 SEAN"
+       bool "MSM7x30 ARTHUR"
        help
-         Support for the ZTE SEAN.
+         Support for the ZTE ARTHUR.
 
 config MACH_WARP2
        depends on ARCH_MSM7X30
