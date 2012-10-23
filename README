@@ -1,3 +1,37 @@
+to build
+
+1. edit the make file to point to your arm-eabi-4.4.3 toolchain "ON LINE 198"
+
+Example
+
+CROSS_COMPILE	?= /home/hroark13/arm-eabi-4.4.3/bin/arm-eabi-
+
+2. type "./hroark13.pl"
+
+
+WITHOUT QUOTES ""
+
+A un-signed flashable zip will be made and adb pushed to your sdcard, that your can flash with a custom recovery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
