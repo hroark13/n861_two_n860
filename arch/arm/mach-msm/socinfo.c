@@ -567,7 +567,7 @@ static struct sys_device soc_sys_device = {
 	.id = 0,
 	.cls = &soc_sysdev_class,
 };
-
+/* hroark13 disable secboot
 #ifdef CONFIG_ZTE_PLATFORM
 
 extern int zte_is_secboot_mode(void);
@@ -584,6 +584,7 @@ static struct sysdev_attribute socinfo_zte_secboot_files[] = {
 	_SYSDEV_ATTR(zte_efuse_status, 0444, socinfo_show_zte_secboot_mode, NULL),
 };
 #endif
+end hroark13 disable secboot */
 static int __init socinfo_create_files(struct sys_device *dev,
 					struct sysdev_attribute files[],
 					int size)
@@ -629,10 +630,12 @@ static int __init socinfo_init_sysdev(void)
 	socinfo_create_files(&soc_sys_device, socinfo_zte_board_id_files,
 				ARRAY_SIZE(socinfo_zte_board_id_files));
 #endif
+/* hroark13 disable secboot 
 #ifdef CONFIG_ZTE_PLATFORM
 	socinfo_create_files(&soc_sys_device, socinfo_zte_secboot_files,
 				ARRAY_SIZE(socinfo_zte_secboot_files));
-#endif
+#endif 
+end hroark13 disable secboot */
 
 	socinfo_create_files(&soc_sys_device, socinfo_v1_files,
 				ARRAY_SIZE(socinfo_v1_files));

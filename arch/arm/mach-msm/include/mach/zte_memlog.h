@@ -45,21 +45,18 @@ typedef struct {
 
   unsigned char reset_flag;
   unsigned char boot_success;
-  unsigned char power_off_charge;
 	power_off_supply_status power_off_charge_info;
 
-  unsigned char pm_reason;
+  unsigned char pm_reason;//used to power reason,SLF_BAT_20101203
   
 /* mboard_version be included by GPIO[173] GPIO[174] GPIO[175] in project N860-7x30,
                                   ordered by      bit[5]        bit[6]         bit[7]
 */
   unsigned int mboard_id;
+  
+   unsigned int key_is_on;  //,power key event
 
- unsigned int key_is_on; 
- unsigned int rtc_alarm;
   struct smem_batt_chg_t batchginfo;
-  unsigned int secboot_enable;
-
 } smem_global;
 
 #endif

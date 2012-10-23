@@ -154,9 +154,9 @@ void msm7x30_ts_init(void);
 #define PMIC_GPIO_SD_PWR_EN 25
 #endif
 #endif
-
+/* hroark13 disable secboot
 static int g_zte_secboot_mode;
-
+end hroark13 disable secboot */
 #define ADV7520_I2C_ADDR	0x39
 
 #define FPGA_SDCC_STATUS       0x8E0001A8
@@ -8030,7 +8030,7 @@ extern void __init msm_init_pmic_vibrator(void);
 
 #ifdef CONFIG_ZTE_PLATFORM
 
-
+/* hroark13 disable secboot
 static void zte_get_secboot_value(void)
 {
   smem_global *pglobal= ioremap(SMEM_LOG_GLOBAL_BASE, sizeof(smem_global));
@@ -8045,7 +8045,7 @@ int zte_is_secboot_mode(void)
 }
 
 EXPORT_SYMBOL(zte_is_secboot_mode);
-
+end hroark13 disable secboot */
 static void set_zte_board_id_type(void)
 {
        smem_global *global_tmp;
@@ -8099,8 +8099,9 @@ static void __init msm7x30_init(void)
 #ifdef CONFIG_ZTE_PLATFORM
 	zte_ftm_set_value(g_zte_ftm_flag_fixup);
        set_zte_board_id_type();
+/* hroark13 disable secboot
       zte_get_secboot_value();
-
+end hroark13 disable secboot */
 #endif
 #ifdef CONFIG_BCM_BT
 	bt_power_init();
