@@ -1,0 +1,207 @@
+--------- beginning of /dev/log/main
+I/cm      (  121): Welcome to Android 4.1.2 / CyanogenMod-10-20121021-UNOFFICIAL-arthur 
+I/cm      (  122):                                                 _  
+I/cm      (  123):  __ __ _ ___  _ _  __  ___  __ _ _  _  _  __  __)) 
+I/cm      (  124): ((_ \(/'((_( ((\( ((_)((_( (('((\( ((`1( ((_)((_(  
+I/cm      (  125):      ))                 _)) 
+I/cm      (  126):   
+I/DEBUG   (  131): debuggerd: Oct 20 2012 23:10:52
+E/rmt_storage(  140): rmt_storage force sync
+E/rmt_storage(  140): [MyTag]open: fd=11
+--------- beginning of /dev/log/system
+I/Vold    (  129): Vold 2.1 (the revenge) firing up
+D/Vold    (  129): Volume sdcard state changing -1 (Initializing) -> 0 (No-Media)
+D/Vold    (  129): Volume sdcard state changing 0 (No-Media) -> 2 (Pending)
+D/DirectVolume(  129): DirectVolume::handlePartitionAdded -> MAJOR 179, MINOR 33, PARTN 1
+D/DirectVolume(  129): DirectVolume::handlePartitionAdded -> MAJOR 179, MINOR 34, PARTN 2
+D/DirectVolume(  129): DirectVolume::handlePartitionAdded -> MAJOR 179, MINOR 35, PARTN 3
+D/Vold    (  129): Volume sdcard state changing 2 (Pending) -> 1 (Idle-Unmounted)
+I/Netd    (  130): Netd 1.0 starting
+E/rmt_storage(  140): block rmt_storage client thread
+E/rmt_storage(  140): block rmt_storage client thread
+I/SurfaceFlinger(  133): SurfaceFlinger is starting
+D/AndroidRuntime(  134): 
+D/AndroidRuntime(  134): >>>>>> AndroidRuntime START com.android.internal.os.ZygoteInit <<<<<<
+D/AndroidRuntime(  134): CheckJNI is OFF
+I/SurfaceFlinger(  133): SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+W/gralloc (  133): FBIOPUT_VSCREENINFO failed, page flipping not supported
+W/gralloc (  133): page flipping not supported (yres_virtual=800, requested=1600)
+I/gralloc (  133): using (fd=14)
+I/gralloc (  133): id           = msmfb40_30001
+I/gralloc (  133): xres         = 480 px
+I/gralloc (  133): yres         = 800 px
+I/gralloc (  133): xres_virtual = 480 px
+I/gralloc (  133): yres_virtual = 1600 px
+I/gralloc (  133): bpp          = 32
+I/gralloc (  133): r            = 24:8
+I/gralloc (  133): g            = 16:8
+I/gralloc (  133): b            =  8:8
+I/gralloc (  133): width        = 76 mm (160.421051 dpi)
+I/gralloc (  133): height       = 127 mm (160.000000 dpi)
+I/gralloc (  133): refresh rate = 61.00 Hz
+D/CALCFPS (  133): DEBUG_CALC_FPS: 0
+D/CALCFPS (  133): period: 10
+D/CALCFPS (  133): ignorethresh_us: 500000
+D/CALCFPS (  133): DEBUG_CALC_FPS: 0
+D/CALCFPS (  133): period: 10
+D/CALCFPS (  133): ignorethresh_us: 500000
+I/mediaserver(  136): ServiceManager: 0x3fd78
+I/AudioFlinger(  136): Using default 3000 mSec as standby time.
+I/CameraService(  136): CameraService started (pid=136)
+E/CameraService(  136): Could not load camera HAL module
+I/AudioPolicyManagerBase(  136): loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+D/AudioHardwareMSM7X30(  136): Could not open libhtc_acoustic.so
+D/AudioHardwareMSM7X30(  136): msm_mixer_open: Opening the device
+D/AudioHardwareMSM7X30(  136): msm_mixer_count:mixer_cnt =38
+I/AudioHardwareMSM7X30(  136): ******* name[0] = [handset_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[1] = [handset_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[2] = [headset_stereo_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[3] = [headset_mono_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[4] = [headset_mono_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[5] = [bt_sco_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[6] = [bt_sco_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[7] = [fmradio_handset_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[8] = [speaker_stereo_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[9] = [fmradio_speaker_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[10] = [fmradio_headset_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[11] = [tty_headset_mono_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[12] = [tty_headset_mono_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[13] = [speaker_mono_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[14] = [headset_stereo_speaker_stereo_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[15] = [a2dp_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[16] = [a2dp_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[17] = [hdmi_stereo_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[18] = [fmradio_stereo_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[19] = [uplink_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[20] = [hac_rx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[21] = [auxmic_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[22] = [fm_headset_stereo_tx] *********
+I/AudioHardwareMSM7X30(  136): ******* name[23] = [fm_headset_stereo_rx] *********
+I/AudioFlinger(  136): loadHwModule() Loaded primary audio interface from QCOM Audio HW HAL (audio) handle 1
+I/AudioFlinger(  136): HAL output buffer size 1200 frames, normal mix buffer size 1200 frames
+I/AudioMixer(  136): found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+I/AudioFlinger(  136): Using module 1 has the primary audio interface
+D/AudioHardwareInterface(  136): setMode(NORMAL)
+I/AudioHardwareMSM7X30(  136): Set master volume to 7.
+I/AudioFlinger(  136): AudioFlinger's thread 0x45c20 ready to run
+W/AudioFlinger(  136): Thread AudioOut_2 cannot connect to the power manager service
+I/AudioHardwareMSM7X30(  136): Routing audio to Speakerphone
+D/AudioHardwareMSM7X30(  136): new_rx = 8
+D/AudioHardwareMSM7X30(  136): new_tx = 13
+E/AudioHardwareMSM7X30(  136): updateDeviceInfo: E rx_device 6 and tx_device 11
+D/AudioHardwareMSM7X30(  136): No active voicecall/playback, disabling cur_rx 65535
+D/AudioHardwareMSM7X30(  136): No active voicecall/recording, disabling cur_tx 65535
+E/AudioHardwareMSM7X30(  136): updateDeviceInfo: X cur_rx 6 cur_tx 11
+D/AudioHardwareMSM7X30(  136): setVoiceVolume(0.000000)
+I/AudioHardwareMSM7X30(  136): Setting in-call volume to 0 (available range is 0 to 100)
+E/AudioHardwareMSM7X30(  136): msm_set_voice_rx_vol(0) failed errno = 1
+I/AudioPolicyService(  136): Loaded audio policy from QCOM Audio Policy HAL (audio_policy)
+D/AudioHardwareMSM7X30(  136): AudioStreamOutMSM7x30::standby()
+D/libEGL  (  133): loaded /system/lib/egl/libEGL_adreno200.so
+D/libEGL  (  133): loaded /system/lib/egl/libGLESv1_CM_adreno200.so
+D/libEGL  (  133): loaded /system/lib/egl/libGLESv2_adreno200.so
+D/dalvikvm(  134): Trying to load lib libjavacore.so 0x0
+D/dalvikvm(  134): Added shared lib libjavacore.so 0x0
+E/BandwidthController(  130): runIptablesCmd(): failed /system/bin/iptables -t raw -N bw_raw_PREROUTING res=768
+E/BandwidthController(  130): runIptablesCmd(): failed /system/bin/ip6tables -t raw -N bw_raw_PREROUTING res=768
+D/dalvikvm(  134): Trying to load lib libnativehelper.so 0x0
+D/dalvikvm(  134): Added shared lib libnativehelper.so 0x0
+I/Adreno200-EGLSUB(  133): <ConfigWindowMatch:2081>: Format RGBA_8888.
+I/SurfaceFlinger(  133): EGL informations:
+I/SurfaceFlinger(  133): # of configs : 36
+I/SurfaceFlinger(  133): vendor    : Android
+I/SurfaceFlinger(  133): version   : 1.4 Android META-EGL
+I/SurfaceFlinger(  133): extensions: EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_fence_sync EGL_ANDROID_image_native_buffer 
+I/SurfaceFlinger(  133): Client API: OpenGL_ES
+I/SurfaceFlinger(  133): EGLSurface: 8-8-8-8, config=0x4
+I/SurfaceFlinger(  133): OpenGL informations:
+I/SurfaceFlinger(  133): vendor    : Qualcomm
+I/SurfaceFlinger(  133): renderer  : Adreno (TM) 205
+I/SurfaceFlinger(  133): version   : OpenGL ES-CM 1.1
+I/SurfaceFlinger(  133): extensions: GL_EXT_debug_marker GL_AMD_compressed_ATC_texture GL_AMD_performance_monitor GL_APPLE_texture_2D_limited_npot GL_ARB_vertex_buffer_object GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_type_2_10_10_10_REV GL_OES_blend_equation_separate GL_OES_blend_func_separate GL_OES_blend_subtract GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_depth_texture GL_OES_depth24 GL_OES_draw_texture GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_framebuffer_object GL_OES_matrix_palette GL_OES_packed_depth_stencil GL_OES_point_size_array GL_OES_point_sprite GL_OES_read_format GL_OES_rgb8_rgba8 GL_OES_stencil_wrap GL_OES_texture_cube_map GL_OES_texture_env_crossbar GL_OES_texture_float GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_mirrored_repeat GL_QCOM_binning_control GL_QCOM_extended_get GL_QCOM_tiled_rendering GL_AMD_compressed_3DC_texture 
+I/SurfaceFlinger(  133): GL_MAX_TEXTURE_SIZE = 4096
+I/SurfaceFlinger(  133): GL_MAX_VIEWPORT_DIMS = 4096 x 4096
+I/SurfaceFlinger(  133): flags = 00000000
+E/rmt_storage(  140): [MyTag]open: fd=-1
+E/rmt_storage(  140): block rmt_storage client thread
+E/BandwidthController(  130): runIptablesCmd(): failed /system/bin/iptables -t raw -A bw_raw_PREROUTING ! -i lo+ -m owner --socket-exists res=768
+E/BandwidthController(  130): runIptablesCmd(): failed /system/bin/ip6tables -t raw -A bw_raw_PREROUTING ! -i lo+ -m owner --socket-exists res=768
+D/MDnsDS  (  130): MDnsSdListener::Hander starting up
+D/MDnsDS  (  130): MDnsSdListener starting to monitor
+D/MDnsDS  (  130): Going to poll with pollCount 1
+I/hwcomposer(  133): Initializing Qualcomm Hardware Composer
+I/hwcomposer(  133): MDP version: 400
+I/hwcomposer(  133): DYN composition threshold : 2.000000
+I/hwcomposer(  133): hwc_device_open: Hardware VSYNC not supported
+I/hwcomposer(  133): Initializing UEvent Listener Thread
+I/hwcomposer(  133): Initializing VSYNC Thread
+I/SurfaceFlinger(  133): EventThread ready to run.
+E/Trace   (  133): error opening trace file: No such file or directory (2)
+D/libEGL  (  340): loaded /system/lib/egl/libEGL_adreno200.so
+D/libEGL  (  340): loaded /system/lib/egl/libGLESv1_CM_adreno200.so
+D/libEGL  (  340): loaded /system/lib/egl/libGLESv2_adreno200.so
+E/Trace   (  340): error opening trace file: No such file or directory (2)
+I/Adreno200-EGLSUB(  340): <ConfigWindowMatch:2092>: Format RGBX_8888.
+I/Adreno200-EGLSUB(  133): <CreateImage:896>: Android Image
+I/Adreno200-EGLSUB(  133): <GetImageAttributes:1161>: RGBX_8888
+I/SamplingProfilerIntegration(  134): Profiling disabled.
+I/Zygote  (  134): Preloading classes...
+D/dalvikvm(  134): GC_EXPLICIT freed 37K, 84% free 419K/2560K, paused 2ms+0ms, total 15ms
+W/Zygote  (  134): Class not found for preloading: android.animation.ValueAnimator$2
+W/Zygote  (  134): Class not found for preloading: android.animation.ValueAnimator$3
+W/Zygote  (  134): Class not found for preloading: android.animation.ValueAnimator$4
+W/Zygote  (  134): Class not found for preloading: android.animation.ValueAnimator$5
+I/Adreno200-EGLSUB(  133): <CreateImage:896>: Android Image
+I/Adreno200-EGLSUB(  133): <GetImageAttributes:1161>: RGBX_8888
+I/Adreno200-EGLSUB(  133): <CreateImage:896>: Android Image
+I/Adreno200-EGLSUB(  133): <GetImageAttributes:1161>: RGBX_8888
+W/Zygote  (  134): Class not found for preloading: android.content.res.Resources$1
+W/Zygote  (  134): Class not found for preloading: android.database.sqlite.SQLiteCompiledSql
+W/Zygote  (  134): Class not found for preloading: android.database.sqlite.SQLiteDatabase$DatabaseReentrantLock
+D/TextLayoutCache(  134): Using debug level = 0 - Debug Enabled = 0
+I/dalvikvm(  134): threadid=1: recursive native library load attempt (/system/lib/libmedia_jni.so)
+D/MtpDeviceJNI(  134): register_android_mtp_MtpDevice
+I/dalvikvm(  134): threadid=1: recursive native library load attempt (/system/lib/libmedia_jni.so)
+I/dalvikvm(  134): threadid=1: recursive native library load attempt (/system/lib/libmedia_jni.so)
+W/Zygote  (  134): Class not found for preloading: android.media.IRemoteControlClientDispatcher
+W/Zygote  (  134): Class not found for preloading: android.media.IRemoteControlClientDispatcher$Stub
+W/Zygote  (  134): Class not found for preloading: android.os.Power
+W/Zygote  (  134): Class not found for preloading: android.text.TextDirectionHeuristics$CharCount
+W/Zygote  (  134): Class not found for preloading: android.text.method.WordIterator$1
+W/Zygote  (  134): Class not found for preloading: android.view.InputHandler
+W/Zygote  (  134): Class not found for preloading: android.view.InputQueue$FinishedCallback
+W/Zygote  (  134): Class not found for preloading: android.view.ViewRootImpl$3
+I/dalvikvm(  134): threadid=1: recursive native library load attempt (/system/lib/libwebcore.so)
+D/dalvikvm(  134): No JNI_OnLoad found in /system/lib/libchromium_net.so 0x0, skipping init
+D/dalvikvm(  134): GC_FOR_ALLOC freed 622K, 36% free 1640K/2560K, paused 73ms, total 75ms
+W/Zygote  (  134): Class not found for preloading: android.widget.EdgeGlow
+W/Zygote  (  134): Class not found for preloading: android.widget.TextView$Blink
+W/Zygote  (  134): Class not found for preloading: android.widget.TextView$EasyEditSpanController
+W/Zygote  (  134): Class not found for preloading: android.widget.TextView$InputContentType
+W/Zygote  (  134): Class not found for preloading: android.widget.TextView$InputMethodState
+W/Zygote  (  134): Class not found for preloading: android.widget.TextView$TextAlign
+E/PhonePolicy(  134): Could not preload class for phone policy: com.android.internal.policy.impl.PhoneWindow$ContextMenuCallback
+W/Zygote  (  134): Class not found for preloading: java.text.DecimalFormat$1
+I/System  (  134): Loaded time zone names for  in 307ms (302ms in ICU)
+I/System  (  134): Loaded time zone names for en_US in 194ms (187ms in ICU)
+I/Zygote  (  134): ...preloaded 2281 classes in 6613ms.
+D/dalvikvm(  134): GC_EXPLICIT freed 908K, 30% free 2154K/3075K, paused 7ms+10ms, total 63ms
+I/Zygote  (  134): Preload resources disabled, skipped.
+D/dalvikvm(  134): GC_EXPLICIT freed 8K, 31% free 2145K/3075K, paused 3ms+8ms, total 45ms
+D/dalvikvm(  134): GC_EXPLICIT freed <1K, 31% free 2145K/3075K, paused 6ms+2ms, total 41ms
+D/dalvikvm(  134): GC_EXPLICIT freed <1K, 31% free 2145K/3075K, paused 3ms+3ms, total 25ms
+I/dalvikvm(  134): System server process 348 has been created
+I/Zygote  (  134): Accepting command socket connections
+I/sysproc (  348): Entered system_init()
+I/sysproc (  348): ServiceManager: 0x713430
+D/SensorService(  348): nuSensorService starting...
+E/Sensors (  348): Couldn't open /dev/akm8973_aot (No such file or directory)
+I/sysproc (  348): System server: starting Android runtime.
+I/sysproc (  348): System server: starting Android services.
+I/SystemServer(  348): Entered the Android system server!
+I/sysproc (  348): System server: entering thread pool.
+I/SystemServer(  348): Entropy Mixer
+I/SystemServer(  348): Power Manager
+I/SystemServer(  348): Activity Manager
+I/ActivityManager(  348): Memory class: 48
+Killed 
