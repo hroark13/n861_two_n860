@@ -128,17 +128,17 @@ extern struct atmel_i2c_platform_data atmel_data;
 void msm7x30_ts_init(void); 
 
 
-//#define MSM_PMEM_SF_SIZE	0x1F00000
-#define MSM_PMEM_SF_SIZE	(40*1024*1024)
+#define MSM_PMEM_SF_SIZE	0x1300000
+//#define MSM_PMEM_SF_SIZE	(40*1024*1024)
 
 #ifdef CONFIG_FB_MSM_TRIPLE_BUFFER
 #define MSM_FB_SIZE            0x780000
 #else
 #define MSM_FB_SIZE            0x500000
 #endif
-#define MSM_PMEM_ADSP_SIZE      0x0 // 0x3200000//PMEM ->5M
+#define MSM_PMEM_ADSP_SIZE      0x0 //0x3200000//PMEM ->5M
 #define MSM_FLUID_PMEM_ADSP_SIZE	0x0 // 0x2800000
-#define PMEM_KERNEL_EBI0_SIZE   0x600000
+#define PMEM_KERNEL_EBI0_SIZE   0x0 // 0x600000
 #define MSM_PMEM_AUDIO_SIZE     0x0 // 0x200000
 
 #define MSM_FB_OVERLAY0_WRITEBACK_SIZE roundup((544 * 960 * 3 * 2), 4096)
