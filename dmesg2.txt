@@ -1,0 +1,1700 @@
+<6>[01-01 00:00:00.000000] [0: swapper]Initializing cgroup subsys cpu
+<5>[01-01 00:00:00.000000] [0: swapper]Linux version 3.0.8-g348b37e (hroark13@dev1a) (gcc version 4.4.3 (GCC) ) #1 PREEMPT Tue Oct 23 23:58:24 EDT 2012
+<4>[01-01 00:00:00.000000] [0: swapper]CPU: ARMv7 Processor [511f00f2] revision 2 (ARMv7), cr=10c53c7d
+<4>[01-01 00:00:00.000000] [0: swapper]CPU: VIPT nonaliasing data cache, VIVT ASID tagged instruction cache
+<4>[01-01 00:00:00.000000] [0: swapper]Machine: arthur
+<6>[01-01 00:00:00.000000] [0: swapper]jiangfeng:parse_tag_zteftm: zte FTM disable !
+<4>[01-01 00:00:00.000000] [0: swapper]Ignoring unrecognised tag 0x5441000a
+<4>[01-01 00:00:00.000000] [0: swapper]Ignoring unrecognised tag 0x5441000c
+<6>[01-01 00:00:00.000000] [0: swapper]memory pool 2 (start ea00000 size 1600000) initialized
+<4>[01-01 00:00:00.000000] [0: swapper]Memory policy: ECC disabled, Data cache writeback
+<3>[01-01 00:00:00.000000] [0: swapper]smem_find(137, 72): wrong size 64
+<6>[01-01 00:00:00.000000] [0: swapper]socinfo_init: v4, id=75, ver=2.1, raw_id=1410, raw_ver=1410, hw_plat=1, hw_plat_ver=65536
+<7>[01-01 00:00:00.000000] [0: swapper]On node 0 totalpages: 44032
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 572 pages used for memmap
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 0 pages reserved
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 43460 pages, LIFO batch:7
+<6>[01-01 00:00:00.000000] [0: swapper]allocating 7864320 bytes at c10ba000 (12ba000 physical) for fb
+<7>[01-01 00:00:00.000000] [0: swapper]pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+<7>[01-01 00:00:00.000000] [0: swapper]pcpu-alloc: [0] 0 
+<4>[01-01 00:00:00.000000] [0: swapper]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 43460
+<5>[01-01 00:00:00.000000] [0: swapper]Kernel command line: console=ttyHSL0,115200,n8 androidboot.hardware=qcom vmalloc=512M androidboot.emmc=true androidboot.mode=normal androidboot.bootloader=0.85.0000 androidboot.baseband=msm
+<6>[01-01 00:00:00.000000] [0: swapper]PID hash table entries: 1024 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Memory: 58MB 114MB = 172MB total
+<5>[01-01 00:00:00.000000] [0: swapper]Memory: 151768k/151768k available, 46888k reserved, 0K highmem
+<5>[01-01 00:00:00.000000] [0: swapper]Virtual kernel memory layout:
+<5>[01-01 00:00:00.000000] [0: swapper]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]    DMA     : 0xff000000 - 0xffe00000   (  14 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    vmalloc : 0xd0000000 - 0xfa000000   ( 672 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    lowmem  : 0xc0000000 - 0xcfe00000   ( 254 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .init : 0xc0008000 - 0xc003e000   ( 216 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .text : 0xc003e000 - 0xc07de258   (7809 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .data : 0xc07e0000 - 0xc0869760   ( 550 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]       .bss : 0xc0869784 - 0xc0d89c98   (5250 kB)
+<6>[01-01 00:00:00.000000] [0: swapper]Preemptible hierarchical RCU implementation.
+<6>[01-01 00:00:00.000000] [0: swapper]NR_IRQS:566
+<6>[01-01 00:00:00.000000] [0: swapper]sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 131071999ms
+<6>[01-01 00:00:00.010000] [0: swapper]Console: colour dummy device 80x30
+<6>[01-01 00:00:00.010000] [0: swapper]Calibrating delay loop... 680.75 BogoMIPS (lpj=3403776)
+<6>[01-01 00:00:00.070000] [0: swapper]pid_max: default: 32768 minimum: 301
+<6>[01-01 00:00:00.070000] [0: swapper]Mount-cache hash table entries: 512
+<6>[01-01 00:00:00.070000] [0: swapper]Initializing cgroup subsys cpuacct
+<6>[01-01 00:00:00.070000] [0: swapper]Initializing cgroup subsys freezer
+<6>[01-01 00:00:00.070000] [0: swapper]CPU: Testing write buffer coherency: ok
+<6>[01-01 00:00:00.070000] [1: swapper]hw perfevents: enabled with ARMv7 Scorpion PMU driver, 5 counters available
+<3>[01-01 00:00:00.100000] [1: swapper]pm: create_suspend_sync_work 157: sync in workqueue enable
+<6>[01-01 00:00:00.100000] [1: swapper]print_constraints: dummy: 
+<3>[01-01 00:00:00.100000] [1: swapper]rdev_init_debugfs: Error-Bad Function Input
+<6>[01-01 00:00:00.100000] [1: swapper]NET: Registered protocol family 16
+<7>[01-01 00:00:00.110000] [1: swapper]g_zte_board_id_type: 0
+<6>[01-01 00:00:00.110000] [1: swapper]Clock ownership
+<6>[01-01 00:00:00.110000] [1: swapper]  GLBL  : 07d82110
+<6>[01-01 00:00:00.110000] [1: swapper]  APPS  : 00000000 00000000 00000000
+<6>[01-01 00:00:00.110000] [1: swapper]  ROW   : 00000000 00000000
+<6>[01-01 00:00:00.110000] [1: swapper]acpuclk_7x30_init()
+<6>[01-01 00:00:00.110000] [1: swapper]ACPU running at 1024000 KHz
+<6>[01-01 00:00:00.110000] [1: swapper]print_constraints: smps0: 500 <--> 1500 mV normal 
+<6>[01-01 00:00:00.110000] [1: swapper]print_constraints: smps1: 500 <--> 1500 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: smps2: 1300 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: smps3: 1800 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: smps4: 2200 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo00: 1200 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo02: 2600 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo03: 1800 <--> 3000 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo04: 2850 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo05: 2850 mV normal 
+<6>[01-01 00:00:00.120000] [1: swapper]print_constraints: ldo06: 3075 <--> 3400 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo07: 1800 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo08: 1800 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo09: 2050 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo10: 2600 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo11: 2800 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo12: 1800 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo13: 2900 <--> 3050 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo14: 2850 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo15: 3050 <--> 3100 mV normal 
+<6>[01-01 00:00:00.130000] [1: swapper]print_constraints: ldo16: 2800 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo17: 2600 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo18: 2200 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo19: 2400 <--> 2500 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo20: 2800 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo21: 1100 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo22: 1200 <--> 1300 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo23: 1350 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo24: 1200 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: ldo25: 1200 mV normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: lvsw0: normal 
+<6>[01-01 00:00:00.150000] [1: swapper]print_constraints: lvsw1: normal 
+<6>[01-01 00:00:00.150000] [1: swapper]print_constraints: ncp: 1800 mV normal 
+<6>[01-01 00:00:00.150000] [1: swapper]pm8058_probe: PMIC revision: E3
+<6>[01-01 00:00:00.150000] [1: swapper]pm_gpio_probe: OK: base=182, ngpio=40
+<6>[01-01 00:00:00.150000] [1: swapper]pm8xxx_mpp_probe: OK: base=222, ngpio=12
+<3>[01-01 00:00:00.160000] [1: swapper]pm8058_probe: failed to config shutdown on hard reset: -19
+<6>[01-01 00:00:00.160000] [1: swapper]ram_console: got buffer at 3d00000, size 100000
+<6>[01-01 00:00:00.160000] [1: swapper]ram_console: found existing buffer, size 191078, start 191078
+<6>[01-01 00:00:00.170000] [1: swapper]console [ram-1] enabled
+<3>[01-01 00:00:00.170000] [1: swapper]++++zte_wifi_init++++ 
+<3>[01-01 00:00:00.180000] [1: swapper]----zte_wifi_init----
+<6>[01-01 00:00:00.180000] [1: swapper][ZHY@pmic-vib]:  msm_init_pmic_vibrator
+<6>[01-01 00:00:00.180000] [1: swapper]snddev_poweramp_gpio_init 
+<6>[01-01 00:00:00.180000] [1: swapper]aux_pcm_gpio_init 
+<5>[01-01 00:00:00.200000] [1: swapper]Boot Reason = 0x20
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_gfx2d0: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_gfx3d: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_mdp: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_mfc: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_rot: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_vfe: normal 
+<6>[01-01 00:00:00.210000] [1: swapper]print_constraints: fs_vpe: normal 
+<6>[01-01 00:00:00.260000] [1: swapper]bio: create slab <bio-0> at 0
+<5>[01-01 00:00:00.270000] [1: swapper]pmic8058_pwm_probe: OK
+<5>[01-01 00:00:00.270000] [1: swapper]SCSI subsystem initialized
+<6>[01-01 00:00:00.270000] [1: swapper]msm_i2c_probe
+<6>[01-01 00:00:00.270000] [1: swapper]msm_i2c_probe: clk_ctl 35d, 100000 Hz
+<3>[01-01 00:00:00.270000] [1: swapper]i2c i2c-0: Failed to register i2c client adv7520 at 0x39 (-16)
+<3>[01-01 00:00:00.270000] [1: swapper]i2c i2c-0: Can't create device at 0x39
+<6>[01-01 00:00:00.270000] [1: swapper]msm_i2c_probe
+<6>[01-01 00:00:00.270000] [1: swapper]msm_i2c_probe: clk_ctl 35d, 100000 Hz
+<6>[01-01 00:00:00.270000] [1: swapper]Advanced Linux Sound Architecture Driver Version 1.0.24.
+<6>[01-01 00:00:00.280000] [1: swapper]Bluetooth: Core ver 2.16
+<6>[01-01 00:00:00.280000] [1: swapper]NET: Registered protocol family 31
+<6>[01-01 00:00:00.280000] [1: swapper]Bluetooth: HCI device and connection manager initialized
+<6>[01-01 00:00:00.280000] [1: swapper]Bluetooth: HCI socket layer initialized
+<6>[01-01 00:00:00.280000] [1: swapper]Bluetooth: L2CAP socket layer initialized
+<6>[01-01 00:00:00.280000] [1: swapper]Bluetooth: SCO socket layer initialized
+<6>[01-01 00:00:00.280000] [4: kworker/0:0]cfg80211: Calling CRDA to update world regulatory domain
+<6>[01-01 00:00:00.280000] [1: swapper]Switching to clocksource gp_timer
+<6>[01-01 00:00:00.300019] [1: swapper]NET: Registered protocol family 2
+<6>[01-01 00:00:00.300019] [1: swapper]IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+<6>[01-01 00:00:00.300019] [1: swapper]TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+<6>[01-01 00:00:00.300019] [1: swapper]TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+<6>[01-01 00:00:00.300019] [1: swapper]TCP: Hash tables configured (established 8192 bind 8192)
+<6>[01-01 00:00:00.300019] [1: swapper]TCP reno registered
+<6>[01-01 00:00:00.300019] [1: swapper]UDP hash table entries: 256 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.300019] [1: swapper]UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.310026] [1: swapper]NET: Registered protocol family 1
+<6>[01-01 00:00:00.310026] [1: swapper]RPC: Registered named UNIX socket transport module.
+<6>[01-01 00:00:00.310026] [1: swapper]RPC: Registered udp transport module.
+<6>[01-01 00:00:00.310026] [1: swapper]RPC: Registered tcp transport module.
+<6>[01-01 00:00:00.310026] [1: swapper]RPC: Registered tcp NFSv4.1 backchannel transport module.
+<6>[01-01 00:00:00.310026] [1: swapper]Trying to unpack rootfs image as initramfs...
+<6>[01-01 00:00:00.350033] [1: swapper]Freeing initrd memory: 740K
+<6>[01-01 00:00:00.350033] [1: swapper]PMU: registered new PMU device of type 0
+<6>[01-01 00:00:00.350033] [1: swapper]sdio_al:SDIO-AL SW version 1.30
+<3>[01-01 00:00:00.370038] [5: kworker/u:0]Notify: smsm init
+<4>[01-01 00:00:00.370038] [1: swapper]get_nand_partitions: no flash partition table in shared memory
+<6>[01-01 00:00:00.390046] rpcrouter_smd_remote_notify: smd opened 0x  (null)
+<3>[01-01 00:00:00.400049] [5: kworker/u:0]rpcrouter: Server create rejected, version = 0, program = 3000001f
+<6>[01-01 00:00:00.430057] [1: swapper][afe.c:afe_init] AFE driver init
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] Number of decoder supported  5
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] Number of concurrency supported  7
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY4TASK
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] queueid:17
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] decid:4
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:1
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY3TASK
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] queueid:16
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] decid:3
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY2TASK
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] queueid:15
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] decid:2
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY1TASK
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] queueid:14
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] decid:1
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY0TASK
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] queueid:13
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] decid:0
+<6>[01-01 00:00:00.430057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.430057] [1: swapper][snddev_ecodec.c:snddev_ecodec_init] snddev_ecodec_init
+<6>[01-01 00:00:00.440060] [21: kworker/u:1][adsp.c:adsp_rtos_mtoa_cb] INIT_INFO Event
+<6>[01-01 00:00:00.440060] [1: swapper][adsp.c:adsp_init] msm_adsp -- 0
+<6>[01-01 00:00:00.440060] [1: swapper][lpa.c:lpa_probe] lpa probe
+<6>[01-01 00:00:00.440060] [1: swapper]audio_mvs_init:
+<6>[01-01 00:00:00.440060] [1: swapper]__msm_rpc_connect: server not found 30000014:50001
+<3>[01-01 00:00:00.440060] [1: swapper]audio_mvs_init: MVS RPC connect failed ver 0x50001
+<6>[01-01 00:00:00.440060] [1: swapper]__msm_rpc_connect: server not found 30000014:40001
+<3>[01-01 00:00:00.440060] [1: swapper]audio_mvs_init: MVS RPC connect failed ver 0x40001
+<6>[01-01 00:00:00.440060] [29: audio_mvs]audio_mvs_thread:
+<6>[01-01 00:00:00.440060] [1: swapper]rmt_storage_get_ramfs: RAMFS entry: addr = 0x07500000, size = 0x00300000
+<6>[01-01 00:00:00.450063] [1: swapper]rmt_storage_probe: Remote storage RPC client (0x300000a7)initialized
+<3>[01-01 00:00:00.450063] [1: swapper]msm_rpc_client_req2: RPC call was not successful (3)
+<3>[01-01 00:00:00.450063] [1: swapper]rmt_storage_reg_cb: Failed to register callback for event 7
+<6>[01-01 00:00:00.450063] [1: swapper]rmt_storage_reg_callbacks: Unable (-22) registering aloc_rmt_buf
+<4>[01-01 00:00:00.450063] [1: swapper]pm_monitor_init enter
+<6>[01-01 00:00:00.470070] [1: swapper]ashmem: initialized
+<6>[01-01 00:00:00.470070] [1: swapper]fuse init (API version 7.16)
+<6>[01-01 00:00:00.470070] [1: swapper]msgmni has been set to 297
+<6>[01-01 00:00:00.470070] [1: swapper]io scheduler noop registered
+<6>[01-01 00:00:00.470070] [1: swapper]io scheduler cfq registered (default)
+<3>[01-01 00:00:00.470070] [1: swapper]mdp reg: nanzhang dump mdp regs
+<3>[01-01 00:00:00.470070] [1: swapper]address        0 : 400030A
+<3>[01-01 00:00:00.470070] [1: swapper]address        1 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        2 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        3 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        4 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        5 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        6 :      25
+<3>[01-01 00:00:00.470070] [1: swapper]address        7 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        8 :FFFFFFFF
+<3>[01-01 00:00:00.470070] [1: swapper]address        9 :     FFF
+<3>[01-01 00:00:00.470070] [1: swapper]address        A :   10000
+<3>[01-01 00:00:00.470070] [1: swapper]address        B :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        C :       4
+<3>[01-01 00:00:00.470070] [1: swapper]address        D :      11
+<3>[01-01 00:00:00.470070] [1: swapper]address        E :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address        F :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       10 :    FFFF
+<3>[01-01 00:00:00.470070] [1: swapper]address       11 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       12 :      40
+<3>[01-01 00:00:00.470070] [1: swapper]address       13 :    3333
+<3>[01-01 00:00:00.470070] [1: swapper]address       14 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       15 :      91
+<3>[01-01 00:00:00.470070] [1: swapper]address       16 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       17 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       18 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       19 :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       1A :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       1B :       0
+<3>[01-01 00:00:00.470070] [1: swapper]address       1C :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       1D :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       1E :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       1F :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       20 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       21 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       22 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       23 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       24 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       25 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       26 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       27 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       28 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       29 :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       2A :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       2B :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       2C :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       2D :       0
+<3>[01-01 00:00:00.480073] [1: swapper]address       2E :       0
+<3>[01-01 00:00:00.540099] [1: swapper]mdp reg: nanzhang dump mdp regs
+<3>[01-01 00:00:00.540099] [1: swapper]address        0 : 400030A
+<3>[01-01 00:00:00.540099] [1: swapper]address        1 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        2 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        3 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        4 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        5 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        6 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        7 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        8 :FFFFFFFF
+<3>[01-01 00:00:00.540099] [1: swapper]address        9 :     FFF
+<3>[01-01 00:00:00.540099] [1: swapper]address        A :   10000
+<3>[01-01 00:00:00.540099] [1: swapper]address        B :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        C :       4
+<3>[01-01 00:00:00.540099] [1: swapper]address        D :      11
+<3>[01-01 00:00:00.540099] [1: swapper]address        E :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address        F :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       10 :    FFFF
+<3>[01-01 00:00:00.540099] [1: swapper]address       11 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       12 :      40
+<3>[01-01 00:00:00.540099] [1: swapper]address       13 :    3333
+<3>[01-01 00:00:00.540099] [1: swapper]address       14 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       15 :      91
+<3>[01-01 00:00:00.540099] [1: swapper]address       16 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       17 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       18 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       19 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1A :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1B :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1C :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1D :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1E :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       1F :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       20 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       21 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       22 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       23 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       24 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       25 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       26 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       27 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       28 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       29 :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       2A :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       2B :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       2C :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       2D :       0
+<3>[01-01 00:00:00.540099] [1: swapper]address       2E :       0
+<4>[01-01 00:00:00.600131] [1: swapper]spi_init
+<4>[01-01 00:00:00.600131] [1: swapper]!truly id is 0x6902
+<6>[01-01 00:00:00.630148] [1: swapper]setting pdata->panel_info.fb_num to 3. type: 3
+<4>[01-01 00:00:00.630148] [1: swapper][ZGC]:init_lcd_proc
+<6>[01-01 00:00:00.630148] [1: swapper]FrameBuffer[0] 480x800 size=4608000 bytes is registered successfully!
+<4>[01-01 00:00:00.630148] [1: swapper]load_565rle_image: Can not open /logo.bmp
+<4>[01-01 00:00:00.640154] [1: swapper][ZGC]:LcdPanleID = 61
+<7>[01-01 00:00:00.640154] [1: swapper]Registered led device: lcd-backlight
+<6>[01-01 00:00:00.640154] [1: swapper]
+<6>[01-01 00:00:00.640154] [1: swapper] msm_vidc_enc: Inside vid_enc_init()
+<6>[01-01 00:00:00.640154] [1: swapper]
+<6>[01-01 00:00:00.640154] [1: swapper] msm_vidc_enc: Inside vid_enc_vcd_init()
+<6>[01-01 00:00:00.640154] [1: swapper]msm_serial: detected port #1
+<6>[01-01 00:00:00.640154] [1: swapper]msm_serial.1: ttyMSM1 at MMIO 0xacb00000 (irq = 69) is a MSM
+<6>[01-01 00:00:00.660167] [1: swapper]msm_serial: driver initialized
+<6>[01-01 00:00:00.660167] [1: swapper]msm_serial_hs.0: ttyHS0 at MMIO 0xa3300000 (irq = 73) is a MSM HS UART
+<6>[01-01 00:00:00.680180] [1: swapper]msm_serial_hs module loaded
+<6>[01-01 00:00:00.680180] [1: swapper]msm_rotator_probe: rotator_hw_revision=0
+<6>[01-01 00:00:00.680180] [1: swapper]kgsl kgsl-3d0: |kgsl_gpummu_init| MMU type set for device is GPUMMU
+<6>[01-01 00:00:00.690187] [1: swapper]kgsl kgsl-2d0: |kgsl_gpummu_init| MMU type set for device is GPUMMU
+<6>[01-01 00:00:00.700194] [1: swapper]brd: module loaded
+<6>[01-01 00:00:00.710201] [1: swapper]loop: module loaded
+<6>[01-01 00:00:00.710201] [1: swapper]pmem: Initializing pmem (user-space) as cached
+<6>[01-01 00:00:00.710201] [1: swapper]allocating 19922944 bytes at   (null) (ea00000 physical) for pmem
+<1>[01-01 00:00:00.710201] [1: swapper]pmem: pmem_setup: unable to register pmem driver(pmem_adsp) - zero size passed in!
+<4>[01-01 00:00:00.710201] [1: swapper]android_pmem: probe of android_pmem.2 failed with error -1
+<1>[01-01 00:00:00.710201] [1: swapper]pmem: pmem_setup: unable to register pmem driver(pmem_audio) - zero size passed in!
+<4>[01-01 00:00:00.710201] [1: swapper]android_pmem: probe of android_pmem.4 failed with error -1
+<4>[01-01 00:00:00.710201] [1: swapper]i2c-core: driver [isa1200] using legacy suspend method
+<4>[01-01 00:00:00.710201] [1: swapper]i2c-core: driver [isa1200] using legacy resume method
+<5>[01-01 00:00:00.710201] [1: swapper]pm8xxx_upl_probe: OK
+<3>[01-01 00:00:00.730215] [1: swapper]msm_snddev_init
+<6>[01-01 00:00:00.730215] [1: swapper]adie_codec_register_codec_operations: codec type 0
+<3>[01-01 00:00:00.730215] [1: swapper]config_timpani_reset: [YXS]reset TIMPANI Codec
+<3>[01-01 00:00:00.730215] [1: swapper]msm_i2c msm_i2c.2: (001a) Error during data xfer (-5)
+<3>[01-01 00:00:00.730215] [1: swapper]msm_i2c msm_i2c.2: (001a) Error during data xfer (-5)
+<3>[01-01 00:00:00.730215] [1: swapper]marimba-core 2-000d: i2c read failed
+<4>[01-01 00:00:00.730215] [1: swapper]marimba_tsadc_probe
+<6>[01-01 00:00:00.730215] [1: swapper]__msm_rpc_connect: server not found 30000060:70001
+<3>[01-01 00:00:00.730215] [1: swapper]pmapp_rpc_req_reply: init rpc failed! ans = -113 for 0x70001 version, fallback
+<6>[01-01 00:00:00.730215] [1: swapper]__msm_rpc_connect: server not found 30000060:60001
+<3>[01-01 00:00:00.730215] [1: swapper]pmapp_rpc_req_reply: init rpc failed! ans = -113 for 0x60001 version, fallback
+<7>[01-01 00:00:00.730215] [1: swapper]pmapp_rpc_req_reply: successfully connected to 0x50001 rpc version
+<6>[01-01 00:00:00.760237] [1: swapper]SCSI Media Changer driver v0.25 
+<6>[01-01 00:00:00.760237] [1: swapper]msm_nand_probe: phys addr 0xa0200000 
+<6>[01-01 00:00:00.760237] [1: swapper]msm_nand_probe: Dual Nand Ctrl in ping-pong mode
+<6>[01-01 00:00:00.760237] [1: swapper]msm_nand_probe: dmac 0x7
+<6>[01-01 00:00:00.760237] [1: swapper]msm_nand_probe: allocated dma buffer at ffde8000, dma_addr d710000
+<3>[01-01 00:00:00.760237] [1: swapper]flash_onfi_probe: No partition info available
+<6>[01-01 00:00:00.760237] [1: swapper]status: 20
+<6>[01-01 00:00:00.760237] [1: swapper]nandid: 7070707 maker 07 device 07
+<3>[01-01 00:00:00.760237] [1: swapper]ERROR: unknown nand device manuf=7 devid=7
+<6>[01-01 00:00:00.760237] [1: swapper]SFLASHC Async Mode bit: 1 
+<6>[01-01 00:00:00.760237] [1: swapper]=================================================================
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: manufacturer_id = 0xf000
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: device_id = 0xf001
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: version_id = 0xf002
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: data_buf_size = 0xf003
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: boot_buf_size = 0xf004
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: num_of_buffers = 0xf005
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: technology = 0xf006
+<6>[01-01 00:00:00.760237] [1: swapper]=================================================================
+<6>[01-01 00:00:00.760237] [1: swapper]flash_onenand_probe: Detected an unsupported device
+<3>[01-01 00:00:00.760237] [1: swapper]msm_nand_probe: No nand device found
+<6>[01-01 00:00:00.770244] [1: swapper]PPP generic driver version 2.4.2
+<6>[01-01 00:00:00.770244] [1: swapper]PPP Deflate Compression module registered
+<6>[01-01 00:00:00.770244] [1: swapper]PPP BSD Compression module registered
+<6>[01-01 00:00:00.770244] [1: swapper]PPP MPPE Compression module registered
+<6>[01-01 00:00:00.770244] [1: swapper]NET: Registered protocol family 24
+<6>[01-01 00:00:00.770244] [1: swapper]SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+<6>[01-01 00:00:00.770244] [1: swapper]CSLIP: code copyright 1989 Regents of the University of California.
+<6>[01-01 00:00:00.770244] [1: swapper]tun: Universal TUN/TAP device driver, 1.6
+<6>[01-01 00:00:00.770244] [1: swapper]tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<4>[01-01 00:00:00.770244] [1: swapper]smc91x: not found (-19).
+<6>[01-01 00:00:00.770244] [1: swapper]smsc911x: Driver version 2008-10-21
+<6>[01-01 00:00:00.770244] [1: swapper]rmnet_init: SMD devices[8]
+<6>[01-01 00:00:00.790259] [1: swapper]peripheral driver registered w/ tranceiver
+<4>[01-01 00:00:00.790259] [1: swapper]usb: config_ftm_from_tag, 242
+<4>[01-01 00:00:00.790259] [1: swapper]usb: config_ftm_from_tag, 249: ftm_mode disable
+<6>[01-01 00:00:00.800267] [1: swapper]android_usb gadget: Mass Storage Function, version: 2009/09/11
+<6>[01-01 00:00:00.800267] [1: swapper]android_usb gadget: Number of LUNs=2
+<6>[01-01 00:00:00.800267] [1: swapper] lun0: LUN: removable file: (no medium)
+<6>[01-01 00:00:00.800267] [1: swapper] lun1: LUN: removable read only CD-ROM file: (no medium)
+<6>[01-01 00:00:00.800267] [1: swapper]android_usb gadget: android_usb ready
+<6>[01-01 00:00:00.800267] [4: kworker/0:0]msm_hsusb msm_hsusb: msm72k_udc: idle flags 0x1
+<6>[01-01 00:00:00.800267] [1: swapper]diagchar initialized now
+<6>[01-01 00:00:00.810275] [1: swapper]input: arthur_keypad as /devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-keypad/input/input0
+<6>[01-01 00:00:00.810275] [1: swapper]synaptics_probe enter
+<4>[01-01 00:00:00.810275] [1: swapper]vreg_disable: unbalanced disables for vreg gp6
+<3>[01-01 00:00:00.810275] [1: swapper]vdd disable failed
+<6>[01-01 00:00:01.020414] [16: kworker/0:1]msm_hsusb msm_hsusb: msm72k_udc_vbus_session: 1
+<6>[01-01 00:00:01.020414] [69: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: offline flags 0x2
+<6>[01-01 00:00:01.050429] [1: swapper]ts max(1143,2028)
+<6>[01-01 00:00:01.050429] [1: swapper]chip_type=0x0, sensor=0x0, fw_ver=0x0
+<4>[01-01 00:00:01.050429] [1: swapper]lcd ( 480, 800 ) 
+<6>[01-01 00:00:01.060434] [1: swapper]input: syna-touchscreen as /devices/virtual/input/input1
+<6>[01-01 00:00:01.060434] [1: swapper]syna_fwupdate_init:synaptics firmware update init succeed!
+<6>[01-01 00:00:01.060434] [1: swapper]synaptics_probe: Start ts syna-touchscreen in interrupt mode
+<7>[01-01 00:00:01.060434] [1: swapper]RTC Registering with rs30000048
+<7>[01-01 00:00:01.060434] [1: swapper]msmrtc_rpc_proc_result: RPC client reply for PROC=12 success
+<6>[01-01 00:00:01.060434] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 374667
+<6>[01-01 00:00:01.060434] [74: krtcclntcbd]stamp=54268363483938816, freq = 1515870810
+<3>[01-01 00:00:01.060434] [74: krtcclntcbd]drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+<7>[01-01 00:00:01.060434] [1: swapper]msmrtc_rpc_proc_result: RPC client reply for PROC=17 success
+<7>[01-01 00:00:01.060434] [1: swapper]msmrtc_tod_proc_result: 10/24/2012 04:09:08 (02)
+<6>[01-01 00:00:01.060434] [1: swapper]using rtc device, msm_rtc, for alarms
+<7>[01-01 00:00:01.060434] [1: swapper]msm_rtc: dev (254:0)
+<6>[01-01 00:00:01.060434] [1: swapper]rs30000048 rs30000048.262144: rtc core: registered msm_rtc as rtc0
+<7>[01-01 00:00:01.060434] [1: swapper]msmrtc_tod_proc_result: 01/06/1980 00:00:00 (06)
+<7>[01-01 00:00:01.060434] [1: swapper]msm_rtc_secure: dev (254:1)
+<6>[01-01 00:00:01.060434] [1: swapper]rs30000048 rs30000048.262144: rtc core: registered msm_rtc_secure as rtc1
+<6>[01-01 00:00:01.060434] [1: swapper]i2c /dev entries driver
+<3>[01-01 00:00:01.070439] [1: swapper]TAOS: comes into taos_init
+<3>[01-01 00:00:01.070439] [1: swapper]TAOS: taos_probe() - i2c smbus block data functions unsupported
+<3>[01-01 00:00:01.080444] [1: swapper]TAOS: taos_device_name is 1
+<3>[01-01 00:00:01.080444] [1: swapper]TAOS: chip id of taos that was read matches expected id in taos_probe()
+<2>[01-01 00:00:01.080444] [1: swapper]taos use gpio 142
+<6>[01-01 00:00:01.080444] [1: swapper]input: light as /devices/virtual/input/input2
+<6>[01-01 00:00:01.080444] [1: swapper]input: proximity as /devices/virtual/input/input3
+<6>[01-01 00:00:01.090449] [1: swapper]lirc_dev: IR Remote Control driver registered, major 238 
+<6>[01-01 00:00:01.090449] [1: swapper]IR NEC protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR RC5(x) protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR RC6 protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR JVC protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR Sony protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR RC5 (streamzap) protocol handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]IR LIRC bridge handler initialized
+<6>[01-01 00:00:01.090449] [1: swapper]Linux video capture interface: v2.00
+<4>[01-01 00:00:01.090449] [1: swapper]zt debug: ov5640_init
+<3>[01-01 00:00:01.090449] [1: swapper]: ov5640_init
+<3>[01-01 00:00:01.090449] [21: kworker/u:1]ov5640_sensor_probe: set reset to 0
+<4>[01-01 00:00:01.090449] [21: kworker/u:1]zt debug: ov5640_sensor_probe_init
+<6>[01-01 00:00:01.100455] [1: swapper]I2C radio driver for Qualcomm FM Radio Transceiver , Version 1.0.0
+<7>[01-01 00:00:01.100455] [1: swapper]msm_batt_init: enter
+<6>[01-01 00:00:01.100455] [27: kworker/u:2][ZHY@msm-battery]:usb  pc,batt_st=good ,discharging,level=good,4211mV,36C,100% ,full=1,1,0mV,0C,0%,0.
+<6>[01-01 00:00:01.100455] [1: swapper]msm_battery task queue start!
+<6>[01-01 00:00:01.100455] [1: swapper]AKM8962 compass driver: initialize.
+<6>[01-01 00:00:01.100455] [1: swapper]input: compass as /devices/virtual/input/input4
+<4>[01-01 00:00:01.100455] [1: swapper]i2c-core: driver [akm8962] using legacy suspend method
+<4>[01-01 00:00:01.100455] [1: swapper]i2c-core: driver [akm8962] using legacy resume method
+<3>[01-01 00:00:01.100455] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb00c8, irq:104
+<3>[01-01 00:00:01.110460] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0xf not connected
+<3>[01-01 00:00:01.110460] [1: swapper]kxtik 4-000f: error reading WHO_AM_I register!
+<3>[01-01 00:00:01.110460] [1: swapper]kxtik 4-000f: device not recognized
+<4>[01-01 00:00:01.110460] [1: swapper]kxtik: probe of 4-000f failed with error -107
+<6>[01-01 00:00:01.110460] [1: swapper]lis3dhtr accelerometer driver: init
+<4>[01-01 00:00:01.110460] [1: swapper][lis3dhtr]:lis3dhtr: probe start.
+<6>[01-01 00:00:01.110460] [1: swapper]lis3dhtr: hw init start
+<3>[01-01 00:00:01.110460] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb43c8, irq:104
+<3>[01-01 00:00:01.120466] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.140477] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.140477] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.160489] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.160489] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.160489] [21: kworker/u:1]ov5640_sensor_init_probe: entry
+<3>[01-01 00:00:01.160489] [21: kworker/u:1]ov5640_sensor_init_probe: model_id = 0x5640
+<3>[01-01 00:00:01.160489] [21: kworker/u:1]ov5640_reg_init: entry
+<3>[01-01 00:00:01.180500] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.180500] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.200512] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.200512] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.220525] [1: swapper]lis3dhtr 4-0018: read transfer error
+<4>[01-01 00:00:01.220525] [1: swapper]lis3dhtr 4-0018: Error reading WHO_AM_I: is device available/working?
+<3>[01-01 00:00:01.220525] [1: swapper]lis3dhtr 4-0018: hw init error 0xf,0xe: -5
+<4>[01-01 00:00:01.220525] [1: swapper][lis3dhtr]:power on success
+<3>[01-01 00:00:01.220525] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.220525] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.240537] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.240537] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<6>[01-01 00:00:01.250543] [69: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x2
+<6>[01-01 00:00:01.250543] [16: kworker/0:1]android_work: did not send uevent (0 0   (null))
+<3>[01-01 00:00:01.260550] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.260550] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.280563] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.280563] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.300576] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.300576] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.320589] [1: swapper]lis3dhtr 4-0018: read transfer error
+<3>[01-01 00:00:01.320589] [1: swapper]lis3dhtr 4-0018: update g range failed 0x23,0x53: -5
+<3>[01-01 00:00:01.320589] [1: swapper]lis3dhtr 4-0018: update_g_range failed
+<3>[01-01 00:00:01.320589] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.320589] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.340603] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.340603] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.360617] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.360617] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.380630] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.380630] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.400645] qup_i2c qup_i2c.4: QUP: I2C status flags :0xb63c8, irq:104
+<3>[01-01 00:00:01.400645] [1: swapper]qup_i2c qup_i2c.4: I2C slave addr:0x18 not connected
+<3>[01-01 00:00:01.420659] [1: swapper]lis3dhtr 4-0018: write transfer error
+<3>[01-01 00:00:01.420659] [1: swapper]lis3dhtr 4-0018: soft power off failed: -5
+<3>[01-01 00:00:01.420659] [1: swapper]lis3dhtr: Driver Init failed
+<4>[01-01 00:00:01.420659] [1: swapper]lis3dhtr: probe of 4-0018 failed with error -5
+<5>[01-01 00:00:01.420659] [1: swapper]pop_mem_tm_probe: device 0 probed successfully
+<3>[01-01 00:00:01.420659] [1: swapper]pop_mem_tm_probe: memory controller 1 does not exist
+<6>[01-01 00:00:01.420659] [1: swapper]device-mapper: ioctl: 4.20.0-ioctl (2011-02-02) initialised: dm-devel@redhat.com
+<6>[01-01 00:00:01.420659] [1: swapper]Bluetooth: HCI UART driver ver 2.2
+<6>[01-01 00:00:01.420659] [1: swapper]Bluetooth: HCI H4 protocol initialized
+<6>[01-01 00:00:01.420659] [1: swapper]Bluetooth: HCI_IBS protocol initialized
+<6>[01-01 00:00:01.420659] [1: swapper]Bluetooth: MSM Sleep Mode Driver Ver 1.1
+<6>[01-01 00:00:01.420659] [1: swapper]Bluetooth: BCM Sleep Mode Driver Ver 1.1
+<7>[01-01 00:00:01.420659] [1: swapper]bcm_power_init
+<7>[01-01 00:00:01.420659] [1: swapper]bcm_power_probe
+<6>[01-01 00:00:01.420659] [1: swapper]mmc0: mci-version: 0
+<3>[01-01 00:00:01.420659] [1: swapper]mmc0: No card detect facilities available
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: Qualcomm MSM SDCC-core at 0x00000000a0500000 irq 98,0 dma 8 dmacrcri 7
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: 8 bit data mode enabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: 4 bit data mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: polling status mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: Slot eject status = 0
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: Power save feature enable = 1
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: DM non-cached buffer at ffdc0000, dma_addr 0x0cd80000
+<6>[01-01 00:00:01.430666] [1: swapper]mmc0: DM cmd busaddr 0x0cd80000, cmdptr busaddr 0x0cd97f40
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: mci-version: 0
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: Qualcomm MSM SDCC-core at 0x00000000a3000000 irq 96,0 dma 8 dmacrcri 12
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: 8 bit data mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: 4 bit data mode enabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: polling status mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: Slot eject status = 1
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: Power save feature enable = 1
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: DM non-cached buffer at ffd60000, dma_addr 0x0cda0000
+<6>[01-01 00:00:01.430666] [1: swapper]mmc1: DM cmd busaddr 0x0cda0000, cmdptr busaddr 0x0cdb7f40
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: mci-version: 0
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: Qualcomm MSM SDCC-core at 0x00000000a3100000 irq 100,537 dma 8 dmacrcri 13
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: 8 bit data mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: 4 bit data mode enabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: polling status mode disabled
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: Slot eject status = 0
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: Power save feature enable = 1
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: DM non-cached buffer at ffd40000, dma_addr 0x0cdc0000
+<6>[01-01 00:00:01.430666] [1: swapper]mmc2: DM cmd busaddr 0x0cdc0000, cmdptr busaddr 0x0cdd7f40
+<7>[01-01 00:00:01.440673] [1: swapper]Registered led device: flashlight
+<7>[01-01 00:00:01.440673] [1: swapper]Registered led device: red
+<7>[01-01 00:00:01.440673] [1: swapper]Registered led device: green
+<6>[01-01 00:00:01.440673] [1: swapper][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 0.
+<6>[01-01 00:00:01.440673] [1: swapper]__msm_rpc_connect: server not found 30000061:60001
+<3>[01-01 00:00:01.440673] [1: swapper]pmic_rpc_req_reply: init rpc failed! ans = -113 for 0x60001 version, fallback
+<6>[01-01 00:00:01.440673] [1: swapper]__msm_rpc_connect: server not found 30000061:50001
+<3>[01-01 00:00:01.440673] [1: swapper]pmic_rpc_req_reply: init rpc failed! ans = -113 for 0x50001 version, fallback
+<7>[01-01 00:00:01.440673] [1: swapper]pmic_rpc_req_reply: successfully connected to 0x30001 rpc version
+<6>[01-01 00:00:01.440673] [1: swapper][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 0.
+<7>[01-01 00:00:01.440673] [1: swapper]Registered led device: keyboard-backlight
+<6>[01-01 00:00:01.450680] [1: swapper]logger: created 256K log 'log_main'
+<6>[01-01 00:00:01.450680] [1: swapper]logger: created 256K log 'log_events'
+<6>[01-01 00:00:01.450680] [1: swapper]logger: created 256K log 'log_radio'
+<6>[01-01 00:00:01.450680] [1: swapper]logger: created 256K log 'log_system'
+<4>[01-01 00:00:01.450680] [1: swapper]zte log address _buf_log_main: 0xc0c7fea4
+<4>[01-01 00:00:01.450680] [1: swapper]zte log address _buf_log_events: 0xc0cbfea4
+<4>[01-01 00:00:01.450680] [1: swapper]zte log address _buf_log_radio: 0xc0cffea4
+<4>[01-01 00:00:01.450680] [1: swapper]zte log address _buf_log_system: 0xc0d3fea4
+<6>[01-01 00:00:01.450680] [1: swapper]msm-cpu-dai msm-cpu-dai.0: asoc_msm_cpu_probe: dev name msm-cpu-dai.0
+<6>[01-01 00:00:01.450680] [1: swapper]msm-codec-dai msm-codec-dai.0: asoc_msm_codec_probe: dev name msm-codec-dai.0
+<6>[01-01 00:00:01.460688] [1: swapper]mvs-cpu-dai mvs-cpu-dai.0: asoc_mvs_cpu_probe: dev name mvs-cpu-dai.0
+<6>[01-01 00:00:01.460688] [1: swapper]mvs-codec-dai mvs-codec-dai.0: asoc_mvs_codec_probe: dev name mvs-codec-dai.0
+<6>[01-01 00:00:01.470695] [1: swapper]asoc: msm-codec-dai <-> msm-cpu-dai.0 mapping ok
+<6>[01-01 00:00:01.470695] [1: swapper]asoc: mvs-codec-dai <-> mvs-cpu-dai.0 mapping ok
+<6>[01-01 00:00:01.480703] [1: swapper]ALSA device list:
+<6>[01-01 00:00:01.480703] [1: swapper]  #0: msm-audio
+<6>[01-01 00:00:01.480703] [1: swapper]Mirror/redirect action on
+<6>[01-01 00:00:01.480703] [1: swapper]u32 classifier
+<6>[01-01 00:00:01.480703] [1: swapper]    Actions configured
+<6>[01-01 00:00:01.480703] [1: swapper]Netfilter messages via NETLINK v0.30.
+<6>[01-01 00:00:01.480703] [1: swapper]nf_conntrack version 0.5.0 (2382 buckets, 9528 max)
+<6>[01-01 00:00:01.480703] [1: swapper]ctnetlink v0.93: registering with nfnetlink.
+<6>[01-01 00:00:01.490710] [1: swapper]NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+<6>[01-01 00:00:01.490710] [1: swapper]NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+<6>[01-01 00:00:01.490710] [1: swapper]xt_time: kernel timezone is -0000
+<6>[01-01 00:00:01.490710] [1: swapper]IPv4 over IPv4 tunneling driver
+<6>[01-01 00:00:01.490710] [1: swapper]GRE over IPv4 demultiplexor driver
+<6>[01-01 00:00:01.490710] [1: swapper]GRE over IPv4 tunneling driver
+<6>[01-01 00:00:01.490710] [1: swapper]ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[01-01 00:00:01.490710] [1: swapper]arp_tables: (C) 2002 David S. Miller
+<6>[01-01 00:00:01.490710] [1: swapper]TCP cubic registered
+<6>[01-01 00:00:01.500717] [1: swapper]NET: Registered protocol family 10
+<6>[01-01 00:00:01.510725] [1: swapper]Mobile IPv6
+<6>[01-01 00:00:01.510725] [1: swapper]ip6_tables: (C) 2000-2006 Netfilter Core Team
+<6>[01-01 00:00:01.510725] [1: swapper]IPv6 over IPv4 tunneling driver
+<6>[01-01 00:00:01.520732] [1: swapper]NET: Registered protocol family 17
+<6>[01-01 00:00:01.520732] [1: swapper]NET: Registered protocol family 15
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: RFCOMM TTY layer initialized
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: RFCOMM socket layer initialized
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: RFCOMM ver 1.11
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: BNEP filters: protocol multicast
+<6>[01-01 00:00:01.520732] [1: swapper]Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+<6>[01-01 00:00:01.520732] [1: swapper]VFP support v0.3: implementor 51 architecture 64 part 0f variant 1 rev 0
+<6>[01-01 00:00:01.600794] [1: swapper]clock_late_init() disabled 41 unused clocks
+<6>[01-01 00:00:01.600794] [1: swapper][voice.c:voice_init] 
+<6>[01-01 00:00:01.600794] [90: voice][voice.c:voice_thread] voice_thread() start
+<6>[01-01 00:00:01.600794] [1: swapper][audio_acdb.c:acdb_init] build id used is = 7X30A-AABBQCLYM-40000230
+<3>[01-01 00:00:01.600794] [91: acdb_cb_thread][audio_acdb.c:initialize_modem_acdb] ACDB=> RPC failure result = -1
+<3>[01-01 00:00:01.600794] [91: acdb_cb_thread][audio_acdb.c:acdb_calibrate_device] failed to initialize modem ACDB
+<6>[01-01 00:00:01.610802] [1: swapper]input: 7k_handset as /devices/virtual/input/input5
+<3>[01-01 00:00:01.610802] [92: khsclntd][YXS]key_code 0x79, key_parm 0x0
+<3>[01-01 00:00:01.610802] [92: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.610802] [92: khsclntd] 	key:143 keycode:121
+<3>[01-01 00:00:01.610802] [92: khsclntd][YXS]key_code 0xff, key_parm 0xff
+<3>[01-01 00:00:01.610802] [92: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.610802] [92: khsclntd] 	key:143 keycode:255
+<3>[01-01 00:00:01.610802] [92: khsclntd][YXS]key_code 0x78, key_parm 0x0
+<3>[01-01 00:00:01.610802] [92: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.610802] [92: khsclntd] 	key:143 keycode:120
+<3>[01-01 00:00:01.610802] [92: khsclntd][YXS]key_code 0xff, key_parm 0xff
+<3>[01-01 00:00:01.610802] [92: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.610802] [92: khsclntd] 	key:143 keycode:255
+<6>[01-01 00:00:01.610802] [79: kworker/u:3]mmc0: new high speed MMC card at address 0001
+<4>[01-01 00:00:01.610802] [1: swapper]zte log address __log_buf: 0xc0c38c54
+<6>[01-01 00:00:01.620810] [79: kworker/u:3]mmcblk0: mmc0:0001 SEM04G 3.68 GiB 
+<7>[01-01 00:00:01.620810] [1: swapper]msmrtc_tod_proc_result: 10/24/2012 04:09:09 (02)
+<4>[10-24 04:09:09.500000] [1: swapper][alarm] time sync from modem,fix_sync_alarm
+<6>[10-24 04:09:09.500000] [1: swapper]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:09:09 UTC (1351051749)
+<3>[10-24 04:09:09.500000] [1: swapper]msm_pm_init: shuangdan_begin to create_proc_entry of zte_alarm
+<3>[10-24 04:09:09.500000] [1: swapper]msm_pm_init: shuangdan_end to create_proc_entry of zte_alarm
+<4>[10-24 04:09:09.500000] [1: swapper]Warning: unable to open an initial console.
+<4>[10-24 04:09:09.500000] [1: swapper]free_initmem:  0xc0008000 to  0xc003e000
+<6>[10-24 04:09:09.500000] [1: swapper]Freeing init memory: 216K
+<4>[10-24 04:09:09.500000] [1: swapper]start to release SPLASH mem
+<4>[10-24 04:09:09.500000] [1: swapper]finish releaseing SPLASH mem
+<6>[10-24 04:09:09.500000] [79: kworker/u:3] mmcblk0: p1 p2 p3 p4 < p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 >
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 496: invalid command '/system/bin/log'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 594: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 596: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 597: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 601: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 602: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.rc: 603: setprop requires 2 arguments
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 114: ignored duplicate definition of service 'rmt_storage'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 121: ignored duplicate definition of service 'hciattach'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 127: ignored duplicate definition of service 'port-bridge'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 129: ignored duplicate definition of service 'qmuxd'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 134: ignored duplicate definition of service 'netmgrd'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 146: ignored duplicate definition of service 'btwlancoex'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 162: ignored duplicate definition of service 'wiperiface'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 167: ignored duplicate definition of service 'gpsone_daemon'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 172: ignored duplicate definition of service 'fm_dl'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 186: ignored duplicate definition of service 'qcom-sh'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 190: ignored duplicate definition of service 'qcom-post-boot'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 197: ignored duplicate definition of service 'getlog'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 204: ignored duplicate definition of service 'bttestmode'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 229: ignored duplicate definition of service 'ckpd'
+<3>[10-24 04:09:09.520013] [1: init]init: /init.qcom.rc: 238: ignored duplicate definition of service 'hdmid'
+<3>[10-24 04:09:09.530015] [1: init]init: could not import file '/system/etc/init.local.rc' from '/init.rc'
+<4>[10-24 04:09:09.530015] [1: init]init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+<4>[10-24 04:09:09.650047] [79: kworker/u:3]mmc2: host does not support reading read-only switch. assuming write-enable.
+<6>[10-24 04:09:09.660050] [79: kworker/u:3]mmc2: new high speed SDHC card at address cf1b
+<6>[10-24 04:09:09.660050] [79: kworker/u:3]mmcblk1: mmc2:cf1b SU16G 14.8 GiB 
+<6>[10-24 04:09:09.660050] [79: kworker/u:3] mmcblk1: p1 p2 p3
+<3>[10-24 04:09:10.410504] [1: init]init: cannot open '/initlogo.rle'
+<6>[10-24 04:09:11.290889] [1: init]EXT4-fs (mmcblk0p15): recovery complete
+<6>[10-24 04:09:11.290889] [1: init]EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[10-24 04:09:11.340927] [1: init]init: exec: pid 98 exited with return code 127: Unknown error: 32512
+<3>[10-24 04:09:11.350934] [1: init]init: exec: pid 100 exited with return code 127: Unknown error: 32512
+<7>[10-24 04:09:11.761271] [1: init]EXT4-fs (mmcblk0p18): ext4_orphan_cleanup: deleting unreferenced inode 52
+<6>[10-24 04:09:11.771280] [1: init]EXT4-fs (mmcblk0p18): 1 orphan inode deleted
+<6>[10-24 04:09:11.771280] [1: init]EXT4-fs (mmcblk0p18): recovery complete
+<6>[10-24 04:09:11.781289] [1: init]EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: noauto_da_alloc
+<3>[10-24 04:09:11.781289] [1: init]init: exec: pid 103 exited with return code 127: Unknown error: 32512
+<4>[10-24 04:09:11.811315] [1: init]EXT4-fs (mmcblk0p7): warning: maximal mount count reached, running e2fsck is recommended
+<6>[10-24 04:09:11.811315] [1: init]EXT4-fs (mmcblk0p7): recovery complete
+<6>[10-24 04:09:11.811315] [1: init]EXT4-fs (mmcblk0p7): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[10-24 04:09:11.821324] [1: init]init: exec: pid 106 exited with return code 127: Unknown error: 32512
+<6>[10-24 04:09:11.841341] [1: init]EXT4-fs (mmcblk0p17): recovery complete
+<6>[10-24 04:09:11.841341] [1: init]EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[10-24 04:09:11.891385] [1: init]android_usb: already disabled
+<3>[10-24 04:09:11.891385] [1: init]usb:enable_store,enabled=1
+<3>[10-24 04:09:11.891385] [1: init]usb:enable_store idProduct=1038
+<6>[10-24 04:09:11.891385] [1: init]adb_bind_config
+<3>[10-24 04:09:11.891385] [1: init]usb android_bind_enabled_functions: adb success
+<6>[10-24 04:09:11.891385] [16: kworker/0:1]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x20
+<6>[10-24 04:09:11.911403] [111: adbd]adb_open
+<6>[10-24 04:09:12.131602] [16: kworker/0:1]android_work: sent uevent USB_STATE=CONNECTED
+<3>[10-24 04:09:12.221685] [1: init]init: service 'console' requires console
+<6>[10-24 04:09:12.261722] android_usb gadget: high speed config #1: android
+<6>[10-24 04:09:12.261722] [16: kworker/0:1]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x20
+<3>[10-24 04:09:12.281741] [1: init]init: cannot find '/system/bin/time_daemon', disabling 'time_daemon'
+<6>[10-24 04:09:12.321778] [16: kworker/0:1]android_work: sent uevent USB_STATE=CONFIGURED
+<6>[10-24 04:09:12.381834] [132: rild]warning: `rild' uses 32-bit capabilities (legacy support in use)
+<4>[10-24 04:09:12.842270] [156: rild]pm_monitor_open exit
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]rmt_storage_event_open_cb: open callback received
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]open partition /boot/modem_fs1 handle=1
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]rmt_storage_event_user_data_cb: send user data callback received
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]rmt_storage_event_open_cb: open callback received
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]open partition /boot/modem_fs2 handle=2
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]rmt_storage_event_user_data_cb: send user data callback received
+<6>[10-24 04:09:13.322732] [31: krmt_storagecln]rmt_storage_event_write_iovec_cb: write iovec callback received
+<4>[10-24 04:09:13.843237] [200: SurfaceFlinger]msm_fb_open yichangming  3
+<4>[10-24 04:09:13.843237] [200: SurfaceFlinger]spi_init
+<4>[10-24 04:09:13.843237] [200: SurfaceFlinger]![ZYF] lcdc_set_bl level=5, 1
+<4>[10-24 04:09:13.913305] [200: SurfaceFlinger][LY] send_bkl_address 
+<4>[10-24 04:09:13.913305] [200: SurfaceFlinger][LY] send_bkl_data 
+<6>[10-24 04:09:13.913305] [200: SurfaceFlinger]MDP: unknown ioctl (cmd=400c6da2) received!
+<6>[10-24 04:09:14.623997] [176: rmt_storage]rmt_storage_ioctl: send status ioctl
+<4>[10-24 04:09:14.704075] [200: SurfaceFlinger]msm_fb_open yichangming  3
+<4>[10-24 04:09:14.704075] [200: SurfaceFlinger]msm_fb_release yichangming  3
+<6>[10-24 04:09:23.172336] [356: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 2.
+<6>[10-24 04:09:23.172336] [356: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 0.
+<6>[10-24 04:09:23.172336] [356: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 60.
+<6>[10-24 04:09:23.182346] [356: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 0.
+<6>[10-24 04:09:23.182346] [356: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 2.
+<6>[10-24 04:09:23.182346] [356: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<4>[10-24 04:09:23.212375] [367: mScreenBrightne][ZYF] lcdc_set_bl level=13, 1
+<4>[10-24 04:09:23.212375] [367: mScreenBrightne][LY] send_bkl_address 
+<4>[10-24 04:09:23.212375] [367: mScreenBrightne][LY] send_bkl_data 
+<7>[10-24 04:09:23.742893] [387: BluetoothAdapte]bcm_power
+<6>[10-24 04:09:25.134250] [356: er.ServerThread]acc_open
+<6>[10-24 04:09:25.134250] [356: er.ServerThread]acc_release
+<6>[10-24 04:09:25.234348] [356: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<6>[10-24 04:09:25.244358] [356: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<6>[10-24 04:09:29.118137] [480: d.process.media]mtp_open
+<4>[10-24 04:09:29.308323] [523: ThrottleService]select 480 (d.process.media), adj 5, size 4943, to kill
+<4>[10-24 04:09:29.308323] [523: ThrottleService]send sigkill to 480 (d.process.media), adj 5, size 4943
+<4>[10-24 04:09:29.308323] [480: d.process.media]signo is 9
+<4>[10-24 04:09:29.308323] [481: GC]signo is 9
+<4>[10-24 04:09:29.308323] [485: Signal Catcher]signo is 9
+<4>[10-24 04:09:29.308323] [486: JDWP]signo is 9
+<4>[10-24 04:09:29.308323] [487: Compiler]signo is 9
+<4>[10-24 04:09:29.308323] [488: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:29.308323] [489: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:29.308323] [490: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:29.308323] [491: Binder_1]signo is 9
+<4>[10-24 04:09:29.308323] [492: Binder_2]signo is 9
+<4>[10-24 04:09:29.308323] [497: thumbs thread]signo is 9
+<4>[10-24 04:09:29.308323] [526: MtpServer]signo is 9
+<6>[10-24 04:09:29.528537] [526: MtpServer]mtp_release
+<4>[10-24 04:09:33.422336] [394: hci_qcomm_init]signo is 9
+<4>[10-24 04:09:33.422336] [395: hci_qcomm_init]signo is 9
+<4>[10-24 04:09:33.422336] [396: hci_qcomm_init]signo is 9
+<4>[10-24 04:09:33.422336] [397: hci_qcomm_init]signo is 9
+<4>[10-24 04:09:33.422336] [398: hci_qcomm_init]signo is 9
+<4>[10-24 04:09:41.540256] [34: kswapd0]select 505 (putmethod.latin), adj 0, size 3845, to kill
+<4>[10-24 04:09:41.540256] [34: kswapd0]select 560 (enmod.trebuchet), adj 0, size 4739, to kill
+<4>[10-24 04:09:41.540256] [34: kswapd0]send sigkill to 560 (enmod.trebuchet), adj 0, size 4739
+<4>[10-24 04:09:41.540256] [563: GC]signo is 9
+<4>[10-24 04:09:41.540256] [566: Signal Catcher]signo is 9
+<4>[10-24 04:09:41.540256] [567: JDWP]signo is 9
+<4>[10-24 04:09:41.540256] [568: Compiler]signo is 9
+<4>[10-24 04:09:41.540256] [569: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:41.540256] [570: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:41.540256] [571: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:41.540256] [572: Binder_1]signo is 9
+<4>[10-24 04:09:41.540256] [573: Binder_2]signo is 9
+<4>[10-24 04:09:41.540256] [616: AsyncTask #1]signo is 9
+<4>[10-24 04:09:41.600315] [560: enmod.trebuchet]signo is 9
+<4>[10-24 04:09:41.650364] [592: launcher-loader]signo is 9
+<4>[10-24 04:09:44.162815] [666: Thread-37]select 626 (android.smspush), adj 1, size 3818, to kill
+<4>[10-24 04:09:44.162815] [666: Thread-37]send sigkill to 626 (android.smspush), adj 1, size 3818
+<4>[10-24 04:09:44.162815] [629: GC]signo is 9
+<4>[10-24 04:09:44.162815] [631: Signal Catcher]signo is 9
+<4>[10-24 04:09:44.162815] [632: JDWP]signo is 9
+<4>[10-24 04:09:44.162815] [633: Compiler]signo is 9
+<4>[10-24 04:09:44.162815] [634: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:44.162815] [635: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:44.162815] [636: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:44.162815] [637: Binder_1]signo is 9
+<4>[10-24 04:09:44.162815] [638: Binder_2]signo is 9
+<4>[10-24 04:09:44.162815] [626: android.smspush]signo is 9
+<4>[10-24 04:09:45.764377] [34: kswapd0]select 505 (putmethod.latin), adj 0, size 4150, to kill
+<4>[10-24 04:09:45.764377] [34: kswapd0]select 578 (d.process.acore), adj 0, size 5001, to kill
+<4>[10-24 04:09:45.764377] [34: kswapd0]send sigkill to 578 (d.process.acore), adj 0, size 5001
+<4>[10-24 04:09:45.764377] [625: ContactsProvide]signo is 9
+<4>[10-24 04:09:45.764377] [578: d.process.acore]signo is 9
+<4>[10-24 04:09:45.764377] [584: JDWP]signo is 9
+<4>[10-24 04:09:45.764377] [585: Compiler]signo is 9
+<4>[10-24 04:09:45.764377] [586: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:45.764377] [587: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:45.764377] [588: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:45.764377] [590: Binder_2]signo is 9
+<4>[10-24 04:09:45.764377] [583: Signal Catcher]signo is 9
+<4>[10-24 04:09:45.764377] [579: GC]signo is 9
+<4>[10-24 04:09:45.764377] [623: PackageMonitor]signo is 9
+<4>[10-24 04:09:45.784397] [667: Binder_3]signo is 9
+<4>[10-24 04:09:45.784397] [668: Binder_4]signo is 9
+<4>[10-24 04:09:45.894504] [589: Binder_1]signo is 9
+<4>[10-24 04:09:45.894504] [622: ApplicationsPro]signo is 9
+<4>[10-24 04:09:47.906467] [34: kswapd0]select 505 (putmethod.latin), adj 2, size 4289, to kill
+<4>[10-24 04:09:47.906467] [34: kswapd0]send sigkill to 505 (putmethod.latin), adj 2, size 4289
+<4>[10-24 04:09:47.906467] [506: GC]signo is 9
+<4>[10-24 04:09:47.906467] [509: Signal Catcher]signo is 9
+<4>[10-24 04:09:47.906467] [512: JDWP]signo is 9
+<4>[10-24 04:09:47.906467] [513: Compiler]signo is 9
+<4>[10-24 04:09:47.906467] [514: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:47.906467] [515: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:47.906467] [516: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:47.906467] [517: Binder_1]signo is 9
+<4>[10-24 04:09:47.906467] [518: Binder_2]signo is 9
+<4>[10-24 04:09:47.906467] [576: Thread-26]signo is 9
+<4>[10-24 04:09:47.906467] [645: Thread-27]signo is 9
+<4>[10-24 04:09:48.036594] [505: putmethod.latin]signo is 9
+<4>[10-24 04:09:48.637180] [689: re-initialized>]select 689 (re-initialized>), adj 9, size 3545, to kill
+<4>[10-24 04:09:48.637180] [689: re-initialized>]send sigkill to 689 (re-initialized>), adj 9, size 3545
+<4>[10-24 04:09:48.637180] [690: GC]signo is 9
+<4>[10-24 04:09:48.637180] [691: Signal Catcher]signo is 9
+<4>[10-24 04:09:48.637180] [692: JDWP]signo is 9
+<4>[10-24 04:09:48.637180] [693: Compiler]signo is 9
+<4>[10-24 04:09:48.637180] [695: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:48.637180] [698: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:48.637180] [699: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:48.637180] [701: Binder_2]signo is 9
+<4>[10-24 04:09:48.637180] [700: Binder_1]signo is 9
+<4>[10-24 04:09:48.647190] [689: re-initialized>]signo is 9
+<6>[10-24 04:09:49.488010] [602: d.process.media]mtp_open
+<4>[10-24 04:09:49.798313] [34: kswapd0]select 602 (d.process.media), adj 0, size 3997, to kill
+<4>[10-24 04:09:49.798313] [34: kswapd0]select 649 (enmod.trebuchet), adj 0, size 4169, to kill
+<4>[10-24 04:09:49.798313] [34: kswapd0]select 674 (ndroid.settings), adj 0, size 4980, to kill
+<4>[10-24 04:09:49.798313] [34: kswapd0]send sigkill to 674 (ndroid.settings), adj 0, size 4980
+<4>[10-24 04:09:49.798313] [675: GC]signo is 9
+<4>[10-24 04:09:49.798313] [676: Signal Catcher]signo is 9
+<4>[10-24 04:09:49.798313] [677: JDWP]signo is 9
+<4>[10-24 04:09:49.798313] [678: Compiler]signo is 9
+<4>[10-24 04:09:49.798313] [680: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:49.798313] [682: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:49.798313] [684: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:49.798313] [685: Binder_1]signo is 9
+<4>[10-24 04:09:49.798313] [687: Binder_2]signo is 9
+<4>[10-24 04:09:49.798313] [674: ndroid.settings]signo is 9
+<4>[10-24 04:09:50.939426] [705: d.process.acore]select 602 (d.process.media), adj 5, size 4076, to kill
+<4>[10-24 04:09:50.939426] [705: d.process.acore]send sigkill to 602 (d.process.media), adj 5, size 4076
+<4>[10-24 04:09:50.939426] [602: d.process.media]signo is 9
+<4>[10-24 04:09:50.939426] [606: GC]signo is 9
+<4>[10-24 04:09:50.939426] [607: Signal Catcher]signo is 9
+<4>[10-24 04:09:50.939426] [608: JDWP]signo is 9
+<4>[10-24 04:09:50.939426] [609: Compiler]signo is 9
+<4>[10-24 04:09:50.939426] [610: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:50.939426] [611: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:50.939426] [612: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:50.939426] [617: Binder_1]signo is 9
+<4>[10-24 04:09:50.939426] [618: Binder_2]signo is 9
+<4>[10-24 04:09:50.939426] [644: thumbs thread]signo is 9
+<4>[10-24 04:09:50.939426] [721: MtpServer]signo is 9
+<6>[10-24 04:09:51.039524] [721: MtpServer]mtp_release
+<4>[10-24 04:09:52.871311] [370: WindowManager]select 731 (android.smspush), adj 1, size 4035, to kill
+<4>[10-24 04:09:52.871311] [370: WindowManager]send sigkill to 731 (android.smspush), adj 1, size 4035
+<4>[10-24 04:09:52.871311] [731: android.smspush]signo is 9
+<4>[10-24 04:09:52.871311] [733: GC]signo is 9
+<4>[10-24 04:09:52.871311] [737: Signal Catcher]signo is 9
+<4>[10-24 04:09:52.871311] [738: JDWP]signo is 9
+<4>[10-24 04:09:52.871311] [739: Compiler]signo is 9
+<4>[10-24 04:09:52.871311] [740: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:52.871311] [741: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:52.871311] [742: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:52.871311] [743: Binder_1]signo is 9
+<4>[10-24 04:09:52.871311] [744: Binder_2]signo is 9
+<4>[10-24 04:09:54.943332] [649: enmod.trebuchet]select 758 (android.smspush), adj 1, size 4055, to kill
+<4>[10-24 04:09:54.943332] [649: enmod.trebuchet]send sigkill to 758 (android.smspush), adj 1, size 4055
+<4>[10-24 04:09:54.943332] [758: android.smspush]signo is 9
+<4>[10-24 04:09:54.943332] [759: GC]signo is 9
+<4>[10-24 04:09:54.943332] [760: Signal Catcher]signo is 9
+<4>[10-24 04:09:54.943332] [761: JDWP]signo is 9
+<4>[10-24 04:09:54.943332] [762: Compiler]signo is 9
+<4>[10-24 04:09:54.943332] [764: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:54.943332] [767: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:54.943332] [768: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:54.943332] [770: Binder_1]signo is 9
+<4>[10-24 04:09:54.943332] [771: Binder_2]signo is 9
+<4>[10-24 04:09:55.664035] [134: zygote]select 649 (enmod.trebuchet), adj 0, size 5106, to kill
+<4>[10-24 04:09:55.664035] [134: zygote]send sigkill to 649 (enmod.trebuchet), adj 0, size 5106
+<4>[10-24 04:09:55.664035] [649: enmod.trebuchet]signo is 9
+<4>[10-24 04:09:55.664035] [650: GC]signo is 9
+<4>[10-24 04:09:55.664035] [651: Signal Catcher]signo is 9
+<4>[10-24 04:09:55.664035] [652: JDWP]signo is 9
+<4>[10-24 04:09:55.664035] [653: Compiler]signo is 9
+<4>[10-24 04:09:55.664035] [656: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:55.664035] [659: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:55.664035] [660: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:55.664035] [662: Binder_1]signo is 9
+<4>[10-24 04:09:55.664035] [663: Binder_2]signo is 9
+<4>[10-24 04:09:55.664035] [719: launcher-loader]signo is 9
+<4>[10-24 04:09:55.664035] [729: AsyncTask #1]signo is 9
+<4>[10-24 04:09:56.634983] [34: kswapd0]select 705 (d.process.acore), adj 0, size 5130, to kill
+<4>[10-24 04:09:56.634983] [34: kswapd0]send sigkill to 705 (d.process.acore), adj 0, size 5130
+<4>[10-24 04:09:56.634983] [706: GC]signo is 9
+<4>[10-24 04:09:56.634983] [710: Signal Catcher]signo is 9
+<4>[10-24 04:09:56.634983] [711: JDWP]signo is 9
+<4>[10-24 04:09:56.634983] [713: Compiler]signo is 9
+<4>[10-24 04:09:56.634983] [714: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:56.634983] [715: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:56.634983] [716: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:56.634983] [718: Binder_2]signo is 9
+<4>[10-24 04:09:56.634983] [772: Binder_3]signo is 9
+<4>[10-24 04:09:56.634983] [773: Binder_4]signo is 9
+<4>[10-24 04:09:56.634983] [705: d.process.acore]signo is 9
+<4>[10-24 04:09:56.634983] [717: Binder_1]signo is 9
+<4>[10-24 04:09:56.634983] [749: PackageMonitor]signo is 9
+<4>[10-24 04:09:56.634983] [751: ContactsProvide]signo is 9
+<4>[10-24 04:09:56.634983] [747: ApplicationsPro]signo is 9
+<3>[10-24 04:09:56.935276] [1: init]init: sys_prop: permission denied uid:1003  name:service.bootanim.exit
+<4>[10-24 04:09:57.135471] [339: BootAnimation]select 776 (android.smspush), adj 1, size 3988, to kill
+<4>[10-24 04:09:57.135471] [339: BootAnimation]send sigkill to 776 (android.smspush), adj 1, size 3988
+<4>[10-24 04:09:57.135471] [776: android.smspush]signo is 9
+<4>[10-24 04:09:57.135471] [778: GC]signo is 9
+<4>[10-24 04:09:57.135471] [781: Signal Catcher]signo is 9
+<4>[10-24 04:09:57.135471] [782: JDWP]signo is 9
+<4>[10-24 04:09:57.135471] [783: Compiler]signo is 9
+<4>[10-24 04:09:57.135471] [784: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:57.135471] [785: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:57.145481] [786: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:57.145481] [787: Binder_1]signo is 9
+<4>[10-24 04:09:57.145481] [788: Binder_2]signo is 9
+<4>[10-24 04:09:58.877170] [34: kswapd0]select 789 (ndroid.settings), adj 0, size 5512, to kill
+<4>[10-24 04:09:58.877170] [34: kswapd0]send sigkill to 789 (ndroid.settings), adj 0, size 5512
+<4>[10-24 04:09:58.877170] [790: GC]signo is 9
+<4>[10-24 04:09:58.877170] [794: Signal Catcher]signo is 9
+<4>[10-24 04:09:58.877170] [795: JDWP]signo is 9
+<4>[10-24 04:09:58.877170] [796: Compiler]signo is 9
+<4>[10-24 04:09:58.877170] [797: ReferenceQueueD]signo is 9
+<4>[10-24 04:09:58.877170] [798: FinalizerDaemon]signo is 9
+<4>[10-24 04:09:58.877170] [799: FinalizerWatchd]signo is 9
+<4>[10-24 04:09:58.877170] [800: Binder_1]signo is 9
+<4>[10-24 04:09:58.877170] [801: Binder_2]signo is 9
+<4>[10-24 04:09:58.947239] [789: ndroid.settings]signo is 9
+<4>[10-24 04:10:01.239475] [34: kswapd0]select 802 (enmod.trebuchet), adj 0, size 4202, to kill
+<4>[10-24 04:10:01.239475] [34: kswapd0]send sigkill to 802 (enmod.trebuchet), adj 0, size 4202
+<4>[10-24 04:10:01.239475] [804: GC]signo is 9
+<4>[10-24 04:10:01.239475] [807: Signal Catcher]signo is 9
+<4>[10-24 04:10:01.239475] [808: JDWP]signo is 9
+<4>[10-24 04:10:01.239475] [809: Compiler]signo is 9
+<4>[10-24 04:10:01.239475] [810: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:01.239475] [811: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:01.239475] [812: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:01.239475] [813: Binder_1]signo is 9
+<4>[10-24 04:10:01.239475] [814: Binder_2]signo is 9
+<4>[10-24 04:10:01.329563] [802: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:01.579807] [34: kswapd0]select 828 (d.process.acore), adj 0, size 3832, to kill
+<4>[10-24 04:10:01.579807] [34: kswapd0]send sigkill to 828 (d.process.acore), adj 0, size 3832
+<4>[10-24 04:10:01.579807] [830: GC]signo is 9
+<4>[10-24 04:10:01.579807] [832: Signal Catcher]signo is 9
+<4>[10-24 04:10:01.579807] [833: JDWP]signo is 9
+<4>[10-24 04:10:01.579807] [834: Compiler]signo is 9
+<4>[10-24 04:10:01.579807] [835: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:01.579807] [836: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:01.579807] [840: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:01.579807] [841: Binder_1]signo is 9
+<4>[10-24 04:10:01.579807] [842: Binder_2]signo is 9
+<4>[10-24 04:10:01.639865] [828: d.process.acore]signo is 9
+<4>[10-24 04:10:01.729953] [34: kswapd0]select 845 (android.smspush), adj 0, size 3784, to kill
+<4>[10-24 04:10:01.729953] [34: kswapd0]send sigkill to 845 (android.smspush), adj 0, size 3784
+<4>[10-24 04:10:01.729953] [846: GC]signo is 9
+<4>[10-24 04:10:01.729953] [847: Signal Catcher]signo is 9
+<4>[10-24 04:10:01.729953] [848: JDWP]signo is 9
+<4>[10-24 04:10:01.729953] [849: Compiler]signo is 9
+<4>[10-24 04:10:01.729953] [851: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:01.729953] [854: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:01.729953] [855: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:01.729953] [858: Binder_1]signo is 9
+<4>[10-24 04:10:01.729953] [859: Binder_2]signo is 9
+<4>[10-24 04:10:01.729953] [845: android.smspush]signo is 9
+<4>[10-24 04:10:06.164280] [34: kswapd0]select 884 (ndroid.contacts), adj 0, size 3833, to kill
+<4>[10-24 04:10:06.164280] [34: kswapd0]send sigkill to 884 (ndroid.contacts), adj 0, size 3833
+<4>[10-24 04:10:06.164280] [885: GC]signo is 9
+<4>[10-24 04:10:06.164280] [886: Signal Catcher]signo is 9
+<4>[10-24 04:10:06.164280] [887: JDWP]signo is 9
+<4>[10-24 04:10:06.164280] [888: Compiler]signo is 9
+<4>[10-24 04:10:06.164280] [890: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:06.164280] [893: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:06.164280] [894: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:06.164280] [910: Binder_1]signo is 9
+<4>[10-24 04:10:06.164280] [913: Binder_2]signo is 9
+<4>[10-24 04:10:06.174289] [884: ndroid.contacts]signo is 9
+<4>[10-24 04:10:09.377414] [34: kswapd0]select 898 (d.process.acore), adj 0, size 3615, to kill
+<4>[10-24 04:10:09.377414] [34: kswapd0]select 914 (enmod.trebuchet), adj 0, size 3637, to kill
+<4>[10-24 04:10:09.377414] [34: kswapd0]select 935 (putmethod.latin), adj 0, size 3670, to kill
+<4>[10-24 04:10:09.377414] [34: kswapd0]send sigkill to 935 (putmethod.latin), adj 0, size 3670
+<4>[10-24 04:10:09.377414] [940: GC]signo is 9
+<4>[10-24 04:10:09.377414] [941: Signal Catcher]signo is 9
+<4>[10-24 04:10:09.377414] [943: JDWP]signo is 9
+<4>[10-24 04:10:09.377414] [944: Compiler]signo is 9
+<4>[10-24 04:10:09.377414] [948: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:09.377414] [949: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:09.377414] [950: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:09.377414] [953: Binder_1]signo is 9
+<4>[10-24 04:10:09.377414] [954: Binder_2]signo is 9
+<4>[10-24 04:10:09.377414] [935: putmethod.latin]signo is 9
+<4>[10-24 04:10:10.598606] [34: kswapd0]select 924 (android.smspush), adj 1, size 3734, to kill
+<4>[10-24 04:10:10.598606] [34: kswapd0]send sigkill to 924 (android.smspush), adj 1, size 3734
+<4>[10-24 04:10:10.598606] [929: GC]signo is 9
+<4>[10-24 04:10:10.598606] [930: Signal Catcher]signo is 9
+<4>[10-24 04:10:10.598606] [931: JDWP]signo is 9
+<4>[10-24 04:10:10.598606] [932: Compiler]signo is 9
+<4>[10-24 04:10:10.598606] [942: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:10.598606] [945: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:10.598606] [946: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:10.598606] [951: Binder_1]signo is 9
+<4>[10-24 04:10:10.598606] [952: Binder_2]signo is 9
+<4>[10-24 04:10:10.598606] [924: android.smspush]signo is 9
+<4>[10-24 04:10:11.569553] [34: kswapd0]select 898 (d.process.acore), adj 0, size 3990, to kill
+<4>[10-24 04:10:11.569553] [34: kswapd0]select 914 (enmod.trebuchet), adj 0, size 4085, to kill
+<4>[10-24 04:10:11.569553] [34: kswapd0]send sigkill to 914 (enmod.trebuchet), adj 0, size 4085
+<4>[10-24 04:10:11.569553] [915: GC]signo is 9
+<4>[10-24 04:10:11.569553] [919: Signal Catcher]signo is 9
+<4>[10-24 04:10:11.569553] [920: JDWP]signo is 9
+<4>[10-24 04:10:11.569553] [922: Compiler]signo is 9
+<4>[10-24 04:10:11.569553] [923: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:11.569553] [933: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:11.569553] [934: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:11.569553] [937: Binder_1]signo is 9
+<4>[10-24 04:10:11.569553] [947: Binder_2]signo is 9
+<4>[10-24 04:10:11.579563] [914: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:11.849826] [34: kswapd0]select 898 (d.process.acore), adj 0, size 4059, to kill
+<4>[10-24 04:10:11.849826] [34: kswapd0]send sigkill to 898 (d.process.acore), adj 0, size 4059
+<4>[10-24 04:10:11.849826] [899: GC]signo is 9
+<4>[10-24 04:10:11.849826] [900: Signal Catcher]signo is 9
+<4>[10-24 04:10:11.849826] [901: JDWP]signo is 9
+<4>[10-24 04:10:11.849826] [902: Compiler]signo is 9
+<4>[10-24 04:10:11.849826] [904: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:11.849826] [905: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:11.849826] [907: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:11.849826] [911: Binder_1]signo is 9
+<4>[10-24 04:10:11.849826] [912: Binder_2]signo is 9
+<4>[10-24 04:10:11.889865] [898: d.process.acore]signo is 9
+<4>[10-24 04:10:12.190158] [34: kswapd0]select 959 (roid.dspmanager), adj 0, size 3981, to kill
+<4>[10-24 04:10:12.190158] [34: kswapd0]send sigkill to 959 (roid.dspmanager), adj 0, size 3981
+<4>[10-24 04:10:12.190158] [960: GC]signo is 9
+<4>[10-24 04:10:12.190158] [961: Signal Catcher]signo is 9
+<4>[10-24 04:10:12.190158] [965: JDWP]signo is 9
+<4>[10-24 04:10:12.190158] [966: Compiler]signo is 9
+<4>[10-24 04:10:12.190158] [967: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:12.190158] [968: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:12.190158] [969: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:12.190158] [970: Binder_1]signo is 9
+<4>[10-24 04:10:12.190158] [971: Binder_2]signo is 9
+<4>[10-24 04:10:12.260227] [959: roid.dspmanager]signo is 9
+<4>[10-24 04:10:12.440403] [34: kswapd0]select 973 (android.smspush), adj 0, size 3823, to kill
+<4>[10-24 04:10:12.440403] [34: kswapd0]select 1002 (enmod.trebuchet), adj 0, size 4002, to kill
+<4>[10-24 04:10:12.440403] [34: kswapd0]send sigkill to 1002 (enmod.trebuchet), adj 0, size 4002
+<4>[10-24 04:10:12.440403] [1004: GC]signo is 9
+<4>[10-24 04:10:12.440403] [1005: Signal Catcher]signo is 9
+<4>[10-24 04:10:12.440403] [1007: JDWP]signo is 9
+<4>[10-24 04:10:12.440403] [1009: Compiler]signo is 9
+<4>[10-24 04:10:12.440403] [1010: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:12.440403] [1011: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:12.440403] [1012: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:12.440403] [1013: Binder_1]signo is 9
+<4>[10-24 04:10:12.440403] [1014: Binder_2]signo is 9
+<4>[10-24 04:10:12.470432] [1002: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:12.790744] [1015: d.process.acore]select 973 (android.smspush), adj 0, size 4002, to kill
+<4>[10-24 04:10:12.790744] [1015: d.process.acore]select 1015 (d.process.acore), adj 0, size 4016, to kill
+<4>[10-24 04:10:12.790744] [1015: d.process.acore]send sigkill to 1015 (d.process.acore), adj 0, size 4016
+<4>[10-24 04:10:12.790744] [1016: GC]signo is 9
+<4>[10-24 04:10:12.790744] [1020: Signal Catcher]signo is 9
+<4>[10-24 04:10:12.790744] [1021: JDWP]signo is 9
+<4>[10-24 04:10:12.790744] [1022: Compiler]signo is 9
+<4>[10-24 04:10:12.790744] [1023: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:12.790744] [1024: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:12.790744] [1025: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:12.790744] [1026: Binder_1]signo is 9
+<4>[10-24 04:10:12.790744] [1027: Binder_2]signo is 9
+<4>[10-24 04:10:12.860813] [1015: d.process.acore]signo is 9
+<4>[10-24 04:10:13.231174] [34: kswapd0]select 973 (android.smspush), adj 0, size 4015, to kill
+<4>[10-24 04:10:13.231174] [34: kswapd0]send sigkill to 973 (android.smspush), adj 0, size 4015
+<4>[10-24 04:10:13.231174] [973: android.smspush]signo is 9
+<4>[10-24 04:10:13.231174] [974: GC]signo is 9
+<4>[10-24 04:10:13.231174] [975: Signal Catcher]signo is 9
+<4>[10-24 04:10:13.231174] [979: JDWP]signo is 9
+<4>[10-24 04:10:13.231174] [980: Compiler]signo is 9
+<4>[10-24 04:10:13.231174] [981: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:13.231174] [982: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:13.231174] [983: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:13.231174] [984: Binder_1]signo is 9
+<4>[10-24 04:10:13.231174] [985: Binder_2]signo is 9
+<4>[10-24 04:10:13.821750] [989: d.process.media]select 989 (d.process.media), adj 0, size 4059, to kill
+<4>[10-24 04:10:13.821750] [989: d.process.media]select 1031 (ogenmod.updater), adj 0, size 4161, to kill
+<4>[10-24 04:10:13.821750] [989: d.process.media]send sigkill to 1031 (ogenmod.updater), adj 0, size 4161
+<4>[10-24 04:10:13.821750] [1031: ogenmod.updater]signo is 9
+<4>[10-24 04:10:13.821750] [1034: GC]signo is 9
+<4>[10-24 04:10:13.821750] [1036: Signal Catcher]signo is 9
+<4>[10-24 04:10:13.821750] [1037: JDWP]signo is 9
+<4>[10-24 04:10:13.821750] [1038: Compiler]signo is 9
+<4>[10-24 04:10:13.821750] [1039: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:13.821750] [1040: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:13.821750] [1041: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:13.821750] [1042: Binder_1]signo is 9
+<4>[10-24 04:10:13.821750] [1043: Binder_2]signo is 9
+<4>[10-24 04:10:13.821750] [1076: pool-1-thread-1]signo is 9
+<4>[10-24 04:10:14.262180] [34: kswapd0]select 989 (d.process.media), adj 0, size 4078, to kill
+<4>[10-24 04:10:14.262180] [34: kswapd0]select 1046 (enmod.trebuchet), adj 0, size 4272, to kill
+<4>[10-24 04:10:14.262180] [34: kswapd0]send sigkill to 1046 (enmod.trebuchet), adj 0, size 4272
+<4>[10-24 04:10:14.262180] [1047: GC]signo is 9
+<4>[10-24 04:10:14.262180] [1049: Signal Catcher]signo is 9
+<4>[10-24 04:10:14.262180] [1051: JDWP]signo is 9
+<4>[10-24 04:10:14.262180] [1053: Compiler]signo is 9
+<4>[10-24 04:10:14.262180] [1054: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:14.262180] [1055: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:14.262180] [1056: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:14.262180] [1057: Binder_1]signo is 9
+<4>[10-24 04:10:14.262180] [1058: Binder_2]signo is 9
+<4>[10-24 04:10:14.262180] [1046: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:14.692600] [34: kswapd0]select 1077 (android.smspush), adj 1, size 4019, to kill
+<4>[10-24 04:10:14.692600] [34: kswapd0]send sigkill to 1077 (android.smspush), adj 1, size 4019
+<4>[10-24 04:10:14.692600] [1077: android.smspush]signo is 9
+<4>[10-24 04:10:14.692600] [1079: GC]signo is 9
+<4>[10-24 04:10:14.692600] [1082: Signal Catcher]signo is 9
+<4>[10-24 04:10:14.692600] [1083: JDWP]signo is 9
+<4>[10-24 04:10:14.692600] [1084: Compiler]signo is 9
+<4>[10-24 04:10:14.692600] [1085: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:14.692600] [1086: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:14.692600] [1087: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:14.692600] [1088: Binder_1]signo is 9
+<4>[10-24 04:10:14.692600] [1089: Binder_2]signo is 9
+<4>[10-24 04:10:15.473362] [34: kswapd0]select 1104 (android.smspush), adj 1, size 4035, to kill
+<4>[10-24 04:10:15.473362] [34: kswapd0]send sigkill to 1104 (android.smspush), adj 1, size 4035
+<4>[10-24 04:10:15.473362] [1104: android.smspush]signo is 9
+<4>[10-24 04:10:15.473362] [1105: GC]signo is 9
+<4>[10-24 04:10:15.473362] [1107: Signal Catcher]signo is 9
+<4>[10-24 04:10:15.473362] [1110: JDWP]signo is 9
+<4>[10-24 04:10:15.473362] [1111: Compiler]signo is 9
+<4>[10-24 04:10:15.473362] [1112: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:15.473362] [1113: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:15.473362] [1114: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:15.473362] [1115: Binder_1]signo is 9
+<4>[10-24 04:10:15.473362] [1116: Binder_2]signo is 9
+<4>[10-24 04:10:16.134006] [34: kswapd0]select 989 (d.process.media), adj 0, size 4330, to kill
+<4>[10-24 04:10:16.134006] [34: kswapd0]select 1061 (d.process.acore), adj 0, size 4577, to kill
+<4>[10-24 04:10:16.134006] [34: kswapd0]select 1090 (enmod.trebuchet), adj 0, size 4735, to kill
+<4>[10-24 04:10:16.134006] [34: kswapd0]send sigkill to 1090 (enmod.trebuchet), adj 0, size 4735
+<4>[10-24 04:10:16.134006] [1092: GC]signo is 9
+<4>[10-24 04:10:16.134006] [1095: Signal Catcher]signo is 9
+<4>[10-24 04:10:16.134006] [1096: JDWP]signo is 9
+<4>[10-24 04:10:16.134006] [1097: Compiler]signo is 9
+<4>[10-24 04:10:16.134006] [1098: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:16.134006] [1099: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:16.134006] [1100: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:16.134006] [1101: Binder_1]signo is 9
+<4>[10-24 04:10:16.134006] [1102: Binder_2]signo is 9
+<4>[10-24 04:10:16.134006] [1135: launcher-loader]signo is 9
+<4>[10-24 04:10:16.144016] [1090: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:16.434299] [34: kswapd0]select 1120 (android.smspush), adj 1, size 4040, to kill
+<4>[10-24 04:10:16.434299] [34: kswapd0]send sigkill to 1120 (android.smspush), adj 1, size 4040
+<4>[10-24 04:10:16.434299] [1123: GC]signo is 9
+<4>[10-24 04:10:16.434299] [1126: Signal Catcher]signo is 9
+<4>[10-24 04:10:16.434299] [1127: JDWP]signo is 9
+<4>[10-24 04:10:16.434299] [1130: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:16.434299] [1131: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:16.434299] [1132: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:16.434299] [1133: Binder_1]signo is 9
+<4>[10-24 04:10:16.434299] [1134: Binder_2]signo is 9
+<4>[10-24 04:10:16.434299] [1136: Binder_3]signo is 9
+<4>[10-24 04:10:16.434299] [1120: android.smspush]signo is 9
+<4>[10-24 04:10:16.434299] [1128: Compiler]signo is 9
+<4>[10-24 04:10:16.814670] [34: kswapd0]select 989 (d.process.media), adj 0, size 4378, to kill
+<4>[10-24 04:10:16.814670] [34: kswapd0]select 1061 (d.process.acore), adj 0, size 4589, to kill
+<4>[10-24 04:10:16.814670] [34: kswapd0]send sigkill to 1061 (d.process.acore), adj 0, size 4589
+<4>[10-24 04:10:16.814670] [1061: d.process.acore]signo is 9
+<4>[10-24 04:10:16.814670] [1065: GC]signo is 9
+<4>[10-24 04:10:16.814670] [1066: Signal Catcher]signo is 9
+<4>[10-24 04:10:16.814670] [1067: JDWP]signo is 9
+<4>[10-24 04:10:16.814670] [1069: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:16.814670] [1070: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:16.814670] [1071: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:16.814670] [1068: Compiler]signo is 9
+<4>[10-24 04:10:16.814670] [1118: PackageMonitor]signo is 9
+<4>[10-24 04:10:16.814670] [1129: ContactsProvide]signo is 9
+<4>[10-24 04:10:16.814670] [1117: ApplicationsPro]signo is 9
+<4>[10-24 04:10:16.834690] [1072: Binder_1]signo is 9
+<4>[10-24 04:10:16.834690] [1073: Binder_2]signo is 9
+<4>[10-24 04:10:17.245090] [989: d.process.media]select 1152 (android.smspush), adj 1, size 4038, to kill
+<4>[10-24 04:10:17.245090] [989: d.process.media]send sigkill to 1152 (android.smspush), adj 1, size 4038
+<4>[10-24 04:10:17.245090] [1152: android.smspush]signo is 9
+<4>[10-24 04:10:17.245090] [1153: GC]signo is 9
+<4>[10-24 04:10:17.245090] [1157: Signal Catcher]signo is 9
+<4>[10-24 04:10:17.245090] [1158: JDWP]signo is 9
+<4>[10-24 04:10:17.245090] [1159: Compiler]signo is 9
+<4>[10-24 04:10:17.245090] [1160: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:17.245090] [1161: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:17.245090] [1162: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:17.245090] [1163: Binder_1]signo is 9
+<4>[10-24 04:10:17.245090] [1164: Binder_2]signo is 9
+<4>[10-24 04:10:17.715549] [34: kswapd0]select 989 (d.process.media), adj 0, size 4599, to kill
+<4>[10-24 04:10:17.715549] [34: kswapd0]select 1138 (enmod.trebuchet), adj 0, size 4877, to kill
+<4>[10-24 04:10:17.715549] [34: kswapd0]send sigkill to 1138 (enmod.trebuchet), adj 0, size 4877
+<4>[10-24 04:10:17.715549] [1140: GC]signo is 9
+<4>[10-24 04:10:17.715549] [1143: Signal Catcher]signo is 9
+<4>[10-24 04:10:17.715549] [1144: JDWP]signo is 9
+<4>[10-24 04:10:17.715549] [1145: Compiler]signo is 9
+<4>[10-24 04:10:17.715549] [1146: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:17.715549] [1147: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:17.715549] [1148: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:17.715549] [1149: Binder_1]signo is 9
+<4>[10-24 04:10:17.715549] [1150: Binder_2]signo is 9
+<4>[10-24 04:10:17.715549] [1166: launcher-loader]signo is 9
+<4>[10-24 04:10:17.805637] [1138: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:18.155979] [1200: re-initialized>]select 1168 (android.smspush), adj 1, size 4041, to kill
+<4>[10-24 04:10:18.155979] [1200: re-initialized>]select 1179 (roid.dspmanager), adj 5, size 4154, to kill
+<4>[10-24 04:10:18.155979] [1200: re-initialized>]send sigkill to 1179 (roid.dspmanager), adj 5, size 4154
+<4>[10-24 04:10:18.165989] [1181: GC]signo is 9
+<4>[10-24 04:10:18.165989] [1184: Signal Catcher]signo is 9
+<4>[10-24 04:10:18.165989] [1185: JDWP]signo is 9
+<4>[10-24 04:10:18.175998] [1188: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:18.175998] [1190: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:18.175998] [1191: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:18.175998] [1194: Binder_1]signo is 9
+<4>[10-24 04:10:18.175998] [1196: Binder_2]signo is 9
+<4>[10-24 04:10:18.175998] [1197: Binder_3]signo is 9
+<4>[10-24 04:10:18.175998] [1179: roid.dspmanager]signo is 9
+<4>[10-24 04:10:18.175998] [1186: Compiler]signo is 9
+<4>[10-24 04:10:18.536350] [989: d.process.media]select 1168 (android.smspush), adj 1, size 4041, to kill
+<4>[10-24 04:10:18.536350] [989: d.process.media]send sigkill to 1168 (android.smspush), adj 1, size 4041
+<4>[10-24 04:10:18.536350] [1168: android.smspush]signo is 9
+<4>[10-24 04:10:18.536350] [1169: GC]signo is 9
+<4>[10-24 04:10:18.536350] [1171: Signal Catcher]signo is 9
+<4>[10-24 04:10:18.536350] [1172: JDWP]signo is 9
+<4>[10-24 04:10:18.536350] [1175: Compiler]signo is 9
+<4>[10-24 04:10:18.536350] [1176: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:18.536350] [1177: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:18.536350] [1178: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:18.536350] [1187: Binder_1]signo is 9
+<4>[10-24 04:10:18.536350] [1189: Binder_2]signo is 9
+<4>[10-24 04:10:18.536350] [1192: Binder_3]signo is 9
+<4>[10-24 04:10:18.996799] [989: d.process.media]select 1216 (android.smspush), adj 1, size 4043, to kill
+<4>[10-24 04:10:18.996799] [989: d.process.media]send sigkill to 1216 (android.smspush), adj 1, size 4043
+<4>[10-24 04:10:18.996799] [1216: android.smspush]signo is 9
+<4>[10-24 04:10:18.996799] [1218: GC]signo is 9
+<4>[10-24 04:10:18.996799] [1220: Signal Catcher]signo is 9
+<4>[10-24 04:10:18.996799] [1222: JDWP]signo is 9
+<4>[10-24 04:10:18.996799] [1223: Compiler]signo is 9
+<4>[10-24 04:10:18.996799] [1224: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:18.996799] [1225: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:18.996799] [1226: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:18.996799] [1227: Binder_1]signo is 9
+<4>[10-24 04:10:18.996799] [1228: Binder_2]signo is 9
+<4>[10-24 04:10:18.996799] [1229: Binder_3]signo is 9
+<6>[10-24 04:10:19.116916] [989: d.process.media]mtp_open
+<4>[10-24 04:10:19.196994] [1231: android.smspush]select 989 (d.process.media), adj 5, size 4895, to kill
+<4>[10-24 04:10:19.196994] [1231: android.smspush]send sigkill to 989 (d.process.media), adj 5, size 4895
+<4>[10-24 04:10:19.217014] [989: d.process.media]signo is 9
+<4>[10-24 04:10:19.217014] [993: GC]signo is 9
+<4>[10-24 04:10:19.217014] [994: Signal Catcher]signo is 9
+<4>[10-24 04:10:19.217014] [995: JDWP]signo is 9
+<4>[10-24 04:10:19.217014] [996: Compiler]signo is 9
+<4>[10-24 04:10:19.217014] [997: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:19.217014] [998: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:19.217014] [999: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:19.217014] [1000: Binder_1]signo is 9
+<4>[10-24 04:10:19.217014] [1001: Binder_2]signo is 9
+<4>[10-24 04:10:19.227024] [1193: thumbs thread]signo is 9
+<4>[10-24 04:10:19.227024] [1245: MtpServer]signo is 9
+<4>[10-24 04:10:19.227024] [1247: Download Servic]signo is 9
+<6>[10-24 04:10:19.297092] [1247: Download Servic]mtp_release
+<4>[10-24 04:10:20.388156] [1200: enmod.trebuchet]select 1231 (android.smspush), adj 1, size 4035, to kill
+<4>[10-24 04:10:20.388156] [1200: enmod.trebuchet]send sigkill to 1231 (android.smspush), adj 1, size 4035
+<4>[10-24 04:10:20.388156] [1231: android.smspush]signo is 9
+<4>[10-24 04:10:20.388156] [1232: GC]signo is 9
+<4>[10-24 04:10:20.388156] [1233: Signal Catcher]signo is 9
+<4>[10-24 04:10:20.388156] [1235: JDWP]signo is 9
+<4>[10-24 04:10:20.388156] [1239: Compiler]signo is 9
+<4>[10-24 04:10:20.388156] [1240: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:20.388156] [1241: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:20.388156] [1242: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:20.388156] [1243: Binder_1]signo is 9
+<4>[10-24 04:10:20.388156] [1246: Binder_2]signo is 9
+<4>[10-24 04:10:20.918674] [615: RILReceiver]select 1253 (android.smspush), adj 1, size 4036, to kill
+<4>[10-24 04:10:20.918674] [615: RILReceiver]send sigkill to 1253 (android.smspush), adj 1, size 4036
+<4>[10-24 04:10:20.918674] [1253: android.smspush]signo is 9
+<4>[10-24 04:10:20.918674] [1254: GC]signo is 9
+<4>[10-24 04:10:20.918674] [1255: Signal Catcher]signo is 9
+<4>[10-24 04:10:20.918674] [1256: JDWP]signo is 9
+<4>[10-24 04:10:20.918674] [1258: Compiler]signo is 9
+<4>[10-24 04:10:20.918674] [1261: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:20.918674] [1262: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:20.918674] [1263: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:20.918674] [1264: Binder_1]signo is 9
+<4>[10-24 04:10:20.918674] [1265: Binder_2]signo is 9
+<4>[10-24 04:10:21.839572] [34: kswapd0]select 1267 (android.smspush), adj 1, size 4039, to kill
+<4>[10-24 04:10:21.839572] [34: kswapd0]send sigkill to 1267 (android.smspush), adj 1, size 4039
+<4>[10-24 04:10:21.839572] [1267: android.smspush]signo is 9
+<4>[10-24 04:10:21.839572] [1268: GC]signo is 9
+<4>[10-24 04:10:21.839572] [1269: Signal Catcher]signo is 9
+<4>[10-24 04:10:21.839572] [1270: JDWP]signo is 9
+<4>[10-24 04:10:21.839572] [1272: Compiler]signo is 9
+<4>[10-24 04:10:21.839572] [1275: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:21.839572] [1276: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:21.839572] [1277: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:21.839572] [1278: Binder_1]signo is 9
+<4>[10-24 04:10:21.839572] [1279: Binder_2]signo is 9
+<4>[10-24 04:10:24.482151] [134: zygote]select 1200 (enmod.trebuchet), adj 0, size 5749, to kill
+<4>[10-24 04:10:24.482151] [134: zygote]send sigkill to 1200 (enmod.trebuchet), adj 0, size 5749
+<4>[10-24 04:10:24.492160] [1201: GC]signo is 9
+<4>[10-24 04:10:24.492160] [1202: Signal Catcher]signo is 9
+<4>[10-24 04:10:24.492160] [1203: JDWP]signo is 9
+<4>[10-24 04:10:24.492160] [1205: Compiler]signo is 9
+<4>[10-24 04:10:24.492160] [1208: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:24.492160] [1209: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:24.492160] [1210: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:24.492160] [1211: Binder_1]signo is 9
+<4>[10-24 04:10:24.492160] [1212: Binder_2]signo is 9
+<4>[10-24 04:10:24.492160] [1250: AsyncTask #1]signo is 9
+<4>[10-24 04:10:24.492160] [1200: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:24.492160] [1244: launcher-loader]signo is 9
+<4>[10-24 04:10:24.862522] [356: er.ServerThread]select 1281 (android.smspush), adj 1, size 4037, to kill
+<4>[10-24 04:10:24.862522] [356: er.ServerThread]send sigkill to 1281 (android.smspush), adj 1, size 4037
+<4>[10-24 04:10:24.862522] [1281: android.smspush]signo is 9
+<4>[10-24 04:10:24.862522] [1282: GC]signo is 9
+<4>[10-24 04:10:24.862522] [1283: Signal Catcher]signo is 9
+<4>[10-24 04:10:24.862522] [1285: JDWP]signo is 9
+<4>[10-24 04:10:24.862522] [1286: Compiler]signo is 9
+<4>[10-24 04:10:24.862522] [1289: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:24.862522] [1290: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:24.862522] [1291: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:24.862522] [1292: Binder_1]signo is 9
+<4>[10-24 04:10:24.862522] [1293: Binder_2]signo is 9
+<6>[10-24 04:10:25.393039] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 2880471
+<6>[10-24 04:10:25.393039] [74: krtcclntcbd]stamp=54268367778906112, freq = 1515870810
+<7>[10-24 04:10:25.393039] [74: krtcclntcbd]msmrtc_tod_proc_result: 10/24/2012 04:10:09 (02)
+<4>[10-24 04:10:09.500000] [74: krtcclntcbd][alarm] time sync from modem,fix_sync_alarm
+<6>[10-24 04:10:09.500000] [74: krtcclntcbd]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:10:09 UTC (1351051809)
+<4>[10-24 04:10:10.730727] [1343: Compiler]select 1336 (android.smspush), adj 1, size 3996, to kill
+<4>[10-24 04:10:10.730727] [1343: Compiler]send sigkill to 1336 (android.smspush), adj 1, size 3996
+<4>[10-24 04:10:10.730727] [1336: android.smspush]signo is 9
+<4>[10-24 04:10:10.730727] [1337: GC]signo is 9
+<4>[10-24 04:10:10.730727] [1341: Signal Catcher]signo is 9
+<4>[10-24 04:10:10.730727] [1342: JDWP]signo is 9
+<4>[10-24 04:10:10.730727] [1344: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:10.730727] [1345: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:10.730727] [1346: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:10.730727] [1347: Binder_1]signo is 9
+<4>[10-24 04:10:10.730727] [1348: Binder_2]signo is 9
+<4>[10-24 04:10:10.740735] [1343: Compiler]signo is 9
+<4>[10-24 04:10:11.911760] [34: kswapd0]select 1294 (viders.calendar), adj 0, size 4205, to kill
+<4>[10-24 04:10:11.911760] [34: kswapd0]select 1304 (d.process.media), adj 0, size 4304, to kill
+<4>[10-24 04:10:11.911760] [34: kswapd0]select 1321 (enmod.trebuchet), adj 0, size 4306, to kill
+<4>[10-24 04:10:11.911760] [34: kswapd0]send sigkill to 1321 (enmod.trebuchet), adj 0, size 4306
+<4>[10-24 04:10:11.911760] [1321: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:11.911760] [1323: GC]signo is 9
+<4>[10-24 04:10:11.911760] [1324: Signal Catcher]signo is 9
+<4>[10-24 04:10:11.911760] [1325: JDWP]signo is 9
+<4>[10-24 04:10:11.911760] [1327: Compiler]signo is 9
+<4>[10-24 04:10:11.911760] [1329: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:11.911760] [1330: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:11.911760] [1331: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:11.911760] [1332: Binder_1]signo is 9
+<4>[10-24 04:10:11.911760] [1333: Binder_2]signo is 9
+<4>[10-24 04:10:12.101939] [530: m.android.phone][alarm] time sync from APP
+<4>[10-24 04:10:12.101939] [530: m.android.phone]set rtc 1351051827 508000000 - rtc 04:10:27 10/24/2012
+<7>[10-24 04:10:27.508000] [530: m.android.phone]rs30000048 rs30000048.262144: msmrtc_timeremote_set_time: 09/24/2012 04:10:27 (03)
+<6>[10-24 04:10:27.508000] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 2965928
+<6>[10-24 04:10:27.508000] [74: krtcclntcbd]stamp=54268367778906113, freq = 1515870810
+<7>[10-24 04:10:27.508000] [74: krtcclntcbd]msmrtc_tod_proc_result: 10/24/2012 04:10:27 (02)
+<6>[10-24 04:10:27.500000] [74: krtcclntcbd]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:10:27 UTC (1351051827)
+<6>[10-24 04:10:27.620066] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 2970384
+<6>[10-24 04:10:27.620066] [74: krtcclntcbd]stamp=54268367778906113, freq = 1515870810
+<7>[10-24 04:10:27.620066] [74: krtcclntcbd]msmrtc_tod_proc_result: 10/24/2012 04:10:11 (02)
+<4>[10-24 04:10:11.500000] [74: krtcclntcbd][alarm] time sync from modem,fix_sync_alarm
+<6>[10-24 04:10:11.500000] [74: krtcclntcbd]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:10:11 UTC (1351051811)
+<4>[10-24 04:10:12.600625] [34: kswapd0]select 1294 (viders.calendar), adj 0, size 4106, to kill
+<4>[10-24 04:10:12.600625] [34: kswapd0]select 1304 (d.process.media), adj 0, size 4333, to kill
+<4>[10-24 04:10:12.600625] [34: kswapd0]send sigkill to 1304 (d.process.media), adj 0, size 4333
+<4>[10-24 04:10:12.600625] [1304: d.process.media]signo is 9
+<4>[10-24 04:10:12.600625] [1307: GC]signo is 9
+<4>[10-24 04:10:12.600625] [1311: Signal Catcher]signo is 9
+<4>[10-24 04:10:12.600625] [1312: JDWP]signo is 9
+<4>[10-24 04:10:12.600625] [1313: Compiler]signo is 9
+<4>[10-24 04:10:12.600625] [1314: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:12.600625] [1315: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:12.600625] [1316: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:12.600625] [1318: Binder_1]signo is 9
+<4>[10-24 04:10:12.600625] [1319: Binder_2]signo is 9
+<4>[10-24 04:10:12.600625] [1378: thumbs thread]signo is 9
+<4>[10-24 04:10:12.930876] [200: SurfaceFlinger]select 1351 (android.smspush), adj 1, size 3916, to kill
+<4>[10-24 04:10:12.930876] [200: SurfaceFlinger]send sigkill to 1351 (android.smspush), adj 1, size 3916
+<4>[10-24 04:10:12.940884] [1351: android.smspush]signo is 9
+<4>[10-24 04:10:12.940884] [1352: GC]signo is 9
+<4>[10-24 04:10:12.940884] [1353: Signal Catcher]signo is 9
+<4>[10-24 04:10:12.940884] [1354: JDWP]signo is 9
+<4>[10-24 04:10:12.940884] [1355: Compiler]signo is 9
+<4>[10-24 04:10:12.940884] [1358: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:12.940884] [1359: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:12.940884] [1361: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:12.940884] [1362: Binder_1]signo is 9
+<4>[10-24 04:10:12.940884] [1363: Binder_2]signo is 9
+<4>[10-24 04:10:13.841687] [34: kswapd0]select 1294 (viders.calendar), adj 5, size 4379, to kill
+<4>[10-24 04:10:13.841687] [34: kswapd0]send sigkill to 1294 (viders.calendar), adj 5, size 4379
+<4>[10-24 04:10:13.841687] [1294: viders.calendar]signo is 9
+<4>[10-24 04:10:13.841687] [1295: GC]signo is 9
+<4>[10-24 04:10:13.841687] [1297: Signal Catcher]signo is 9
+<4>[10-24 04:10:13.841687] [1300: JDWP]signo is 9
+<4>[10-24 04:10:13.841687] [1301: Compiler]signo is 9
+<4>[10-24 04:10:13.841687] [1303: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:13.841687] [1305: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:13.841687] [1310: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:13.841687] [1317: Binder_1]signo is 9
+<4>[10-24 04:10:13.841687] [1320: Binder_2]signo is 9
+<4>[10-24 04:10:13.841687] [1381: pool-1-thread-1]signo is 9
+<4>[10-24 04:10:13.911753] [1379: Thread-156]signo is 9
+<4>[10-24 04:10:14.972771] [1365: enmod.trebuchet]select 1383 (android.smspush), adj 1, size 4040, to kill
+<4>[10-24 04:10:14.972771] [1365: enmod.trebuchet]send sigkill to 1383 (android.smspush), adj 1, size 4040
+<4>[10-24 04:10:14.972771] [1384: GC]signo is 9
+<4>[10-24 04:10:14.972771] [1386: Signal Catcher]signo is 9
+<4>[10-24 04:10:14.972771] [1389: JDWP]signo is 9
+<4>[10-24 04:10:14.972771] [1390: Compiler]signo is 9
+<4>[10-24 04:10:14.972771] [1391: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:14.972771] [1392: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:14.972771] [1393: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:14.972771] [1394: Binder_1]signo is 9
+<4>[10-24 04:10:14.972771] [1407: Binder_2]signo is 9
+<4>[10-24 04:10:14.972771] [1383: android.smspush]signo is 9
+<4>[10-24 04:10:15.993764] [530: m.android.phone][alarm] time sync from APP
+<4>[10-24 04:10:15.993764] [530: m.android.phone]set rtc 1351051831 259000000 - rtc 04:10:31 10/24/2012
+<7>[10-24 04:10:31.259000] [530: m.android.phone]rs30000048 rs30000048.262144: msmrtc_timeremote_set_time: 09/24/2012 04:10:31 (03)
+<6>[10-24 04:10:31.259000] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 3118142
+<6>[10-24 04:10:31.259000] [74: krtcclntcbd]stamp=54268367778906113, freq = 1515870810
+<7>[10-24 04:10:31.259000] [74: krtcclntcbd]msmrtc_tod_proc_result: 10/24/2012 04:10:16 (02)
+<6>[10-24 04:10:16.500000] [74: krtcclntcbd]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:10:16 UTC (1351051816)
+<4>[10-24 04:10:16.500000] [34: kswapd0]select 1416 (android.smspush), adj 1, size 4035, to kill
+<4>[10-24 04:10:16.500000] [34: kswapd0]send sigkill to 1416 (android.smspush), adj 1, size 4035
+<4>[10-24 04:10:16.500000] [1416: android.smspush]signo is 9
+<4>[10-24 04:10:16.500000] [1417: GC]signo is 9
+<4>[10-24 04:10:16.500000] [1418: Signal Catcher]signo is 9
+<4>[10-24 04:10:16.500000] [1419: JDWP]signo is 9
+<4>[10-24 04:10:16.500000] [1424: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:16.500000] [1425: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:16.500000] [1426: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:16.500000] [1421: Compiler]signo is 9
+<4>[10-24 04:10:16.500000] [1428: Binder_1]signo is 9
+<4>[10-24 04:10:16.500000] [1429: Binder_2]signo is 9
+<6>[10-24 04:10:16.610059] [74: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 3122015
+<6>[10-24 04:10:16.610059] [74: krtcclntcbd]stamp=54268367778906113, freq = 1515870810
+<7>[10-24 04:10:16.610059] [74: krtcclntcbd]msmrtc_tod_proc_result: 10/24/2012 04:10:16 (02)
+<4>[10-24 04:10:16.500000] [74: krtcclntcbd][alarm] time sync from modem,fix_sync_alarm
+<6>[10-24 04:10:16.500000] [74: krtcclntcbd]rs30000048 rs30000048.262144: setting system clock to 2012-10-24 04:10:16 UTC (1351051816)
+<4>[10-24 04:10:17.990926] [1437: Compiler]select 1433 (android.smspush), adj 1, size 3941, to kill
+<4>[10-24 04:10:17.990926] [1437: Compiler]send sigkill to 1433 (android.smspush), adj 1, size 3941
+<4>[10-24 04:10:17.990926] [1433: android.smspush]signo is 9
+<4>[10-24 04:10:18.000934] [1434: GC]signo is 9
+<4>[10-24 04:10:18.000934] [1435: Signal Catcher]signo is 9
+<4>[10-24 04:10:18.000934] [1436: JDWP]signo is 9
+<4>[10-24 04:10:18.000934] [1439: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:18.000934] [1442: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:18.000934] [1443: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:18.000934] [1444: Binder_1]signo is 9
+<4>[10-24 04:10:18.000934] [1445: Binder_2]signo is 9
+<4>[10-24 04:10:18.000934] [1437: Compiler]signo is 9
+<4>[10-24 04:10:18.581445] [134: zygote]select 1395 (droid.deskclock), adj 9, size 4255, to kill
+<4>[10-24 04:10:18.581445] [134: zygote]send sigkill to 1395 (droid.deskclock), adj 9, size 4255
+<4>[10-24 04:10:18.581445] [1396: GC]signo is 9
+<4>[10-24 04:10:18.581445] [1400: Signal Catcher]signo is 9
+<4>[10-24 04:10:18.581445] [1401: JDWP]signo is 9
+<4>[10-24 04:10:18.581445] [1402: Compiler]signo is 9
+<4>[10-24 04:10:18.581445] [1403: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:18.581445] [1404: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:18.581445] [1405: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:18.581445] [1406: Binder_1]signo is 9
+<4>[10-24 04:10:18.581445] [1413: AsyncHandler]signo is 9
+<4>[10-24 04:10:18.581445] [1415: pool-1-thread-1]signo is 9
+<4>[10-24 04:10:18.581445] [1395: droid.deskclock]signo is 9
+<4>[10-24 04:10:18.581445] [1408: Binder_2]signo is 9
+<4>[10-24 04:10:19.242066] [1446: d.process.media]select 1365 (enmod.trebuchet), adj 0, size 5171, to kill
+<4>[10-24 04:10:19.242066] [1446: d.process.media]send sigkill to 1365 (enmod.trebuchet), adj 0, size 5171
+<4>[10-24 04:10:19.242066] [1367: GC]signo is 9
+<4>[10-24 04:10:19.242066] [1369: Signal Catcher]signo is 9
+<4>[10-24 04:10:19.242066] [1371: JDWP]signo is 9
+<4>[10-24 04:10:19.242066] [1372: Compiler]signo is 9
+<4>[10-24 04:10:19.242066] [1373: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:19.242066] [1374: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:19.242066] [1375: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:19.242066] [1376: Binder_1]signo is 9
+<4>[10-24 04:10:19.242066] [1377: Binder_2]signo is 9
+<4>[10-24 04:10:19.242066] [1409: launcher-loader]signo is 9
+<4>[10-24 04:10:19.242066] [1430: AsyncTask #1]signo is 9
+<4>[10-24 04:10:19.242066] [1473: setWallpaperDim]signo is 9
+<4>[10-24 04:10:19.242066] [1365: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:19.692499] [1446: d.process.media]select 1457 (android.smspush), adj 1, size 4022, to kill
+<4>[10-24 04:10:19.692499] [1446: d.process.media]send sigkill to 1457 (android.smspush), adj 1, size 4022
+<4>[10-24 04:10:19.692499] [1457: android.smspush]signo is 9
+<4>[10-24 04:10:19.692499] [1461: GC]signo is 9
+<4>[10-24 04:10:19.692499] [1462: Signal Catcher]signo is 9
+<4>[10-24 04:10:19.692499] [1463: JDWP]signo is 9
+<4>[10-24 04:10:19.692499] [1464: Compiler]signo is 9
+<4>[10-24 04:10:19.692499] [1465: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:19.692499] [1466: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:19.692499] [1467: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:19.692499] [1469: Binder_1]signo is 9
+<4>[10-24 04:10:19.692499] [1470: Binder_2]signo is 9
+<4>[10-24 04:10:20.062858] [1474: enmod.trebuchet]select 1488 (android.smspush), adj 1, size 4038, to kill
+<4>[10-24 04:10:20.062858] [1474: enmod.trebuchet]send sigkill to 1488 (android.smspush), adj 1, size 4038
+<4>[10-24 04:10:20.062858] [1488: android.smspush]signo is 9
+<4>[10-24 04:10:20.062858] [1490: GC]signo is 9
+<4>[10-24 04:10:20.062858] [1491: Signal Catcher]signo is 9
+<4>[10-24 04:10:20.062858] [1493: JDWP]signo is 9
+<4>[10-24 04:10:20.062858] [1494: Compiler]signo is 9
+<4>[10-24 04:10:20.062858] [1496: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:20.062858] [1497: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:20.062858] [1498: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:20.062858] [1499: Binder_1]signo is 9
+<4>[10-24 04:10:20.062858] [1500: Binder_2]signo is 9
+<4>[10-24 04:10:20.333120] [1515: SharedPreferenc]select 1502 (android.smspush), adj 1, size 4039, to kill
+<4>[10-24 04:10:20.333120] [1515: SharedPreferenc]send sigkill to 1502 (android.smspush), adj 1, size 4039
+<4>[10-24 04:10:20.333120] [1502: android.smspush]signo is 9
+<4>[10-24 04:10:20.333120] [1503: GC]signo is 9
+<4>[10-24 04:10:20.333120] [1505: Signal Catcher]signo is 9
+<4>[10-24 04:10:20.333120] [1506: JDWP]signo is 9
+<4>[10-24 04:10:20.333120] [1510: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:20.333120] [1511: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:20.333120] [1512: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:20.333120] [1513: Binder_1]signo is 9
+<4>[10-24 04:10:20.333120] [1514: Binder_2]signo is 9
+<4>[10-24 04:10:20.333120] [1509: Compiler]signo is 9
+<4>[10-24 04:10:20.643422] [1446: d.process.media]select 1518 (android.smspush), adj 1, size 4042, to kill
+<4>[10-24 04:10:20.643422] [1446: d.process.media]send sigkill to 1518 (android.smspush), adj 1, size 4042
+<4>[10-24 04:10:20.643422] [1518: android.smspush]signo is 9
+<4>[10-24 04:10:20.643422] [1521: Signal Catcher]signo is 9
+<4>[10-24 04:10:20.643422] [1522: JDWP]signo is 9
+<4>[10-24 04:10:20.643422] [1523: Compiler]signo is 9
+<4>[10-24 04:10:20.643422] [1526: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:20.643422] [1527: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:20.643422] [1528: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:20.643422] [1529: Binder_1]signo is 9
+<4>[10-24 04:10:20.643422] [1530: Binder_2]signo is 9
+<4>[10-24 04:10:20.643422] [1531: Binder_3]signo is 9
+<4>[10-24 04:10:20.643422] [1520: GC]signo is 9
+<4>[10-24 04:10:21.113880] [1551: hdmid]select 1536 (android.smspush), adj 1, size 4043, to kill
+<4>[10-24 04:10:21.113880] [1551: hdmid]send sigkill to 1536 (android.smspush), adj 1, size 4043
+<4>[10-24 04:10:21.113880] [1536: android.smspush]signo is 9
+<4>[10-24 04:10:21.113880] [1538: GC]signo is 9
+<4>[10-24 04:10:21.113880] [1539: Signal Catcher]signo is 9
+<4>[10-24 04:10:21.113880] [1540: JDWP]signo is 9
+<4>[10-24 04:10:21.113880] [1542: Compiler]signo is 9
+<4>[10-24 04:10:21.113880] [1544: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:21.113880] [1545: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:21.113880] [1546: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:21.113880] [1547: Binder_1]signo is 9
+<4>[10-24 04:10:21.113880] [1549: Binder_2]signo is 9
+<4>[10-24 04:10:21.634388] [34: kswapd0]select 1446 (d.process.media), adj 0, size 4617, to kill
+<4>[10-24 04:10:21.634388] [34: kswapd0]select 1474 (enmod.trebuchet), adj 0, size 5024, to kill
+<4>[10-24 04:10:21.634388] [34: kswapd0]send sigkill to 1474 (enmod.trebuchet), adj 0, size 5024
+<4>[10-24 04:10:21.634388] [1475: GC]signo is 9
+<4>[10-24 04:10:21.634388] [1476: Signal Catcher]signo is 9
+<4>[10-24 04:10:21.634388] [1478: JDWP]signo is 9
+<4>[10-24 04:10:21.634388] [1479: Compiler]signo is 9
+<4>[10-24 04:10:21.634388] [1482: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:21.634388] [1483: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:21.634388] [1484: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:21.634388] [1485: Binder_1]signo is 9
+<4>[10-24 04:10:21.634388] [1486: Binder_2]signo is 9
+<4>[10-24 04:10:21.634388] [1516: launcher-loader]signo is 9
+<4>[10-24 04:10:21.634388] [1548: AsyncTask #1]signo is 9
+<4>[10-24 04:10:21.634388] [1474: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:21.874622] [34: kswapd0]select 1446 (d.process.media), adj 5, size 4647, to kill
+<4>[10-24 04:10:21.874622] [34: kswapd0]send sigkill to 1446 (d.process.media), adj 5, size 4647
+<4>[10-24 04:10:21.884632] [1532: thumbs thread]signo is 9
+<4>[10-24 04:10:21.884632] [1471: Binder_2]signo is 9
+<4>[10-24 04:10:21.884632] [1446: d.process.media]signo is 9
+<4>[10-24 04:10:21.884632] [1447: GC]signo is 9
+<4>[10-24 04:10:21.884632] [1448: Signal Catcher]signo is 9
+<4>[10-24 04:10:21.884632] [1449: JDWP]signo is 9
+<4>[10-24 04:10:21.884632] [1450: Compiler]signo is 9
+<4>[10-24 04:10:21.884632] [1452: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:21.884632] [1453: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:21.884632] [1455: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:21.884632] [1468: Binder_1]signo is 9
+<4>[10-24 04:10:21.894642] [1572: Download Servic]signo is 9
+<4>[10-24 04:10:22.234974] [1580: enmod.trebuchet]select 1553 (android.smspush), adj 1, size 4043, to kill
+<4>[10-24 04:10:22.234974] [1580: enmod.trebuchet]send sigkill to 1553 (android.smspush), adj 1, size 4043
+<4>[10-24 04:10:22.234974] [1553: android.smspush]signo is 9
+<4>[10-24 04:10:22.234974] [1554: GC]signo is 9
+<4>[10-24 04:10:22.234974] [1555: Signal Catcher]signo is 9
+<4>[10-24 04:10:22.234974] [1557: JDWP]signo is 9
+<4>[10-24 04:10:22.234974] [1559: Compiler]signo is 9
+<4>[10-24 04:10:22.234974] [1561: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:22.234974] [1562: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:22.234974] [1563: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:22.234974] [1564: Binder_1]signo is 9
+<4>[10-24 04:10:22.234974] [1565: Binder_2]signo is 9
+<4>[10-24 04:10:22.395130] [1566: m.android.email]select 1593 (roid.dspmanager), adj 5, size 4137, to kill
+<4>[10-24 04:10:22.395130] [1566: m.android.email]send sigkill to 1593 (roid.dspmanager), adj 5, size 4137
+<4>[10-24 04:10:22.415149] [1595: GC]signo is 9
+<4>[10-24 04:10:22.415149] [1598: Signal Catcher]signo is 9
+<4>[10-24 04:10:22.415149] [1599: JDWP]signo is 9
+<4>[10-24 04:10:22.415149] [1601: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:22.415149] [1602: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:22.415149] [1603: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:22.415149] [1604: Binder_1]signo is 9
+<4>[10-24 04:10:22.415149] [1605: Binder_2]signo is 9
+<4>[10-24 04:10:22.415149] [1600: Compiler]signo is 9
+<4>[10-24 04:10:22.415149] [1593: roid.dspmanager]signo is 9
+<4>[10-24 04:10:23.005726] [34: kswapd0]select 1607 (android.smspush), adj 1, size 4036, to kill
+<4>[10-24 04:10:23.015735] [34: kswapd0]send sigkill to 1607 (android.smspush), adj 1, size 4036
+<4>[10-24 04:10:23.015735] [1607: android.smspush]signo is 9
+<4>[10-24 04:10:23.015735] [1609: GC]signo is 9
+<4>[10-24 04:10:23.015735] [1610: Signal Catcher]signo is 9
+<4>[10-24 04:10:23.015735] [1612: JDWP]signo is 9
+<4>[10-24 04:10:23.015735] [1614: Compiler]signo is 9
+<4>[10-24 04:10:23.015735] [1615: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:23.015735] [1616: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:23.015735] [1617: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:23.015735] [1618: Binder_1]signo is 9
+<4>[10-24 04:10:23.015735] [1619: Binder_2]signo is 9
+<4>[10-24 04:10:23.015735] [1621: Binder_3]signo is 9
+<4>[10-24 04:10:23.225940] [134: zygote]select 1566 (m.android.email), adj 0, size 5164, to kill
+<4>[10-24 04:10:23.225940] [134: zygote]send sigkill to 1566 (m.android.email), adj 0, size 5164
+<4>[10-24 04:10:23.225940] [1566: m.android.email]signo is 9
+<4>[10-24 04:10:23.225940] [1568: GC]signo is 9
+<4>[10-24 04:10:23.225940] [1571: Signal Catcher]signo is 9
+<4>[10-24 04:10:23.225940] [1573: JDWP]signo is 9
+<4>[10-24 04:10:23.225940] [1574: Compiler]signo is 9
+<4>[10-24 04:10:23.225940] [1575: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:23.225940] [1576: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:23.225940] [1577: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:23.225940] [1578: Binder_1]signo is 9
+<4>[10-24 04:10:23.235950] [1623: Thread-212]signo is 9
+<4>[10-24 04:10:23.235950] [1579: Binder_2]signo is 9
+<4>[10-24 04:10:23.235950] [1624: AsyncTask #2]signo is 9
+<4>[10-24 04:10:23.235950] [1620: AsyncTask #1]signo is 9
+<4>[10-24 04:10:23.656360] [1639: ndroid.exchange]select 1626 (android.smspush), adj 1, size 4036, to kill
+<4>[10-24 04:10:23.656360] [1639: ndroid.exchange]send sigkill to 1626 (android.smspush), adj 1, size 4036
+<4>[10-24 04:10:23.656360] [1626: android.smspush]signo is 9
+<4>[10-24 04:10:23.656360] [1628: GC]signo is 9
+<4>[10-24 04:10:23.656360] [1629: Signal Catcher]signo is 9
+<4>[10-24 04:10:23.656360] [1630: JDWP]signo is 9
+<4>[10-24 04:10:23.656360] [1632: Compiler]signo is 9
+<4>[10-24 04:10:23.656360] [1634: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:23.656360] [1635: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:23.656360] [1636: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:23.656360] [1637: Binder_1]signo is 9
+<4>[10-24 04:10:23.656360] [1638: Binder_2]signo is 9
+<4>[10-24 04:10:23.916614] [1662: SharedPreferenc]select 1654 (android.smspush), adj 1, size 4036, to kill
+<4>[10-24 04:10:23.916614] [1662: SharedPreferenc]send sigkill to 1654 (android.smspush), adj 1, size 4036
+<4>[10-24 04:10:23.916614] [1654: android.smspush]signo is 9
+<4>[10-24 04:10:23.916614] [1656: GC]signo is 9
+<4>[10-24 04:10:23.916614] [1657: Signal Catcher]signo is 9
+<4>[10-24 04:10:23.916614] [1659: JDWP]signo is 9
+<4>[10-24 04:10:23.916614] [1661: Compiler]signo is 9
+<4>[10-24 04:10:23.916614] [1663: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:23.916614] [1664: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:23.916614] [1665: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:23.916614] [1666: Binder_1]signo is 9
+<4>[10-24 04:10:23.916614] [1667: Binder_2]signo is 9
+<4>[10-24 04:10:24.156849] [343: system_server]select 1670 (android.smspush), adj 1, size 4037, to kill
+<4>[10-24 04:10:24.156849] [343: system_server]send sigkill to 1670 (android.smspush), adj 1, size 4037
+<4>[10-24 04:10:24.156849] [1670: android.smspush]signo is 9
+<4>[10-24 04:10:24.156849] [1672: GC]signo is 9
+<4>[10-24 04:10:24.156849] [1673: Signal Catcher]signo is 9
+<4>[10-24 04:10:24.156849] [1674: JDWP]signo is 9
+<4>[10-24 04:10:24.156849] [1678: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:24.156849] [1679: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:24.156849] [1680: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:24.156849] [1682: Binder_1]signo is 9
+<4>[10-24 04:10:24.156849] [1683: Binder_2]signo is 9
+<4>[10-24 04:10:24.156849] [1676: Compiler]signo is 9
+<4>[10-24 04:10:24.306995] [1689: re-initialized>]select 1639 (ndroid.exchange), adj 5, size 4334, to kill
+<4>[10-24 04:10:24.306995] [1689: re-initialized>]send sigkill to 1639 (ndroid.exchange), adj 5, size 4334
+<4>[10-24 04:10:24.317005] [1639: ndroid.exchange]signo is 9
+<4>[10-24 04:10:24.317005] [1641: GC]signo is 9
+<4>[10-24 04:10:24.317005] [1642: Signal Catcher]signo is 9
+<4>[10-24 04:10:24.317005] [1643: JDWP]signo is 9
+<4>[10-24 04:10:24.317005] [1644: Compiler]signo is 9
+<4>[10-24 04:10:24.317005] [1647: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:24.317005] [1648: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:24.317005] [1649: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:24.317005] [1681: AsyncTask #1]signo is 9
+<4>[10-24 04:10:24.317005] [1685: AsyncTask #2]signo is 9
+<4>[10-24 04:10:24.317005] [1686: AsyncTask #3]signo is 9
+<4>[10-24 04:10:24.317005] [1650: Binder_1]signo is 9
+<4>[10-24 04:10:24.327015] [1651: Binder_2]signo is 9
+<4>[10-24 04:10:24.337024] [1688: AsyncTask #4]signo is 9
+<4>[10-24 04:10:24.787464] [1580: enmod.trebuchet]select 1689 (android.smspush), adj 1, size 4038, to kill
+<4>[10-24 04:10:24.787464] [1580: enmod.trebuchet]send sigkill to 1689 (android.smspush), adj 1, size 4038
+<4>[10-24 04:10:24.787464] [1689: android.smspush]signo is 9
+<4>[10-24 04:10:24.787464] [1691: GC]signo is 9
+<4>[10-24 04:10:24.797474] [1692: Signal Catcher]signo is 9
+<4>[10-24 04:10:24.797474] [1693: JDWP]signo is 9
+<4>[10-24 04:10:24.797474] [1695: Compiler]signo is 9
+<4>[10-24 04:10:24.797474] [1697: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:24.797474] [1698: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:24.797474] [1699: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:24.797474] [1700: Binder_1]signo is 9
+<4>[10-24 04:10:24.797474] [1701: Binder_2]signo is 9
+<4>[10-24 04:10:25.047718] [134: zygote]select 1704 (android.smspush), adj 1, size 4022, to kill
+<4>[10-24 04:10:25.047718] [134: zygote]send sigkill to 1704 (android.smspush), adj 1, size 4022
+<4>[10-24 04:10:25.047718] [1705: GC]signo is 9
+<4>[10-24 04:10:25.047718] [1709: Signal Catcher]signo is 9
+<4>[10-24 04:10:25.047718] [1710: JDWP]signo is 9
+<4>[10-24 04:10:25.047718] [1711: Compiler]signo is 9
+<4>[10-24 04:10:25.047718] [1712: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:25.047718] [1713: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:25.047718] [1714: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:25.047718] [1715: Binder_1]signo is 9
+<4>[10-24 04:10:25.047718] [1716: Binder_2]signo is 9
+<4>[10-24 04:10:25.047718] [1704: android.smspush]signo is 9
+<4>[10-24 04:10:25.818470] [1731: android.smspush]select 1580 (enmod.trebuchet), adj 0, size 5765, to kill
+<4>[10-24 04:10:25.818470] [1731: android.smspush]select 1731 (android.smspush), adj 1, size 4016, to kill
+<4>[10-24 04:10:25.818470] [1731: android.smspush]send sigkill to 1731 (android.smspush), adj 1, size 4016
+<4>[10-24 04:10:25.818470] [1732: GC]signo is 9
+<4>[10-24 04:10:25.818470] [1733: Signal Catcher]signo is 9
+<4>[10-24 04:10:25.818470] [1734: JDWP]signo is 9
+<4>[10-24 04:10:25.818470] [1736: Compiler]signo is 9
+<4>[10-24 04:10:25.818470] [1738: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:25.818470] [1740: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:25.818470] [1741: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:25.818470] [1742: Binder_1]signo is 9
+<4>[10-24 04:10:25.818470] [1743: Binder_2]signo is 9
+<4>[10-24 04:10:25.838489] [1731: android.smspush]signo is 9
+<4>[10-24 04:10:26.088733] [1745: adbd]select 1580 (enmod.trebuchet), adj 0, size 6031, to kill
+<4>[10-24 04:10:26.088733] [1745: adbd]send sigkill to 1580 (enmod.trebuchet), adj 0, size 6031
+<4>[10-24 04:10:26.098743] [1580: enmod.trebuchet]signo is 9
+<4>[10-24 04:10:26.098743] [1581: GC]signo is 9
+<4>[10-24 04:10:26.098743] [1582: Signal Catcher]signo is 9
+<4>[10-24 04:10:26.098743] [1583: JDWP]signo is 9
+<4>[10-24 04:10:26.098743] [1585: Compiler]signo is 9
+<4>[10-24 04:10:26.098743] [1586: ReferenceQueueD]signo is 9
+<4>[10-24 04:10:26.098743] [1589: FinalizerDaemon]signo is 9
+<4>[10-24 04:10:26.098743] [1590: FinalizerWatchd]signo is 9
+<4>[10-24 04:10:26.098743] [1591: Binder_1]signo is 9
+<4>[10-24 04:10:26.098743] [1592: Binder_2]signo is 9
+<4>[10-24 04:10:26.098743] [1684: AsyncTask #1]signo is 9
+<4>[10-24 04:10:26.098743] [1652: launcher-loader]signo is 9
