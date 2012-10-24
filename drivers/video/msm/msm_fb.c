@@ -3546,6 +3546,15 @@ static int msm_lcd_read_proc(
 		case LCD_PANEL_4P3_HX8369A:
 			strcpy(module_name,"61");
 			break;
+		case LCD_PANEL_4P3_RM68120_LEAD:
+			strcpy(module_name,"zteLEAD(RM68120)_WVGA_4.3Inch");
+			break;
+		case LCD_PANEL_4P3_HX8369A_TM:
+			strcpy(module_name,"zteTM4.3WVGA480*800");
+			break;	
+		case LCD_PANEL_4P3_NT35510_2:
+			strcpy(module_name,"zteBOE4.3WVGA480*800");
+			break;
 		case LCD_PANEL_3P8_NT35510_1:
 			strcpy(module_name,"70");
 			break;
@@ -3574,20 +3583,6 @@ static int msm_lcd_read_proc(
 			strcpy(module_name,"100");
 			//len = sprintf(page, "%s\n","40");
 			break;	
-		case LCD_PANEL_3P5_R61529:
-			strcpy(module_name,"zteLEAD(R61529+LG)_320*480_3.5Inch");
-			break;	
-		case LCD_PANEL_4P3_NT35516_TRULY:
-			strcpy(module_name,"zteTRULY(NT35516+LG)_540*960_4.0Inch");
-			break;	
-		case LCD_PANEL_4P3_NT35516_AUO:
-			strcpy(module_name,"zteLEAD(NT35516+AUO)_540*960_4.0Inch");
-			break;
-		case LCD_PANEL_4P3_OTM9608A_BOE:
-			strcpy(module_name,"zteBOE(OTM9608A)_540*960_4.3Inch");
-			break;
-			
-			
 		default:
 			strcpy(module_name,"0");
 			//len = sprintf(page, "%s\n","0");
@@ -3597,6 +3592,7 @@ static int msm_lcd_read_proc(
 	return len;
 
 }
+
 
 static int msm_lcd_write_proc(struct file *file, const char __user *buffer,
 			     unsigned long count, void *data)

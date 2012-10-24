@@ -34,8 +34,6 @@
 
 struct mdp4_statistic mdp4_stat;
 
-
-
 unsigned is_mdp4_hw_reset(void)
 {
 	unsigned hw_reset = 0;
@@ -269,12 +267,12 @@ void mdp4_hw_init(void)
 #endif
        isr = inpdw(MDP_INTR_STATUS);
 /**end**/
+
 	if (mdp_rev > MDP_REV_41) {
 		/* mdp chip select controller */
 		outpdw(MDP_BASE + 0x00c0, CS_CONTROLLER_0);
 		outpdw(MDP_BASE + 0x00c4, CS_CONTROLLER_1);
 	}
-/* skip the code to avoid LCDC/Overlay is to be disable */
 
 	mdp4_clear_lcdc();
 
@@ -392,10 +390,6 @@ irqreturn_t mdp4_isr(int irq, void *ptr)
 		/* When underun occurs mdp clear the histogram registers
 		that are set before in hw_init so restore them back so
 		that histogram works.*/
-#if 1
-		for (i=0;i<10;++i)
-			printk("nanzhang here underrun\n");
-#endif
 		for (i = 0; i < MDP_HIST_MGMT_MAX; i++) {
 			mgmt = mdp_hist_mgmt_array[i];
 			if (!mgmt)
@@ -2872,12 +2866,10 @@ int mdp4_pcc_cfg(struct mdp_pcc_cfg_data *cfg_ptr)
 
 	if (0x8 & cfg_ptr->ops)
 		outpdw(mdp_dma_op_mode,
-			((inpdw(mdp_dma_op_mode) & ~(0x1<<10)) |
-						((0x8 & cfg_ptr->ops)<<10)));
+			(inpdw(mdp_dma_op_mode)|((0x8&cfg_ptr->ops)<<10)));
 
 	outpdw(mdp_cfg_offset,
-			((inpdw(mdp_cfg_offset) & ~(0x1<<29)) |
-						((cfg_ptr->ops & 0x1)<<29)));
+			(inpdw(mdp_cfg_offset)|((cfg_ptr->ops&0x1)<<29)));
 
 	mdp_pipe_ctrl(MDP_CMD_BLOCK, MDP_BLOCK_POWER_OFF, FALSE);
 
@@ -3063,9 +3055,8 @@ int mdp4_argc_cfg(struct mdp_pgc_lut_data *pgc_ptr)
 
 		if (!ret) {
 			mdp_pipe_ctrl(MDP_CMD_BLOCK, MDP_BLOCK_POWER_ON, FALSE);
-			outpdw(pgc_enable_offset, (inpdw(pgc_enable_offset) &
-							~(0x1<<lshift_bits)) |
-				((0x1 & pgc_ptr->flags) << lshift_bits));
+			outpdw(pgc_enable_offset, (inpdw(pgc_enable_offset) |
+				((0x1 & pgc_ptr->flags) << lshift_bits)));
 			mdp_pipe_ctrl(MDP_CMD_BLOCK, MDP_BLOCK_POWER_OFF,
 									FALSE);
 		}

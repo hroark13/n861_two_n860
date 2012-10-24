@@ -24,7 +24,7 @@
 #include <linux/irq.h>
 #include <asm/system.h>
 
-#define fb_width(fb)	((fb)->var.xres)
+#define fb_width(fb)	(ALIGN((fb)->var.xres,32))
 #define fb_height(fb)	((fb)->var.yres)
 #define fb_size(fb)	((fb)->var.xres * (fb)->var.yres * 2)
 
@@ -35,13 +35,15 @@ static void memset16(void *_ptr, unsigned short val, unsigned count)
 	while (count--)
 		*ptr++ = val;
 }
-#ifndef CONFIG_ZTE_PLATFORM
+///ZTE_LCD_LUYA_20091221_001,start
+//#ifndef CONFIG_ZTE_PLATFORM
+#if 0
 /* 565RLE image format: [count(2 bytes), rle(2 bytes)] */
 int load_565rle_image(char *filename)
 {
 	struct fb_info *info;
-	int fd, count, err = 0;
-	unsigned max;
+	int fd, err = 0;
+	unsigned count, max;
 	unsigned short *data, *bits, *ptr;
 
 	info = registered_fb[0];
@@ -57,8 +59,9 @@ int load_565rle_image(char *filename)
 			__func__, filename);
 		return -ENOENT;
 	}
-	count = sys_lseek(fd, (off_t)0, 2);
-	if (count <= 0) {
+	count = (unsigned)sys_lseek(fd, (off_t)0, 2);
+	if (count == 0) {
+		sys_close(fd);
 		err = -EIO;
 		goto err_logo_close_file;
 	}
@@ -69,7 +72,7 @@ int load_565rle_image(char *filename)
 		err = -ENOMEM;
 		goto err_logo_close_file;
 	}
-	if (sys_read(fd, (char *)data, count) != count) {
+	if ((unsigned)sys_read(fd, (char *)data, count) != count) {
 		err = -EIO;
 		goto err_logo_free_data;
 	}
@@ -103,7 +106,6 @@ int load_565rle_image(char *filename)
 	int fd, err = 0;
 	unsigned count, max;
 	unsigned short *data, *bits, *ptr;
-	printk("LUYA!!!!1 load_565rle_image\n");
 
 	info = registered_fb[0];
 	if (!info) {
@@ -111,7 +113,6 @@ int load_565rle_image(char *filename)
 			__func__);
 		return -ENODEV;
 	}
-	printk("LUYA!!!!2 load_565rle_image\n");
 
 	fd = sys_open(filename, O_RDONLY, 0);
 	if (fd < 0) {
@@ -119,10 +120,14 @@ int load_565rle_image(char *filename)
 			__func__, filename);
 		return -ENOENT;
 	}
+#ifdef CONFIG_FB_MSM_MIPI_DSI
 	max = fb_width(info) * fb_height(info)*2;
-	printk("LUYA!!!!max=%d\n",max);
+#else
+	max = fb_width(info) * fb_height(info);
+#endif
+	printk(KERN_WARNING "LUYA!!!!max=%d\n",max);
 	count = (unsigned)sys_lseek(fd, (off_t)0, 2);
-	printk("LUYA!!!!count=%d\n",count);
+	printk(KERN_WARNING "LUYA!!!!count=%d\n",count);
 	
 	if (count == 0) {
 		sys_close(fd);
@@ -140,7 +145,11 @@ int load_565rle_image(char *filename)
 		err = -EIO;
 		goto err_logo_free_data;
 	}
+#ifdef CONFIG_FB_MSM_MIPI_DSI
 	ptr = data+27;
+#else
+	ptr = data+35;
+#endif
 	bits = (unsigned short *)(info->screen_base);
 	while (max > 0) {
 //		unsigned n = ptr[0];
@@ -160,5 +169,6 @@ err_logo_close_file:
 	return err;
 }
 #endif
+///ZTE_LCD_LUYA_20091221_001,end
 
 EXPORT_SYMBOL(load_565rle_image);

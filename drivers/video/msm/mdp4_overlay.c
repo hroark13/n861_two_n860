@@ -314,7 +314,7 @@ void mdp4_overlay_dmap_cfg(struct msm_fb_data_type *mfd, int lcdc)
 
 	/* dma2 config register */
 	curr = inpdw(MDP_BASE + 0x90000);
-	mask = 0x0FFFFFFF;
+	mask = 0xBFFFFFFF;
 	dma2_cfg_reg = (dma2_cfg_reg & mask) | (curr & ~mask);
 	MDP_OUTP(MDP_BASE + 0x90000, dma2_cfg_reg);
 
@@ -1167,7 +1167,6 @@ void mdp4_overlayproc_cfg(struct mdp4_overlay_pipe *pipe)
 {
 	uint32 data, intf;
 	char *overlay_base;
-	uint32 curr;
 
 	intf = 0;
 	if (pipe->mixer_num == MDP4_MIXER2)
@@ -1209,13 +1208,10 @@ void mdp4_overlayproc_cfg(struct mdp4_overlay_pipe *pipe)
 			outpdw(overlay_base + 0x001c, pipe->blt_addr + off);
 			/* MDDI - BLT + on demand */
 			outpdw(overlay_base + 0x0004, 0x08);
-
-			curr = inpdw(overlay_base + 0x0014);
-			curr &= 0x4;
 #ifdef BLT_RGB565
-			outpdw(overlay_base + 0x0014, curr | 0x1); /* RGB565 */
+			outpdw(overlay_base + 0x0014, 0x1); /* RGB565 */
 #else
-			outpdw(overlay_base + 0x0014, curr | 0x0); /* RGB888 */
+			outpdw(overlay_base + 0x0014, 0x0); /* RGB888 */
 #endif
 		} else if (pipe->mixer_num == MDP4_MIXER2) {
 			if (ctrl->panel_mode & MDP4_PANEL_WRITEBACK) {
@@ -1242,9 +1238,7 @@ void mdp4_overlayproc_cfg(struct mdp4_overlay_pipe *pipe)
 				/* MDDI - BLT + on demand */
 				outpdw(overlay_base + 0x0004, 0x08);
 				/* pseudo planar + writeback */
-				curr = inpdw(overlay_base + 0x0014);
-				curr &= 0x4;
-				outpdw(overlay_base + 0x0014, curr | 0x012);
+				outpdw(overlay_base + 0x0014, 0x012);
 				/* rgb->yuv */
 				outpdw(overlay_base + 0x0200, 0x05);
 			}
@@ -1261,8 +1255,6 @@ void mdp4_overlayproc_cfg(struct mdp4_overlay_pipe *pipe)
 
 	if (pipe->mixer_num == MDP4_MIXER1) {
 		if (intf == TV_INTF) {
-			curr = inpdw(overlay_base + 0x0014);
-			curr &= 0x4;
 			outpdw(overlay_base + 0x0014, 0x02); /* yuv422 */
 			/* overlay1 CSC config */
 			outpdw(overlay_base + 0x0200, 0x05); /* rgb->yuv */
@@ -1270,9 +1262,7 @@ void mdp4_overlayproc_cfg(struct mdp4_overlay_pipe *pipe)
 	}
 
 #ifdef MDP4_IGC_LUT_ENABLE
-	curr = inpdw(overlay_base + 0x0014);
-	curr &= ~0x4;
-	outpdw(overlay_base + 0x0014, curr | 0x4);	/* GC_LUT_EN, 888 */
+	outpdw(overlay_base + 0x0014, 0x4);	/* GC_LUT_EN, 888 */
 #endif
 
 	if (mdp_is_in_isr == FALSE)
@@ -1704,11 +1694,7 @@ static int mdp4_overlay_validate_downscale(struct mdp_overlay *req,
 		req->src_rect.w, req->src_rect.h, req->dst_rect.w,
 		req->dst_rect.h);
 
-	if((req->src_rect.w>1200)&&(req->src_rect.h>700))
-	{
-		pr_err("%s: LHT 720P Portrait mode use WriteBack \n", __func__);
-		return -ERANGE;
-	}
+
 	panel_clk_khz = pclk_rate/1000;
 	mdp_clk_hz = mdp_perf_level2clk_rate(perf_level);
 
@@ -2222,6 +2208,7 @@ static void mdp4_overlay1_update_blt_mode(struct msm_fb_data_type *mfd)
 #endif
 }
 
+
 static u32 mdp4_overlay_blt_enable(struct mdp_overlay *req,
 	struct msm_fb_data_type *mfd, uint32 perf_level)
 {
@@ -2428,13 +2415,9 @@ int mdp4_overlay_unset(struct fb_info *info, int ndx)
 #endif
 	}
 
-	if (mfd->mdp_rev >= MDP_REV_42 && !mfd->use_ov0_blt &&
+	if (mfd->mdp_rev >= MDP_REV_41 && !mfd->use_ov0_blt &&
 		(pipe->mixer_num == MDP4_MIXER0)) {
-			ctrl->stage[pipe->mixer_num][pipe->mixer_stage] = NULL;
-	} else if (mfd->mdp_rev == MDP_REV_41 &&
-		mdp4_overlay_is_rgb_type(pipe->src_format) &&
-		!mfd->use_ov0_blt && (pipe->mixer_num == MDP4_MIXER0)) {
-			ctrl->stage[pipe->mixer_num][pipe->mixer_stage] = NULL;
+		ctrl->stage[pipe->mixer_num][pipe->mixer_stage] = NULL;
 	} else {
 		mdp4_mixer_stage_down(pipe);
 

@@ -42,8 +42,6 @@
 int first_pixel_start_x;
 int first_pixel_start_y;
 
-
-
 static struct mdp4_overlay_pipe *lcdc_pipe;
 static struct completion lcdc_comp;
 
@@ -233,10 +231,6 @@ int mdp_lcdc_on(struct platform_device *pdev)
 	MDP_OUTP(MDP_BASE + LCDC_BASE + 0x1c, active_hctl);
 	MDP_OUTP(MDP_BASE + LCDC_BASE + 0x20, active_v_start);
 	MDP_OUTP(MDP_BASE + LCDC_BASE + 0x24, active_v_end);
-/**start******20120511*********yichangming******
- *********solve blue screen***************/
- 	MDP_OUTP(MDP_BASE + LCDC_BASE + 0x2C,0x10000888 );
- /**end**/
 
 	mdp4_overlay_reg_flush(pipe, 1);
 

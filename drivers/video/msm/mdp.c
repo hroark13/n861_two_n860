@@ -49,9 +49,6 @@ static struct clk *mdp_clk;
 static struct clk *mdp_pclk;
 static struct clk *mdp_lut_clk;
 int mdp_rev;
-/* Add a global flag to indicate supporting of the feature:
-   continuous display from app bootloader to kernel/android 
-*/
 
 static struct regulator *footswitch;
 static unsigned int mdp_footswitch_on;
@@ -2139,6 +2136,7 @@ void dump_mdp_reg_nanzhang(void * msm_mdp_base)
 static int firstBoot=0;
 #endif
 /**end**/
+
 static int mdp_probe(struct platform_device *pdev)
 {
 	struct platform_device *msm_fb_dev = NULL;
@@ -2174,6 +2172,7 @@ static int mdp_probe(struct platform_device *pdev)
 			pr_err("mdp: can not get mdp irq\n");
 			return -ENOMEM;
 		}
+
 /**start******20120511*********yichangming******
  *********solve blue screen***************/
  #if 1
@@ -2193,6 +2192,7 @@ if (!firstBoot) {
   }
   #endif
 /**end**/
+
 		mdp_rev = mdp_pdata->mdp_rev;
 /**start******20120511*********yichangming******
  *********solve blue screen***************/	
@@ -2200,6 +2200,7 @@ if (!firstBoot) {
 dump_mdp_reg_nanzhang(msm_mdp_base); //  M7630AABBQMLZA4040305I
 #endif
 /**end**/
+
 		rc = mdp_irq_clk_setup(mdp_pdata->cont_splash_enabled);
 /**start******20120511*********yichangming******
  *********solve blue screen***************/	
@@ -2207,6 +2208,7 @@ dump_mdp_reg_nanzhang(msm_mdp_base); //  M7630AABBQMLZA4040305I
 dump_mdp_reg_nanzhang(msm_mdp_base); //  M7630AABBQMLZA4040305I
 #endif
 /**end**/
+
 		if (rc)
 			return rc;
 
@@ -2219,9 +2221,11 @@ dump_mdp_reg_nanzhang(msm_mdp_base); //  M7630AABBQMLZA4040305I
 #else
 		mdp_hw_init();
 #endif
+
 #if 0
 dump_mdp_reg_nanzhang(msm_mdp_base); // nan zhang M7630AABBQMLZA4040305I
 #endif
+
 #ifdef CONFIG_FB_MSM_OVERLAY
 		mdp_hw_cursor_init();
 #endif

@@ -43,7 +43,7 @@ static int pdev_list_cnt;
 
 static struct clk *pixel_mdp_clk; /* drives the lcdc block in mdp */
 static struct clk *pixel_lcdc_clk; /* drives the lcdc interface */
-static boolean firsttime=true;
+
 static struct platform_driver lcdc_driver = {
 	.probe = lcdc_probe,
 	.remove = lcdc_remove,
@@ -130,11 +130,6 @@ static int lcdc_on(struct platform_device *pdev)
 
 	mfd->fbi->var.pixclock = clk_round_rate(pixel_mdp_clk,
 					mfd->fbi->var.pixclock);
-	if(firsttime)
-	{
-		firsttime=false;
-	}
-	else
 	ret = clk_set_rate(pixel_mdp_clk, mfd->fbi->var.pixclock);
 	if (ret) {
 		pr_err("%s: Can't set MDP LCDC pixel clock to rate %u\n",
