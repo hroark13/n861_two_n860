@@ -70,7 +70,7 @@ int syna_fwupdate_deinit(struct i2c_client *client);
 #endif 
 
 #if defined(CONFIG_TOUCHSCREEN_VIRTUAL_KEYS)
-#define virtualkeys virtualkeys.syna-touchscreen
+#define virtualkeys virtualkeys.synaptics-rmi4-ts
 #if defined(CONFIG_MACH_V9PLUS)
 static const char ts_keys_size[] = "0x01:102:100:1061:200:74:0x01:139:300:1061:200:74:0x01:158:500:1061:200:74";
 #elif defined(CONFIG_MACH_ARTHUR)
@@ -737,15 +737,24 @@ static int synaptics_rmi4_probe(
 
 	max_x=ts->max[0];
 #if defined (CONFIG_TOUCHSCREEN_VIRTUAL_KEYS)
-
-#if defined(CONFIG_MACH_SEAN)
+#if defined(CONFIG_MACH_R750)
+	max_y= 2739;
+#elif defined(CONFIG_MACH_V9PLUS)
+	max_y=3092;
+#elif defined(CONFIG_MACH_ARTHUR)
+	max_y=1872;
+#elif defined(CONFIG_MACH_SEAN)
 	max_y=1450;
+#elif defined(CONFIG_MACH_SKATEPLUS)
+	max_y=1884;
 /*ergate-003*/
 #elif defined(CONFIG_MACH_WARP2)
 	max_y=1885;
 #else
 	max_y=ts->max[1];
 #endif
+#else
+	max_y=ts->max[1];
 #endif
 
 	//ret = synaptics_rmi4_init_panel(ts); 
@@ -770,7 +779,11 @@ static int synaptics_rmi4_probe(
 {
 	uint xres,yres=0;
 	get_screeninfo(&xres, &yres);
+	#if defined (CONFIG_MACH_SKATEPLUS) || defined (CONFIG_MACH_ARTHUR)
+	ts->dup_threshold= (3*max_y)/yres;
+	#else
 	ts->dup_threshold=(max_y*10/yres+5)/10;	
+	#endif 
 	//ts->dup_threshold=(max_y*10/LCD_MAX_Y+5)/10;
 	//pr_info("dup_threshold %d\n", ts->dup_threshold);
 }
