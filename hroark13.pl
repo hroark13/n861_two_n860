@@ -32,7 +32,7 @@ system ("make -j8");
 
 print "\ncreating boot.img\n";
 chdir $dir or die "/zpack/n860 $!";;
-system ("$dir/zpack/mkbootimg --cmdline 'console=ttyHSL0,115200,n8 androidboot.hardware=qcom vmalloc=512M' --kernel $dir/arch/arm/boot/zImage --ramdisk ramdisk-repack.gz -o boot.img --base 0x00200000 --pagesize 4096");
+system ("$dir/zpack/mkbootimg --cmdline 'console=ttyMSM1,115200' --kernel $dir/arch/arm/boot/zImage --ramdisk ramdisk-repack.gz -o boot.img --base 0x00200000 --pagesize 4096");
 
 unlink("ramdisk-repack.gz") or die $!;
 
