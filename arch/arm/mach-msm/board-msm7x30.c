@@ -721,8 +721,8 @@ static const unsigned int fluid_keymap[] = {
 };
 
 static const unsigned int surf_keymap[] = {
-	KEY(0, 0, KEY_VOLUMEDOWN), 
-	KEY(0, 1, KEY_VOLUMEUP),
+	KEY(0, 0, KEY_VOLUMEUP),
+	KEY(0, 1, KEY_VOLUMEDOWN), 
 	KEY(0, 2, KEY_RESERVED),
 	KEY(0, 3, KEY_RESERVED),
 	KEY(0, 4, KEY_RESERVED),
