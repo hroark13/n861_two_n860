@@ -467,20 +467,6 @@ static int pm8058_pwm_enable(struct pwm_device *pwm, int ch, int on)
 	return rc;
 }
 
-static const unsigned int fluid_keymap[] = {
-	KEY(0, 0, KEY_7),
-	KEY(0, 1, KEY_ENTER),
-	KEY(0, 2, KEY_UP),
-	/* drop (0,3) as it always shows up in pair with(0,2) */
-	KEY(0, 4, KEY_DOWN),
-
-	KEY(1, 0, KEY_CAMERA_SNAPSHOT),
-	KEY(1, 1, KEY_SELECT),
-	KEY(1, 2, KEY_1),
-	KEY(1, 3, KEY_VOLUMEUP),
-	KEY(1, 4, KEY_VOLUMEDOWN),
-};
-
 static const unsigned int surf_keymap[] = {
 	KEY(0, 0, KEY_VOLUMEUP),
 	KEY(0, 1, KEY_VOLUMEDOWN), 
@@ -507,13 +493,8 @@ static struct matrix_keymap_data surf_keymap_data = {
 };
 
 static struct pm8xxx_keypad_platform_data surf_keypad_data = {
-#if defined(CONFIG_MACH_WARP2)
-	.input_name		= "warp2_keypad",
-	.input_phys_device	= "warp2_keypad/input0",
-#elif defined(CONFIG_MACH_ARTHUR)
 	.input_name		= "arthur_keypad",
 	.input_phys_device	= "arthur_keypad/input0",
-#endif
 	.num_rows		= 12,
 	.num_cols		= 8,
 	.rows_gpio_start	= PM8058_GPIO_PM_TO_SYS(8),
@@ -523,25 +504,6 @@ static struct pm8xxx_keypad_platform_data surf_keypad_data = {
 	.row_hold_ns		= 91500,
 	.wakeup			= 1,
 	.keymap_data		= &surf_keymap_data,
-};
-
-static struct matrix_keymap_data fluid_keymap_data = {
-	.keymap_size	= ARRAY_SIZE(fluid_keymap),
-	.keymap		= fluid_keymap,
-};
-
-static struct pm8xxx_keypad_platform_data fluid_keypad_data = {
-	.input_name		= "fluid-keypad",
-	.input_phys_device	= "fluid-keypad/input0",
-	.num_rows		= 5,
-	.num_cols		= 5,
-	.rows_gpio_start	= PM8058_GPIO_PM_TO_SYS(8),
-	.cols_gpio_start	= PM8058_GPIO_PM_TO_SYS(0),
-	.debounce_ms		= 15,
-	.scan_delay_ms		= 32,
-	.row_hold_ns		= 91500,
-	.wakeup			= 1,
-	.keymap_data		= &fluid_keymap_data,
 };
 
 static struct pm8058_pwm_pdata pm8058_pwm_data = {
@@ -734,7 +696,7 @@ static struct i2c_board_info msm_camera_boardinfo[] __initdata = {
 	},
 #endif
 
-#if defined(CONFIG_MACH_ARTHUR) ||defined(CONFIG_MACH_WARP2)
+#if defined(CONFIG_MACH_ARTHUR)
 #ifdef CONFIG_OV5640
     /*
      *
@@ -867,20 +829,7 @@ static void config_camera_off_gpios(void)
 	}
 }
 
-#if defined(CONFIG_MACH_ARTHUR) ||defined(CONFIG_MACH_WARP2)
-/* add power setting ZTE_LJ_CAM_201009016 begin*/ 
-/*
- * Commented by zh.shj, ZTE_MSM_CAMERA_ZHSHJ_001
- *
- * Camera power setting for backend sensor, i.e., MT9T111/MT9T112
- * For MT9T111: 3.1Mp, 1/4-Inch System-On-A-Chip (SOC) CMOS Digital Image Sensor
- * For MT9T112: 3.1Mp, 1/4-Inch System-On-A-Chip (SOC) CMOS Digital Image Sensor
- *
- * ZTE_LJ_CAM_20100916
- * On msm7x30,we change iovdd from 2.8v to 1.8v
- * Because the power of gpio high level state is 1.8v 
- */
- //add verg for motor alone, ZTE_CAM_YGL_20110510 ZTE_CAM_LJ_20110727
+#if defined(CONFIG_MACH_ARTHUR)
 #define MSM_CAMERA_POWER_BACKEND_DVDD_VAL       (1800)
 #define MSM_CAMERA_POWER_BACKEND_IOVDD_VAL      (1800)
 #define MSM_CAMERA_POWER_BACKEND_AVDD_VAL       (2800)
@@ -1222,7 +1171,7 @@ static struct msm_camera_sensor_flash_src msm_flash_src_pwm = {
 };
 #endif
 
-#if defined(CONFIG_MACH_ARTHUR) ||defined(CONFIG_MACH_WARP2)
+#if defined(CONFIG_MACH_ARTHUR)
 #ifdef CONFIG_OV5640
 /*
  *
@@ -1311,11 +1260,6 @@ static struct platform_device msm_vpe_device = {
 static uint32_t audio_pamp_gpio_config =
    GPIO_CFG(82, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA);
 
-#if (defined(CONFIG_MACH_WARP2))
-static uint32_t audio_paboost_gpio_config =
-   GPIO_CFG(43, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA);
-#endif
-
 static uint32_t audio_fluid_icodec_tx_config =
   GPIO_CFG(85, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA);
 
@@ -1325,9 +1269,7 @@ static int __init snddev_poweramp_gpio_init(void)
 
 	pr_info("snddev_poweramp_gpio_init \n");
 	rc = gpio_tlmm_config(audio_pamp_gpio_config, GPIO_CFG_ENABLE);
-	#if (defined(CONFIG_MACH_WARP2))
-	gpio_tlmm_config(audio_paboost_gpio_config, GPIO_CFG_ENABLE);
-	#endif
+
 	if (rc) {
 		printk(KERN_ERR
 			"%s: gpio_tlmm_config(%#x)=%d\n",
@@ -1374,18 +1316,12 @@ void msm_snddev_tx_route_deconfig(void)
 void msm_snddev_poweramp_on(void)
 {
 	gpio_set_value(82, 1);	/* enable spkr poweramp */
-	#if (defined(CONFIG_MACH_WARP2))
-	gpio_set_value(43, 1);	/* enable spkr poweramp boost*/
-	#endif
 	pr_info("%s: power on amplifier\n", __func__);
 }
 
 void msm_snddev_poweramp_off(void)
 {
 	gpio_set_value(82, 0);	/* disable spkr poweramp */
-	#if (defined(CONFIG_MACH_WARP2))
-	gpio_set_value(43, 0);	/* enable spkr poweramp boost */
-	#endif
 	pr_info("%s: power off amplifier\n", __func__);
 }
 
@@ -1597,9 +1533,6 @@ static int __init buses_init(void)
 		pr_err("%s: gpio_tlmm_config (gpio=%d) failed\n",
 		       __func__, PMIC_GPIO_INT);
 
-	if (machine_is_msm8x60_fluid())
-		pm8058_7x30_data.keypad_pdata = &fluid_keypad_data;
-	else
 		pm8058_7x30_data.keypad_pdata = &surf_keypad_data;
 
 	return 0;
@@ -3372,24 +3305,11 @@ static int lcdc_gpio_array_num[] = {
 
 static struct msm_gpio lcdc_gpio_config_data[] = {
 	{ GPIO_CFG(2, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_bkl_drv" },
-
-#if defined(CONFIG_MACH_WARP2)
-	{ GPIO_CFG(120, 0, GPIO_CFG_INPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_ic_id" },
-#elif defined(CONFIG_MACH_ARTHUR)
 	{ GPIO_CFG(120, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_ic_id" },
-#else
-  #error not board type defined here
-#endif
 	{ GPIO_CFG(180, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_rst" },
 	{ GPIO_CFG(121, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdo" },
 	{ GPIO_CFG(122, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_cs" },
-#if defined(CONFIG_MACH_WARP2)
-	{ GPIO_CFG(121, 0, GPIO_CFG_INPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
-#elif defined(CONFIG_MACH_ARTHUR)
 	{ GPIO_CFG(123, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
-#else
-  #error not board type defined here
-#endif
 	{ GPIO_CFG(124, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_clk" },
 };
 
@@ -3411,11 +3331,8 @@ static struct msm_panel_common_pdata lcdc_panel_data = {
 };
 
 static struct platform_device lcdc_panel_device = {
-#if defined(CONFIG_MACH_WARP2)
-	.name   = "lcdc_panel_qhd",
-#elif defined(CONFIG_MACH_ARTHUR)
+
 	.name   = "lcdc_panel_wvga",
-#endif
 	.id     = 0,
 	.dev    = {
 		.platform_data = &lcdc_panel_data,
@@ -3914,9 +3831,7 @@ static struct msm_gpio lcd_panel_gpios[] = {
  * the future.
 	{ GPIO_CFG(18, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn0" },
  */
-#if defined(CONFIG_MACH_WARP2)
-	{ GPIO_CFG(18, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_grn0" },
-#endif
+
 	{ GPIO_CFG(19, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_grn1" },
 	{ GPIO_CFG(20, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_blu0" },
 	{ GPIO_CFG(21, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_blu1" },
@@ -3955,98 +3870,6 @@ static struct msm_gpio lcd_panel_gpios[] = {
 	{ GPIO_CFG(109, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red7" },
 };
 
-#if defined(CONFIG_MACH_ARTHUR)
-#ifdef CONFIG_ZTE_PLATFORM
-// not used it
-#else
-static struct msm_gpio lcd_sharp_panel_gpios[] = {
-	{ GPIO_CFG(22, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu2" },
-	{ GPIO_CFG(25, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red2" },
-	{ GPIO_CFG(90, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_pclk" },
-	{ GPIO_CFG(91, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_en" },
-	{ GPIO_CFG(92, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_vsync" },
-	{ GPIO_CFG(93, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_hsync" },
-	{ GPIO_CFG(94, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn2" },
-	{ GPIO_CFG(95, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn3" },
-	{ GPIO_CFG(96, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn4" },
-	{ GPIO_CFG(97, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn5" },
-	{ GPIO_CFG(98, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn6" },
-	{ GPIO_CFG(99, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_grn7" },
-	{ GPIO_CFG(100, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu3" },
-	{ GPIO_CFG(101, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu4" },
-	{ GPIO_CFG(102, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu5" },
-	{ GPIO_CFG(103, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu6" },
-	{ GPIO_CFG(104, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_blu7" },
-	{ GPIO_CFG(105, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red3" },
-	{ GPIO_CFG(106, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red4" },
-	{ GPIO_CFG(107, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red5" },
-	{ GPIO_CFG(108, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red6" },
-	{ GPIO_CFG(109, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "lcdc_red7" },
-};
-
-static int lcdc_toshiba_panel_power(int on)
-{
-	int rc, i;
-	struct msm_gpio *gp;
-
-	rc = display_common_power(on);
-	if (rc < 0) {
-		printk(KERN_ERR "%s display_common_power failed: %d\n",
-				__func__, rc);
-		return rc;
-	}
-
-	if (on) {
-		rc = msm_gpios_enable(lcd_panel_gpios,
-				ARRAY_SIZE(lcd_panel_gpios));
-		if (rc < 0) {
-			printk(KERN_ERR "%s: gpio enable failed: %d\n",
-					__func__, rc);
-		}
-	} else {	/* off */
-		gp = lcd_panel_gpios;
-		for (i = 0; i < ARRAY_SIZE(lcd_panel_gpios); i++) {
-			/* ouput low */
-			gpio_set_value(GPIO_PIN(gp->gpio_cfg), 0);
-			gp++;
-		}
-	}
-
-	return rc;
-}
-
-static int lcdc_sharp_panel_power(int on)
-{
-	int rc, i;
-	struct msm_gpio *gp;
-
-	rc = display_common_power(on);
-	if (rc < 0) {
-		printk(KERN_ERR "%s display_common_power failed: %d\n",
-				__func__, rc);
-		return rc;
-	}
-
-	if (on) {
-		rc = msm_gpios_enable(lcd_sharp_panel_gpios,
-				ARRAY_SIZE(lcd_sharp_panel_gpios));
-		if (rc < 0) {
-			printk(KERN_ERR "%s: gpio enable failed: %d\n",
-				__func__, rc);
-		}
-	} else {	/* off */
-		gp = lcd_sharp_panel_gpios;
-		for (i = 0; i < ARRAY_SIZE(lcd_sharp_panel_gpios); i++) {
-			/* ouput low */
-			gpio_set_value(GPIO_PIN(gp->gpio_cfg), 0);
-			gp++;
-		}
-	}
-
-	return rc;
-}
-#endif
-#endif 
 
 static int lcdc_panel_power(int on)
 {
@@ -4905,7 +4728,7 @@ static struct platform_device *devices[] __initdata = {
 	&msm_kgsl_3d0,
 	&msm_kgsl_2d0,
 
-#if defined(CONFIG_MACH_ARTHUR) ||defined(CONFIG_MACH_WARP2)
+#if defined(CONFIG_MACH_ARTHUR)
 #ifdef CONFIG_OV5640
     /*
      * Commented by zh.shj
@@ -5286,20 +5109,8 @@ static uint32_t msm_sdcc_setup_vreg(int dev_id, unsigned int enable)
 	if (test_bit(dev_id, &vreg_sts) == enable)
 		return rc;
 
-
-#if defined(CONFIG_MACH_WARP2) 
-       if(dev_id==4){
-	   	if(enable && enabled_once[dev_id - 1])
-			return 0;
-       	}
-	else{   
-       	if (!enable || enabled_once[dev_id - 1])
-			return 0;
-		}
-#else
 	if (!enable || enabled_once[dev_id - 1])
 			return 0;
-#endif
 	
 	if (!curr)
 		return -ENODEV;
@@ -5324,9 +5135,6 @@ static uint32_t msm_sdcc_setup_vreg(int dev_id, unsigned int enable)
 			pr_err("%s: could not disable regulator: %d\n",
 					__func__, rc);
 		
-#if defined(CONFIG_MACH_WARP2)
-		enabled_once[dev_id - 1] = 0;
-#endif
 	}
 	return rc;
 }
