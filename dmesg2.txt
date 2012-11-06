@@ -1,0 +1,848 @@
+<6>[01-01 00:00:00.000000] [0: swapper]Initializing cgroup subsys cpu
+<5>[01-01 00:00:00.000000] [0: swapper]Linux version 3.0.8-perf+ (hroark13@dev1a) (gcc version 4.4.3 (GCC) ) #1 PREEMPT Tue Nov 6 10:12:28 EST 2012
+<4>[01-01 00:00:00.000000] [0: swapper]CPU: ARMv7 Processor [511f00f2] revision 2 (ARMv7), cr=10c53c7d
+<4>[01-01 00:00:00.000000] [0: swapper]CPU: VIPT nonaliasing data cache, VIVT ASID tagged instruction cache
+<4>[01-01 00:00:00.000000] [0: swapper]Machine: arthur
+<6>[01-01 00:00:00.000000] [0: swapper]jiangfeng:parse_tag_zteftm: zte FTM disable !
+<4>[01-01 00:00:00.000000] [0: swapper]Ignoring unrecognised tag 0x5441000a
+<4>[01-01 00:00:00.000000] [0: swapper]Ignoring unrecognised tag 0x5441000c
+<6>[01-01 00:00:00.000000] [0: swapper]memory pool 2 (start cf00000 size 3100000) initialized
+<4>[01-01 00:00:00.000000] [0: swapper]Memory policy: ECC disabled, Data cache writeback
+<3>[01-01 00:00:00.000000] [0: swapper]smem_find(137, 72): wrong size 64
+<6>[01-01 00:00:00.000000] [0: swapper]socinfo_init: v4, id=75, ver=2.1, raw_id=1410, raw_ver=1410, hw_plat=1, hw_plat_ver=65536
+<7>[01-01 00:00:00.000000] [0: swapper]On node 0 totalpages: 37120
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 572 pages used for memmap
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 0 pages reserved
+<7>[01-01 00:00:00.000000] [0: swapper]  Normal zone: 36548 pages, LIFO batch:7
+<6>[01-01 00:00:00.000000] [0: swapper]allocating 7864320 bytes at c10ba000 (12ba000 physical) for fb
+<7>[01-01 00:00:00.000000] [0: swapper]pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+<7>[01-01 00:00:00.000000] [0: swapper]pcpu-alloc: [0] 0 
+<4>[01-01 00:00:00.000000] [0: swapper]Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 36548
+<5>[01-01 00:00:00.000000] [0: swapper]Kernel command line: console=ttyHSL0,115200,n8 androidboot.hardware=qcom vmalloc=512M androidboot.emmc=true androidboot.mode=normal androidboot.bootloader=0.85.0000 androidboot.baseband=msm
+<6>[01-01 00:00:00.000000] [0: swapper]PID hash table entries: 1024 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+<6>[01-01 00:00:00.000000] [0: swapper]Memory: 58MB 87MB = 145MB total
+<5>[01-01 00:00:00.000000] [0: swapper]Memory: 124184k/124184k available, 74472k reserved, 0K highmem
+<5>[01-01 00:00:00.000000] [0: swapper]Virtual kernel memory layout:
+<5>[01-01 00:00:00.000000] [0: swapper]    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]    DMA     : 0xff000000 - 0xffe00000   (  14 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    vmalloc : 0xd0000000 - 0xfa000000   ( 672 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    lowmem  : 0xc0000000 - 0xcfe00000   ( 254 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]    modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .init : 0xc0008000 - 0xc003d000   ( 212 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .text : 0xc003d000 - 0xc07cf0a4   (7753 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]      .data : 0xc07d0000 - 0xc0858c48   ( 548 kB)
+<5>[01-01 00:00:00.000000] [0: swapper]       .bss : 0xc0858c6c - 0xc0d79c38   (5252 kB)
+<6>[01-01 00:00:00.000000] [0: swapper]NR_IRQS:566
+<6>[01-01 00:00:00.000000] [0: swapper]sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 131071999ms
+<6>[01-01 00:00:00.010000] [0: swapper]Console: colour dummy device 80x30
+<6>[01-01 00:00:00.010000] [0: swapper]Calibrating delay loop... 680.75 BogoMIPS (lpj=3403776)
+<6>[01-01 00:00:00.070000] [0: swapper]pid_max: default: 32768 minimum: 301
+<6>[01-01 00:00:00.070000] [0: swapper]Mount-cache hash table entries: 512
+<6>[01-01 00:00:00.070000] [0: swapper]Initializing cgroup subsys cpuacct
+<6>[01-01 00:00:00.070000] [0: swapper]Initializing cgroup subsys freezer
+<6>[01-01 00:00:00.070000] [0: swapper]CPU: Testing write buffer coherency: ok
+<6>[01-01 00:00:00.070000] [1: swapper]hw perfevents: enabled with ARMv7 Scorpion PMU driver, 5 counters available
+<3>[01-01 00:00:00.070000] [1: swapper]pm: create_suspend_sync_work 157: sync in workqueue enable
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: dummy: 
+<3>[01-01 00:00:00.070000] [1: swapper]rdev_init_debugfs: Error-Bad Function Input
+<6>[01-01 00:00:00.070000] [1: swapper]NET: Registered protocol family 16
+<7>[01-01 00:00:00.070000] [1: swapper]g_zte_board_id_type: 0
+<6>[01-01 00:00:00.070000] [1: swapper]Clock ownership
+<6>[01-01 00:00:00.070000] [1: swapper]  GLBL  : 07d82110
+<6>[01-01 00:00:00.070000] [1: swapper]  APPS  : 00000000 00000000 00000000
+<6>[01-01 00:00:00.070000] [1: swapper]  ROW   : 00000000 00000000
+<6>[01-01 00:00:00.070000] [1: swapper]acpuclk_7x30_init()
+<6>[01-01 00:00:00.070000] [1: swapper]ACPU running at 1024000 KHz
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: smps0: 500 <--> 1500 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: smps1: 500 <--> 1500 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: smps2: 1300 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: smps3: 1800 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: smps4: 2200 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: ldo00: 1200 mV normal 
+<6>[01-01 00:00:00.070000] [1: swapper]print_constraints: ldo02: 2600 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo03: 1800 <--> 3000 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo04: 2850 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo05: 2850 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo06: 3075 <--> 3400 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo07: 1800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo08: 1800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo09: 2050 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo10: 2600 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo11: 2800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo12: 1800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo13: 2900 <--> 3050 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo14: 2850 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo15: 3050 <--> 3100 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo16: 2800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo17: 2600 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo18: 2200 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo19: 2400 <--> 2500 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo20: 2800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo21: 1100 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo22: 1200 <--> 1300 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo23: 1350 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo24: 1200 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ldo25: 1200 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: lvsw0: normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: lvsw1: normal 
+<6>[01-01 00:00:00.080000] [1: swapper]print_constraints: ncp: 1800 mV normal 
+<6>[01-01 00:00:00.080000] [1: swapper]pm8058_probe: PMIC revision: E3
+<6>[01-01 00:00:00.090000] [1: swapper]pm_gpio_probe: OK: base=182, ngpio=40
+<6>[01-01 00:00:00.090000] [1: swapper]pm8xxx_mpp_probe: OK: base=222, ngpio=12
+<3>[01-01 00:00:00.090000] [1: swapper]pm8058_probe: failed to config shutdown on hard reset: -19
+<6>[01-01 00:00:00.090000] [1: swapper]ram_console: got buffer at 3d00000, size 100000
+<6>[01-01 00:00:00.090000] [1: swapper]ram_console: found existing buffer, size 1048560, start 607959
+<6>[01-01 00:00:00.100000] [1: swapper]console [ram-1] enabled
+<3>[01-01 00:00:00.100000] [1: swapper]++++zte_wifi_init++++ 
+<3>[01-01 00:00:00.100000] [1: swapper]----zte_wifi_init----
+<6>[01-01 00:00:00.100000] [1: swapper][ZHY@pmic-vib]:  msm_init_pmic_vibrator
+<6>[01-01 00:00:00.110000] [1: swapper]snddev_poweramp_gpio_init 
+<6>[01-01 00:00:00.110000] [1: swapper]aux_pcm_gpio_init 
+<5>[01-01 00:00:00.130000] [1: swapper]Boot Reason = 0x20
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_gfx2d0: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_gfx3d: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_mdp: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_mfc: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_rot: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_vfe: normal 
+<6>[01-01 00:00:00.140000] [1: swapper]print_constraints: fs_vpe: normal 
+<6>[01-01 00:00:00.190000] [1: swapper]bio: create slab <bio-0> at 0
+<5>[01-01 00:00:00.190000] [1: swapper]pmic8058_pwm_probe: OK
+<5>[01-01 00:00:00.190000] [1: swapper]SCSI subsystem initialized
+<6>[01-01 00:00:00.190000] [1: swapper]msm_i2c_probe
+<6>[01-01 00:00:00.190000] [1: swapper]msm_i2c_probe: clk_ctl 35d, 100000 Hz
+<3>[01-01 00:00:00.190000] [1: swapper]i2c i2c-0: Failed to register i2c client adv7520 at 0x39 (-16)
+<3>[01-01 00:00:00.190000] [1: swapper]i2c i2c-0: Can't create device at 0x39
+<6>[01-01 00:00:00.200000] [1: swapper]msm_i2c_probe
+<6>[01-01 00:00:00.200000] [1: swapper]msm_i2c_probe: clk_ctl 35d, 100000 Hz
+<6>[01-01 00:00:00.200000] [1: swapper]Advanced Linux Sound Architecture Driver Version 1.0.24.
+<6>[01-01 00:00:00.200000] [1: swapper]Bluetooth: Core ver 2.16
+<6>[01-01 00:00:00.200000] [1: swapper]NET: Registered protocol family 31
+<6>[01-01 00:00:00.200000] [1: swapper]Bluetooth: HCI device and connection manager initialized
+<6>[01-01 00:00:00.200000] [1: swapper]Bluetooth: HCI socket layer initialized
+<6>[01-01 00:00:00.200000] [1: swapper]Bluetooth: L2CAP socket layer initialized
+<6>[01-01 00:00:00.200000] [1: swapper]Bluetooth: SCO socket layer initialized
+<6>[01-01 00:00:00.200000] [4: kworker/0:0]cfg80211: Calling CRDA to update world regulatory domain
+<6>[01-01 00:00:00.200000] [1: swapper]Switching to clocksource gp_timer
+<6>[01-01 00:00:00.230026] [1: swapper]NET: Registered protocol family 2
+<6>[01-01 00:00:00.230026] [1: swapper]IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+<6>[01-01 00:00:00.230026] [1: swapper]TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+<6>[01-01 00:00:00.230026] [1: swapper]TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+<6>[01-01 00:00:00.230026] [1: swapper]TCP: Hash tables configured (established 8192 bind 8192)
+<6>[01-01 00:00:00.230026] [1: swapper]TCP reno registered
+<6>[01-01 00:00:00.230026] [1: swapper]UDP hash table entries: 256 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.230026] [1: swapper]UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+<6>[01-01 00:00:00.230026] [1: swapper]NET: Registered protocol family 1
+<6>[01-01 00:00:00.240028] [1: swapper]RPC: Registered named UNIX socket transport module.
+<6>[01-01 00:00:00.240028] [1: swapper]RPC: Registered udp transport module.
+<6>[01-01 00:00:00.240028] [1: swapper]RPC: Registered tcp transport module.
+<6>[01-01 00:00:00.240028] [1: swapper]RPC: Registered tcp NFSv4.1 backchannel transport module.
+<6>[01-01 00:00:00.240028] [1: swapper]Trying to unpack rootfs image as initramfs...
+<6>[01-01 00:00:00.270033] [1: swapper]Freeing initrd memory: 740K
+<6>[01-01 00:00:00.270033] [1: swapper]PMU: registered new PMU device of type 0
+<6>[01-01 00:00:00.290038] [1: swapper]sdio_al:SDIO-AL SW version 1.30
+<3>[01-01 00:00:00.290038] [5: kworker/u:0]Notify: smsm init
+<4>[01-01 00:00:00.300041] [1: swapper]get_nand_partitions: no flash partition table in shared memory
+<6>[01-01 00:00:00.330052] rpcrouter_smd_remote_notify: smd opened 0x  (null)
+<3>[01-01 00:00:00.330052] [5: kworker/u:0]rpcrouter: Server create rejected, version = 0, program = 3000001f
+<6>[01-01 00:00:00.350057] [1: swapper][afe.c:afe_init] AFE driver init
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] Number of decoder supported  5
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] Number of concurrency supported  7
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY4TASK
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] queueid:17
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] decid:4
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:1
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY3TASK
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] queueid:16
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] decid:3
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY2TASK
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] queueid:15
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] decid:2
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY1TASK
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] queueid:14
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] decid:1
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] module_name:AUDPLAY0TASK
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] queueid:13
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] decid:0
+<6>[01-01 00:00:00.350057] [1: swapper][audpp.c:audpp_probe] nr_codec_support:11
+<6>[01-01 00:00:00.350057] [1: swapper][snddev_ecodec.c:snddev_ecodec_init] snddev_ecodec_init
+<6>[01-01 00:00:00.400074] [22: kworker/u:1][adsp.c:adsp_rtos_mtoa_cb] INIT_INFO Event
+<6>[01-01 00:00:00.400074] [1: swapper][adsp.c:adsp_init] msm_adsp -- 0
+<6>[01-01 00:00:00.400074] [1: swapper][lpa.c:lpa_probe] lpa probe
+<6>[01-01 00:00:00.400074] [1: swapper]audio_mvs_init:
+<6>[01-01 00:00:00.400074] [1: swapper]__msm_rpc_connect: server not found 30000014:50001
+<3>[01-01 00:00:00.400074] [1: swapper]audio_mvs_init: MVS RPC connect failed ver 0x50001
+<6>[01-01 00:00:00.400074] [1: swapper]__msm_rpc_connect: server not found 30000014:40001
+<3>[01-01 00:00:00.400074] [1: swapper]audio_mvs_init: MVS RPC connect failed ver 0x40001
+<6>[01-01 00:00:00.400074] [30: audio_mvs]audio_mvs_thread:
+<6>[01-01 00:00:00.400074] [1: swapper]rmt_storage_get_ramfs: RAMFS entry: addr = 0x07500000, size = 0x00300000
+<6>[01-01 00:00:00.400074] [1: swapper]rmt_storage_probe: Remote storage RPC client (0x300000a7)initialized
+<3>[01-01 00:00:00.400074] [1: swapper]msm_rpc_client_req2: RPC call was not successful (3)
+<3>[01-01 00:00:00.400074] [1: swapper]rmt_storage_reg_cb: Failed to register callback for event 7
+<6>[01-01 00:00:00.400074] [1: swapper]rmt_storage_reg_callbacks: Unable (-22) registering aloc_rmt_buf
+<4>[01-01 00:00:00.410078] [1: swapper]pm_monitor_init enter
+<6>[01-01 00:00:00.410078] [1: swapper]ashmem: initialized
+<6>[01-01 00:00:00.420082] [1: swapper]fuse init (API version 7.16)
+<6>[01-01 00:00:00.420082] [1: swapper]msgmni has been set to 243
+<6>[01-01 00:00:00.420082] [1: swapper]io scheduler noop registered
+<6>[01-01 00:00:00.420082] [1: swapper]io scheduler deadline registered (default)
+<6>[01-01 00:00:00.420082] [1: swapper]io scheduler cfq registered
+<3>[01-01 00:00:00.420082] [1: swapper]mdp reg: nanzhang dump mdp regs
+<3>[01-01 00:00:00.420082] [1: swapper]address        0 : 400030A
+<3>[01-01 00:00:00.420082] [1: swapper]address        1 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        2 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        3 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        4 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        5 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        6 :      25
+<3>[01-01 00:00:00.420082] [1: swapper]address        7 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        8 :FFFFFFFF
+<3>[01-01 00:00:00.420082] [1: swapper]address        9 :     FFF
+<3>[01-01 00:00:00.420082] [1: swapper]address        A :   10000
+<3>[01-01 00:00:00.420082] [1: swapper]address        B :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        C :       4
+<3>[01-01 00:00:00.420082] [1: swapper]address        D :      11
+<3>[01-01 00:00:00.420082] [1: swapper]address        E :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address        F :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       10 :    FFFF
+<3>[01-01 00:00:00.420082] [1: swapper]address       11 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       12 :      40
+<3>[01-01 00:00:00.420082] [1: swapper]address       13 :    3333
+<3>[01-01 00:00:00.420082] [1: swapper]address       14 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       15 :      91
+<3>[01-01 00:00:00.420082] [1: swapper]address       16 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       17 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       18 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       19 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1A :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1B :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1C :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1D :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1E :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       1F :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       20 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       21 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       22 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       23 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       24 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       25 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       26 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       27 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       28 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       29 :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       2A :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       2B :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       2C :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       2D :       0
+<3>[01-01 00:00:00.420082] [1: swapper]address       2E :       0
+<3>[01-01 00:00:00.470105] [1: swapper]mdp reg: nanzhang dump mdp regs
+<3>[01-01 00:00:00.470105] [1: swapper]address        0 : 400030A
+<3>[01-01 00:00:00.470105] [1: swapper]address        1 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        2 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        3 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        4 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        5 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        6 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        7 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        8 :FFFFFFFF
+<3>[01-01 00:00:00.470105] [1: swapper]address        9 :     FFF
+<3>[01-01 00:00:00.470105] [1: swapper]address        A :   10000
+<3>[01-01 00:00:00.470105] [1: swapper]address        B :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        C :       4
+<3>[01-01 00:00:00.470105] [1: swapper]address        D :      11
+<3>[01-01 00:00:00.470105] [1: swapper]address        E :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address        F :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       10 :    FFFF
+<3>[01-01 00:00:00.470105] [1: swapper]address       11 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       12 :      40
+<3>[01-01 00:00:00.470105] [1: swapper]address       13 :    3333
+<3>[01-01 00:00:00.470105] [1: swapper]address       14 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       15 :      91
+<3>[01-01 00:00:00.470105] [1: swapper]address       16 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       17 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       18 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       19 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1A :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1B :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1C :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1D :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1E :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       1F :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       20 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       21 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       22 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       23 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       24 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       25 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       26 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       27 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       28 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       29 :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       2A :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       2B :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       2C :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       2D :       0
+<3>[01-01 00:00:00.470105] [1: swapper]address       2E :       0
+<4>[01-01 00:00:00.530136] [1: swapper]spi_init
+<4>[01-01 00:00:00.530136] [1: swapper]!truly id is 0x6902
+<6>[01-01 00:00:00.560154] [1: swapper]setting pdata->panel_info.fb_num to 3. type: 3
+<4>[01-01 00:00:00.560154] [1: swapper][ZGC]:init_lcd_proc
+<6>[01-01 00:00:00.560154] [1: swapper]FrameBuffer[0] 480x800 size=4608000 bytes is registered successfully!
+<4>[01-01 00:00:00.560154] [1: swapper]load_565rle_image: Can not open /logo.bmp
+<4>[01-01 00:00:00.570160] [1: swapper][ZGC]:LcdPanleID = 61
+<7>[01-01 00:00:00.570160] [1: swapper]Registered led device: lcd-backlight
+<6>[01-01 00:00:00.570160] [1: swapper]
+<6>[01-01 00:00:00.570160] [1: swapper] msm_vidc_enc: Inside vid_enc_init()
+<6>[01-01 00:00:00.570160] [1: swapper]
+<6>[01-01 00:00:00.570160] [1: swapper] msm_vidc_enc: Inside vid_enc_vcd_init()
+<6>[01-01 00:00:00.570160] [1: swapper]msm_serial: detected port #1
+<6>[01-01 00:00:00.570160] [1: swapper]msm_serial.1: ttyMSM1 at MMIO 0xacb00000 (irq = 69) is a MSM
+<6>[01-01 00:00:00.590173] [1: swapper]msm_serial: driver initialized
+<6>[01-01 00:00:00.590173] [1: swapper]msm_serial_hs.0: ttyHS0 at MMIO 0xa3300000 (irq = 73) is a MSM HS UART
+<6>[01-01 00:00:00.590173] [1: swapper]msm_serial_hs module loaded
+<6>[01-01 00:00:00.590173] [1: swapper]msm_rotator_probe: rotator_hw_revision=0
+<6>[01-01 00:00:00.600180] [1: swapper]kgsl kgsl-3d0: |kgsl_gpummu_init| MMU type set for device is GPUMMU
+<6>[01-01 00:00:00.600180] [1: swapper]kgsl kgsl-2d0: |kgsl_gpummu_init| MMU type set for device is GPUMMU
+<6>[01-01 00:00:00.620194] [1: swapper]brd: module loaded
+<6>[01-01 00:00:00.640208] [1: swapper]loop: module loaded
+<6>[01-01 00:00:00.640208] [1: swapper]pmem: Initializing pmem (user-space) as cached
+<6>[01-01 00:00:00.640208] [1: swapper]allocating 41943040 bytes at   (null) (cf00000 physical) for pmem
+<1>[01-01 00:00:00.640208] [1: swapper]pmem: pmem_setup: unable to register pmem driver(pmem_adsp) - zero size passed in!
+<4>[01-01 00:00:00.640208] [1: swapper]android_pmem: probe of android_pmem.2 failed with error -1
+<1>[01-01 00:00:00.640208] [1: swapper]pmem: pmem_setup: unable to register pmem driver(pmem_audio) - zero size passed in!
+<4>[01-01 00:00:00.640208] [1: swapper]android_pmem: probe of android_pmem.4 failed with error -1
+<4>[01-01 00:00:00.640208] [1: swapper]i2c-core: driver [isa1200] using legacy suspend method
+<4>[01-01 00:00:00.640208] [1: swapper]i2c-core: driver [isa1200] using legacy resume method
+<5>[01-01 00:00:00.640208] [1: swapper]pm8xxx_upl_probe: OK
+<3>[01-01 00:00:00.640208] [1: swapper]msm_snddev_init
+<6>[01-01 00:00:00.650215] [1: swapper]adie_codec_register_codec_operations: codec type 0
+<3>[01-01 00:00:00.650215] [1: swapper]config_timpani_reset: [YXS]reset TIMPANI Codec
+<3>[01-01 00:00:00.650215] [1: swapper]msm_i2c msm_i2c.2: (001a) Error during data xfer (-5)
+<3>[01-01 00:00:00.650215] [1: swapper]msm_i2c msm_i2c.2: (001a) Error during data xfer (-5)
+<3>[01-01 00:00:00.650215] [1: swapper]marimba-core 2-000d: i2c read failed
+<4>[01-01 00:00:00.650215] [1: swapper]marimba_tsadc_probe
+<6>[01-01 00:00:00.650215] [1: swapper]__msm_rpc_connect: server not found 30000060:70001
+<3>[01-01 00:00:00.650215] [1: swapper]pmapp_rpc_req_reply: init rpc failed! ans = -113 for 0x70001 version, fallback
+<6>[01-01 00:00:00.650215] [1: swapper]__msm_rpc_connect: server not found 30000060:60001
+<3>[01-01 00:00:00.650215] [1: swapper]pmapp_rpc_req_reply: init rpc failed! ans = -113 for 0x60001 version, fallback
+<7>[01-01 00:00:00.650215] [1: swapper]pmapp_rpc_req_reply: successfully connected to 0x50001 rpc version
+<6>[01-01 00:00:00.680237] [1: swapper]SCSI Media Changer driver v0.25 
+<6>[01-01 00:00:00.680237] [1: swapper]msm_nand_probe: phys addr 0xa0200000 
+<6>[01-01 00:00:00.680237] [1: swapper]msm_nand_probe: Dual Nand Ctrl in ping-pong mode
+<6>[01-01 00:00:00.680237] [1: swapper]msm_nand_probe: dmac 0x7
+<6>[01-01 00:00:00.680237] [1: swapper]msm_nand_probe: allocated dma buffer at ffdea000, dma_addr c6b4000
+<3>[01-01 00:00:00.680237] [1: swapper]flash_onfi_probe: No partition info available
+<6>[01-01 00:00:00.680237] [1: swapper]status: 20
+<6>[01-01 00:00:00.680237] [1: swapper]nandid: 7070707 maker 07 device 07
+<3>[01-01 00:00:00.680237] [1: swapper]ERROR: unknown nand device manuf=7 devid=7
+<6>[01-01 00:00:00.680237] [1: swapper]SFLASHC Async Mode bit: 1 
+<6>[01-01 00:00:00.680237] [1: swapper]=================================================================
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: manufacturer_id = 0xf000
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: device_id = 0xf001
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: version_id = 0xf002
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: data_buf_size = 0xf003
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: boot_buf_size = 0xf004
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: num_of_buffers = 0xf005
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: technology = 0xf006
+<6>[01-01 00:00:00.680237] [1: swapper]=================================================================
+<6>[01-01 00:00:00.680237] [1: swapper]flash_onenand_probe: Detected an unsupported device
+<3>[01-01 00:00:00.680237] [1: swapper]msm_nand_probe: No nand device found
+<6>[01-01 00:00:00.700252] [1: swapper]PPP generic driver version 2.4.2
+<6>[01-01 00:00:00.700252] [1: swapper]PPP Deflate Compression module registered
+<6>[01-01 00:00:00.700252] [1: swapper]PPP BSD Compression module registered
+<6>[01-01 00:00:00.700252] [1: swapper]PPP MPPE Compression module registered
+<6>[01-01 00:00:00.700252] [1: swapper]NET: Registered protocol family 24
+<6>[01-01 00:00:00.700252] [1: swapper]SLIP: version 0.8.4-NET3.019-NEWTTY (dynamic channels, max=256) (6 bit encapsulation enabled).
+<6>[01-01 00:00:00.700252] [1: swapper]CSLIP: code copyright 1989 Regents of the University of California.
+<6>[01-01 00:00:00.700252] [1: swapper]tun: Universal TUN/TAP device driver, 1.6
+<6>[01-01 00:00:00.700252] [1: swapper]tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<4>[01-01 00:00:00.700252] [1: swapper]smc91x: not found (-19).
+<6>[01-01 00:00:00.700252] [1: swapper]smsc911x: Driver version 2008-10-21
+<6>[01-01 00:00:00.710259] [1: swapper]rmnet_init: SMD devices[8]
+<6>[01-01 00:00:00.720267] [1: swapper]peripheral driver registered w/ tranceiver
+<4>[01-01 00:00:00.720267] [1: swapper]usb: config_ftm_from_tag, 242
+<4>[01-01 00:00:00.720267] [1: swapper]usb: config_ftm_from_tag, 249: ftm_mode disable
+<6>[01-01 00:00:00.750290] [1: swapper]android_usb gadget: Mass Storage Function, version: 2009/09/11
+<6>[01-01 00:00:00.750290] [1: swapper]android_usb gadget: Number of LUNs=2
+<6>[01-01 00:00:00.750290] [1: swapper] lun0: LUN: removable file: (no medium)
+<6>[01-01 00:00:00.750290] [1: swapper] lun1: LUN: removable read only CD-ROM file: (no medium)
+<6>[01-01 00:00:00.750290] [1: swapper]android_usb gadget: android_usb ready
+<6>[01-01 00:00:00.750290] [4: kworker/0:0]msm_hsusb msm_hsusb: msm72k_udc: idle flags 0x1
+<6>[01-01 00:00:00.750290] [1: swapper]diagchar initialized now
+<6>[01-01 00:00:00.760298] [1: swapper]input: arthur_keypad as /devices/platform/msm_ssbi.0/pm8058-core/pm8xxx-keypad/input/input0
+<6>[01-01 00:00:00.760298] [1: swapper]synaptics_probe enter
+<4>[01-01 00:00:00.760298] [1: swapper]vreg_disable: unbalanced disables for vreg gp6
+<3>[01-01 00:00:00.760298] [1: swapper]vdd disable failed
+<6>[01-01 00:00:00.950427] [17: kworker/0:1]msm_hsusb msm_hsusb: msm72k_udc_vbus_session: 1
+<6>[01-01 00:00:00.950427] [71: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: offline flags 0x2
+<6>[01-01 00:00:00.990446] [1: swapper]ts max(1143,2028)
+<6>[01-01 00:00:00.990446] [1: swapper]chip_type=0x0, sensor=0x0, fw_ver=0x0
+<4>[01-01 00:00:00.990446] [1: swapper]lcd ( 480, 800 ) 
+<6>[01-01 00:00:01.000451] [1: swapper]input: syna-touchscreen as /devices/virtual/input/input1
+<6>[01-01 00:00:01.000451] [1: swapper]syna_fwupdate_init:synaptics firmware update init succeed!
+<6>[01-01 00:00:01.000451] [1: swapper]synaptics_probe: Start ts syna-touchscreen in interrupt mode
+<7>[01-01 00:00:01.000451] [1: swapper]RTC Registering with rs30000048
+<7>[01-01 00:00:01.000451] [1: swapper]msmrtc_rpc_proc_result: RPC client reply for PROC=12 success
+<6>[01-01 00:00:01.000451] [76: krtcclntcbd]RPC CALL -- TOD TIME UPDATE: ttick = 342602
+<6>[01-01 00:00:01.000451] [76: krtcclntcbd]stamp=54329356314509312, freq = 0
+<3>[01-01 00:00:01.000451] [76: krtcclntcbd]drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+<7>[01-01 00:00:01.000451] [1: swapper]msmrtc_rpc_proc_result: RPC client reply for PROC=17 success
+<7>[01-01 00:00:01.000451] [1: swapper]msmrtc_tod_proc_result: 11/06/2012 15:18:17 (01)
+<6>[01-01 00:00:01.010456] [1: swapper]using rtc device, msm_rtc, for alarms
+<7>[01-01 00:00:01.010456] [1: swapper]msm_rtc: dev (254:0)
+<6>[01-01 00:00:01.010456] [1: swapper]rs30000048 rs30000048.262144: rtc core: registered msm_rtc as rtc0
+<7>[01-01 00:00:01.010456] [1: swapper]msmrtc_tod_proc_result: 01/06/1980 00:00:00 (06)
+<7>[01-01 00:00:01.010456] [1: swapper]msm_rtc_secure: dev (254:1)
+<6>[01-01 00:00:01.010456] [1: swapper]rs30000048 rs30000048.262144: rtc core: registered msm_rtc_secure as rtc1
+<6>[01-01 00:00:01.010456] [1: swapper]i2c /dev entries driver
+<3>[01-01 00:00:01.010456] [1: swapper]TAOS: comes into taos_init
+<3>[01-01 00:00:01.010456] [1: swapper]TAOS: taos_probe() - i2c smbus block data functions unsupported
+<3>[01-01 00:00:01.020462] [1: swapper]TAOS: taos_device_name is 1
+<3>[01-01 00:00:01.020462] [1: swapper]TAOS: chip id of taos that was read matches expected id in taos_probe()
+<2>[01-01 00:00:01.040472] [1: swapper]taos use gpio 142
+<6>[01-01 00:00:01.040472] [1: swapper]input: light as /devices/virtual/input/input2
+<6>[01-01 00:00:01.040472] [1: swapper]input: proximity as /devices/virtual/input/input3
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 compass driver: initialize
+<6>[01-01 00:00:01.050478] [1: swapper]akm8962_probe is starting in akm8962_probe
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 akm8962_probe: Success to allocate input device
+<6>[01-01 00:00:01.050478] [1: swapper]input: compass as /devices/virtual/input/input4
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 akm8962_probe: Register input device success
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 akm8962_probe: akmd_device register success
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 akm8962_probe: akm_aot_device register success
+<6>[01-01 00:00:01.050478] [1: swapper]AKM8962 successfully probed.
+<6>[01-01 00:00:01.050478] [1: swapper]lirc_dev: IR Remote Control driver registered, major 238 
+<6>[01-01 00:00:01.050478] [1: swapper]IR NEC protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR RC5(x) protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR RC6 protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR JVC protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR Sony protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR RC5 (streamzap) protocol handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]IR LIRC bridge handler initialized
+<6>[01-01 00:00:01.050478] [1: swapper]Linux video capture interface: v2.00
+<4>[01-01 00:00:01.050478] [1: swapper]zt debug: ov5640_init
+<3>[01-01 00:00:01.050478] [1: swapper]: ov5640_init
+<3>[01-01 00:00:01.050478] [22: kworker/u:1]ov5640_sensor_probe: set reset to 0
+<4>[01-01 00:00:01.050478] [22: kworker/u:1]zt debug: ov5640_sensor_probe_init
+<6>[01-01 00:00:01.060483] [1: swapper]I2C radio driver for Qualcomm FM Radio Transceiver , Version 1.0.0
+<7>[01-01 00:00:01.060483] [1: swapper]msm_batt_init: enter
+<6>[01-01 00:00:01.060483] [28: kworker/u:2][ZHY@msm-battery]:usb  pc,batt_st=good ,discharging,level=good,4211mV,34C,100% ,full=1,1,59508mV,29C,250%,222.
+<6>[01-01 00:00:01.060483] [1: swapper]msm_battery task queue start!
+<5>[01-01 00:00:01.060483] [1: swapper]pop_mem_tm_probe: device 0 probed successfully
+<3>[01-01 00:00:01.060483] [1: swapper]pop_mem_tm_probe: memory controller 1 does not exist
+<6>[01-01 00:00:01.080495] [1: swapper]device-mapper: ioctl: 4.20.0-ioctl (2011-02-02) initialised: dm-devel@redhat.com
+<6>[01-01 00:00:01.080495] [1: swapper]Bluetooth: HCI UART driver ver 2.2
+<6>[01-01 00:00:01.080495] [1: swapper]Bluetooth: HCI H4 protocol initialized
+<6>[01-01 00:00:01.080495] [1: swapper]Bluetooth: HCI_IBS protocol initialized
+<6>[01-01 00:00:01.080495] [1: swapper]Bluetooth: MSM Sleep Mode Driver Ver 1.1
+<6>[01-01 00:00:01.080495] [1: swapper]Bluetooth: BCM Sleep Mode Driver Ver 1.1
+<7>[01-01 00:00:01.080495] [1: swapper]bcm_power_init
+<7>[01-01 00:00:01.080495] [1: swapper]bcm_power_probe
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: mci-version: 0
+<3>[01-01 00:00:01.080495] [1: swapper]mmc0: No card detect facilities available
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: Qualcomm MSM SDCC-core at 0x00000000a0500000 irq 98,0 dma 8 dmacrcri 7
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: 8 bit data mode enabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: 4 bit data mode disabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: polling status mode disabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: Slot eject status = 0
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: Power save feature enable = 1
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: DM non-cached buffer at ffdc0000, dma_addr 0x0c780000
+<6>[01-01 00:00:01.080495] [1: swapper]mmc0: DM cmd busaddr 0x0c780000, cmdptr busaddr 0x0c797f40
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: mci-version: 0
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: Qualcomm MSM SDCC-core at 0x00000000a3000000 irq 96,0 dma 8 dmacrcri 12
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: 8 bit data mode disabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: 4 bit data mode enabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: polling status mode disabled
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: Slot eject status = 1
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: Power save feature enable = 1
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: DM non-cached buffer at ffd60000, dma_addr 0x0c7a0000
+<6>[01-01 00:00:01.080495] [1: swapper]mmc1: DM cmd busaddr 0x0c7a0000, cmdptr busaddr 0x0c7b7f40
+<6>[01-01 00:00:01.080495] [1: swapper]mmc2: mci-version: 0
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: Qualcomm MSM SDCC-core at 0x00000000a3100000 irq 100,537 dma 8 dmacrcri 13
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: 8 bit data mode disabled
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: 4 bit data mode enabled
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: polling status mode disabled
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: MMC clock 144000 -> 49152000 Hz, PCLK 96000000 Hz
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: Slot eject status = 0
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: Power save feature enable = 1
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: DM non-cached buffer at ffd40000, dma_addr 0x0c7c0000
+<6>[01-01 00:00:01.090501] [1: swapper]mmc2: DM cmd busaddr 0x0c7c0000, cmdptr busaddr 0x0c7d7f40
+<7>[01-01 00:00:01.090501] [1: swapper]Registered led device: button-backlight
+<7>[01-01 00:00:01.090501] [1: swapper]Registered led device: flashlight
+<7>[01-01 00:00:01.110512] [1: swapper]Registered led device: red
+<7>[01-01 00:00:01.110512] [1: swapper]Registered led device: green
+<6>[01-01 00:00:01.110512] [1: swapper][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 0.
+<6>[01-01 00:00:01.110512] [1: swapper]__msm_rpc_connect: server not found 30000061:60001
+<3>[01-01 00:00:01.110512] [1: swapper]pmic_rpc_req_reply: init rpc failed! ans = -113 for 0x60001 version, fallback
+<6>[01-01 00:00:01.110512] [1: swapper]__msm_rpc_connect: server not found 30000061:50001
+<3>[01-01 00:00:01.110512] [1: swapper]pmic_rpc_req_reply: init rpc failed! ans = -113 for 0x50001 version, fallback
+<7>[01-01 00:00:01.110512] [1: swapper]pmic_rpc_req_reply: successfully connected to 0x30001 rpc version
+<6>[01-01 00:00:01.110512] [1: swapper][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 0.
+<6>[01-01 00:00:01.120518] [1: swapper]logger: created 256K log 'log_main'
+<6>[01-01 00:00:01.120518] [1: swapper]logger: created 256K log 'log_events'
+<6>[01-01 00:00:01.120518] [1: swapper]logger: created 256K log 'log_radio'
+<6>[01-01 00:00:01.120518] [1: swapper]logger: created 256K log 'log_system'
+<4>[01-01 00:00:01.120518] [1: swapper]zte log address _buf_log_main: 0xc0c6fe0c
+<4>[01-01 00:00:01.120518] [1: swapper]zte log address _buf_log_events: 0xc0cafe0c
+<4>[01-01 00:00:01.120518] [1: swapper]zte log address _buf_log_radio: 0xc0cefe0c
+<4>[01-01 00:00:01.120518] [1: swapper]zte log address _buf_log_system: 0xc0d2fe0c
+<6>[01-01 00:00:01.130524] [1: swapper]msm-cpu-dai msm-cpu-dai.0: asoc_msm_cpu_probe: dev name msm-cpu-dai.0
+<6>[01-01 00:00:01.130524] [1: swapper]msm-codec-dai msm-codec-dai.0: asoc_msm_codec_probe: dev name msm-codec-dai.0
+<6>[01-01 00:00:01.130524] [1: swapper]mvs-cpu-dai mvs-cpu-dai.0: asoc_mvs_cpu_probe: dev name mvs-cpu-dai.0
+<6>[01-01 00:00:01.130524] [1: swapper]mvs-codec-dai mvs-codec-dai.0: asoc_mvs_codec_probe: dev name mvs-codec-dai.0
+<6>[01-01 00:00:01.150536] [1: swapper]asoc: msm-codec-dai <-> msm-cpu-dai.0 mapping ok
+<6>[01-01 00:00:01.150536] [1: swapper]asoc: mvs-codec-dai <-> mvs-cpu-dai.0 mapping ok
+<6>[01-01 00:00:01.170549] [1: swapper]ALSA device list:
+<6>[01-01 00:00:01.170549] [1: swapper]  #0: msm-audio
+<6>[01-01 00:00:01.170549] [1: swapper]Mirror/redirect action on
+<6>[01-01 00:00:01.170549] [1: swapper]u32 classifier
+<6>[01-01 00:00:01.170549] [1: swapper]    Actions configured
+<6>[01-01 00:00:01.170549] [1: swapper]Netfilter messages via NETLINK v0.30.
+<6>[01-01 00:00:01.170549] [1: swapper]nf_conntrack version 0.5.0 (1951 buckets, 7804 max)
+<6>[01-01 00:00:01.170549] [1: swapper]ctnetlink v0.93: registering with nfnetlink.
+<6>[01-01 00:00:01.170549] [1: swapper]NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+<6>[01-01 00:00:01.170549] [1: swapper]NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+<6>[01-01 00:00:01.170549] [1: swapper]xt_time: kernel timezone is -0000
+<6>[01-01 00:00:01.170549] [1: swapper]IPv4 over IPv4 tunneling driver
+<6>[01-01 00:00:01.190562] [71: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x2
+<6>[01-01 00:00:01.190562] [71: kworker/0:2]android_work: did not send uevent (0 0   (null))
+<6>[01-01 00:00:01.190562] [1: swapper]GRE over IPv4 demultiplexor driver
+<6>[01-01 00:00:01.190562] [1: swapper]GRE over IPv4 tunneling driver
+<6>[01-01 00:00:01.190562] [1: swapper]ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[01-01 00:00:01.190562] [1: swapper]arp_tables: (C) 2002 David S. Miller
+<6>[01-01 00:00:01.190562] [1: swapper]TCP cubic registered
+<6>[01-01 00:00:01.190562] [1: swapper]NET: Registered protocol family 10
+<3>[01-01 00:00:01.200568] [22: kworker/u:1]ov5640_sensor_init_probe: entry
+<3>[01-01 00:00:01.200568] [22: kworker/u:1]ov5640_sensor_init_probe: model_id = 0x5640
+<3>[01-01 00:00:01.200568] [22: kworker/u:1]ov5640_reg_init: entry
+<6>[01-01 00:00:01.210574] [1: swapper]Mobile IPv6
+<6>[01-01 00:00:01.210574] [1: swapper]ip6_tables: (C) 2000-2006 Netfilter Core Team
+<6>[01-01 00:00:01.230587] [1: swapper]IPv6 over IPv4 tunneling driver
+<6>[01-01 00:00:01.230587] [1: swapper]NET: Registered protocol family 17
+<6>[01-01 00:00:01.230587] [1: swapper]NET: Registered protocol family 15
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: RFCOMM TTY layer initialized
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: RFCOMM socket layer initialized
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: RFCOMM ver 1.11
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: BNEP filters: protocol multicast
+<6>[01-01 00:00:01.230587] [1: swapper]Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+<6>[01-01 00:00:01.230587] [1: swapper]VFP support v0.3: implementor 51 architecture 64 part 0f variant 1 rev 0
+<6>[01-01 00:00:01.230587] [1: swapper]ThumbEE CPU extension supported.
+<6>[01-01 00:00:01.270614] [1: swapper]clock_late_init() disabled 41 unused clocks
+<6>[01-01 00:00:01.270614] [1: swapper][voice.c:voice_init] 
+<6>[01-01 00:00:01.270614] [92: voice][voice.c:voice_thread] voice_thread() start
+<6>[01-01 00:00:01.270614] [1: swapper][audio_acdb.c:acdb_init] build id used is = 7X30A-AABBQCLYM-40000230
+<3>[01-01 00:00:01.270614] [93: acdb_cb_thread][audio_acdb.c:initialize_modem_acdb] ACDB=> RPC failure result = -1
+<3>[01-01 00:00:01.270614] [93: acdb_cb_thread][audio_acdb.c:acdb_calibrate_device] failed to initialize modem ACDB
+<1>[01-01 00:00:01.270614] [93: acdb_cb_thread]Unable to handle kernel NULL pointer dereference at virtual address 00000004
+<1>[01-01 00:00:01.270614] [93: acdb_cb_thread]pgd = c0004000
+<1>[01-01 00:00:01.270614] [93: acdb_cb_thread][00000004] *pgd=00000000
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]Internal error: Oops: 5 [#1] PREEMPT
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]Modules linked in:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]CPU: 0    Not tainted  (3.0.8-perf+ #1)
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]PC is at __list_add+0x4/0x80
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]LR is at prepare_to_wait+0x50/0x94
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]pc : [<c025996c>]    lr : [<c00fc358>]    psr: 60000093
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]sp : cbeb1f58  ip : 00000000  fp : cbeb1f98
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]r10: c0c24f5c  r9 : 00000000  r8 : cbeb1f8c
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]r7 : cbeb0000  r6 : cbea4b60  r5 : 00000001  r4 : 40000013
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]r3 : cbeb1f98  r2 : 00000000  r1 : c0c24c7c  r0 : cbeb1f98
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]Flags: nZCv  IRQs off  FIQs on  Mode SVC_32  ISA ARM  Segment kernel
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]Control: 10c57c7d  Table: 00204059  DAC: 00000015
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]PC: 0xc02598ec:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]98ec  158d5000 1a000009 e5946004 e1560005 0584c004 058c4000 0a000005 e59f0018
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]990c  e1a03005 e59f2024 e3a01038 e58d6000 ebfa21e2 e8bd807c 00100100 c070541a
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]992c  c070542b 00200200 c070545f c0705493 c07054cd e92d4010 e1a04000 ebffffd0
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]994c  e59f300c e5843000 e59f3008 e5843004 e8bd8010 00100100 00200200 e92d4073
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]996c  e592c004 e1a05002 e1a04001 e15c0001 e1a06000 0a000006 e59f0050 e3a0101a
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]998c  e59f204c e1a03004 e58dc000 e58d5004 ebfa21c2 e594c000 e15c0005 0a000006
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]99ac  e59f0028 e3a0101e e59f2028 e1a03005 e58dc000 e58d4004 ebfa21b8 e5856004
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]99cc  e5865000 e5864004 e5846000 e8bd807c c070541a c0705507 c0705554 e59f3010
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]LR: 0xc00fc2d8:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c2d8  e121f004 e1a0200d e3c23d7f e3c3303f e5932004 e2422001 e5832004 e5933000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c2f8  e3130002 08bd8010 e8bd4010 ea12b919 e92d4070 e5913000 e1a05002 e3c33001
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c318  e5813000 e10f4000 f10c0080 e1a0200d e3c23d7f e3c3303f e5932004 e2822001
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c338  e5832004 e5b1300c e1530001 1a000003 e1a01000 e1a00003 e5912000 eb057583
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c358  e1a0200d e3c23d7f e3c3303f e593300c e5835000 e121f004 e1a0200d e3c23d7f
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c378  e3c3303f e5932004 e2422001 e5832004 e5933000 e3130002 08bd8070 e8bd4070
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c398  ea12b8f4 e1a02001 e1a01000 e92d4010 e1a03002 e5922000 e3c22001 e483200c
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]c3b8  e10f4000 f10c0080 e1a0000d e3c02d7f e3c2203f e5920004 e2800001 e5820004
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]SP: 0xcbeb1ed8:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1ed8  62635f62 7268745f 5d646165 205d3400 0f718000 d00d4000 0000f718 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1ef8  00001000 ffffffff cbeb1f44 cbea4b60 cbeb0000 c0042d6c cbeb1f98 c0c24c7c
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f18  00000000 cbeb1f98 40000013 00000001 cbea4b60 cbeb0000 cbeb1f8c 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f38  c0c24f5c cbeb1f98 00000000 cbeb1f58 c00fc358 c025996c 60000093 ffffffff
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f58  cbeb1f98 c0c24c7c 40000013 00000001 cbea4b60 c00fc358 c0c24a34 c0846828
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f78  cbea4b60 c00c96a0 c0c24ca8 00000010 00000000 00000000 cbea4b60 c00fc030
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f98  cbeb1f98 cbeb1f98 00000000 cc613f30 00000000 cbeb1fd4 c00c8d38 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fb8  00000000 00000000 00000000 c00fbde4 c0044154 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]FP: 0xcbeb1f18:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f18  00000000 cbeb1f98 40000013 00000001 cbea4b60 cbeb0000 cbeb1f8c 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f38  c0c24f5c cbeb1f98 00000000 cbeb1f58 c00fc358 c025996c 60000093 ffffffff
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f58  cbeb1f98 c0c24c7c 40000013 00000001 cbea4b60 c00fc358 c0c24a34 c0846828
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f78  cbea4b60 c00c96a0 c0c24ca8 00000010 00000000 00000000 cbea4b60 c00fc030
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f98  cbeb1f98 cbeb1f98 00000000 cc613f30 00000000 cbeb1fd4 c00c8d38 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fb8  00000000 00000000 00000000 c00fbde4 c0044154 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fd8  cbeb1fd8 cbeb1fd8 00000000 cc613f30 c00fbd64 c0044154 00000013 c0044154
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1ff8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R0: 0xcbeb1f18:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f18  00000000 cbeb1f98 40000013 00000001 cbea4b60 cbeb0000 cbeb1f8c 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f38  c0c24f5c cbeb1f98 00000000 cbeb1f58 c00fc358 c025996c 60000093 ffffffff
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f58  cbeb1f98 c0c24c7c 40000013 00000001 cbea4b60 c00fc358 c0c24a34 c0846828
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f78  cbea4b60 c00c96a0 c0c24ca8 00000010 00000000 00000000 cbea4b60 c00fc030
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f98  cbeb1f98 cbeb1f98 00000000 cc613f30 00000000 cbeb1fd4 c00c8d38 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fb8  00000000 00000000 00000000 c00fbde4 c0044154 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fd8  cbeb1fd8 cbeb1fd8 00000000 cc613f30 c00fbd64 c0044154 00000013 c0044154
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1ff8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R1: 0xc0c24bfc:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4bfc  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4c1c  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4c3c  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4c5c  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4c7c  00000000 00000000 00000001 c0c24c88 c0c24c88 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4c9c  00000000 00000000 00000000 00000000 00000000 00000000 00000000 0f70f000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4cbc  00000000 0f718000 d00d4000 cbea8cc0 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4cdc  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R3: 0xcbeb1f18:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f18  00000000 cbeb1f98 40000013 00000001 cbea4b60 cbeb0000 cbeb1f8c 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f38  c0c24f5c cbeb1f98 00000000 cbeb1f58 c00fc358 c025996c 60000093 ffffffff
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f58  cbeb1f98 c0c24c7c 40000013 00000001 cbea4b60 c00fc358 c0c24a34 c0846828
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f78  cbea4b60 c00c96a0 c0c24ca8 00000010 00000000 00000000 cbea4b60 c00fc030
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f98  cbeb1f98 cbeb1f98 00000000 cc613f30 00000000 cbeb1fd4 c00c8d38 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fb8  00000000 00000000 00000000 c00fbde4 c0044154 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fd8  cbeb1fd8 cbeb1fd8 00000000 cc613f30 c00fbd64 c0044154 00000013 c0044154
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1ff8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R6: 0xcbea4ae0:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4ae0  00000000 00000101 00000000 00000002 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4b00  00000000 ffff8b50 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4b20  00000000 cbea4b24 cbea4b24 00000000 00000000 00a00012 cbea4b38 cbea4b38
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4b40  cc85c138 cc85c138 cc5e45a4 00000001 cc85c0a0 00000000 c02d3c5c 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4b60  00000000 cbeb0000 00000002 80208040 00000000 00000001 00000078 00000078
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4b80  00000078 00000000 c05b7700 00000000 00000400 00400000 cc60a038 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4ba0  00000000 cc60a044 c07fc188 00000001 4c7689b2 00000000 001f3307 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4bc0  267d9534 00000000 001f3307 00000000 00000000 00000000 00000000 c07fc158
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R7: 0xcbeaff80:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]ff80  c0c1b468 c0c1b454 00000000 00000013 c0c1b410 cbeaffd4 c0088958 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]ffa0  00000000 cc613f50 c0c1b410 cbeaffd4 c0088958 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]ffc0  00000000 c00fbde4 c0044154 00000000 c0c1b410 00000000 cbeaffd8 cbeaffd8
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]ffe0  00000000 cc613f50 c00fbd64 c0044154 00000013 c0044154 aaaaaaaa aaaaaaaa
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]0000  00000000 00000003 00000000 cbea4b60 c07fc5f4 00000000 00000015 cbeb0000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]0020  cbea4b60 c07fc110 cc8e6200 00000001 c080ff94 00000000 cbeb1ecc cbeb1e48
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]0040  c05aa5fc 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]0060  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R8: 0xcbeb1f0c:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f0c  c0042d6c cbeb1f98 c0c24c7c 00000000 cbeb1f98 40000013 00000001 cbea4b60
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f2c  cbeb0000 cbeb1f8c 00000000 c0c24f5c cbeb1f98 00000000 cbeb1f58 c00fc358
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f4c  c025996c 60000093 ffffffff cbeb1f98 c0c24c7c 40000013 00000001 cbea4b60
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f6c  c00fc358 c0c24a34 c0846828 cbea4b60 c00c96a0 c0c24ca8 00000010 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f8c  00000000 cbea4b60 c00fc030 cbeb1f98 cbeb1f98 00000000 cc613f30 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fac  cbeb1fd4 c00c8d38 00000000 00000000 00000000 00000000 c00fbde4 c0044154
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fcc  00000000 00000000 00000000 cbeb1fd8 cbeb1fd8 00000000 cc613f30 c00fbd64
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fec  c0044154 00000013 c0044154 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]R10: 0xc0c24edc:
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4edc  00000000 00000000 00000000 00000000 0f709000 cbea80c0 d00c8000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4efc  00000000 00000000 00000000 00000000 00000000 00000000 0f70a000 cbea8240
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4f1c  d00ca000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4f3c  0f70b000 cbea83c0 d00cc000 00000000 00000000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4f5c  00000000 00000000 0f70c000 cbea8540 d00ce000 00000000 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4f7c  00000000 00000000 00000000 00000000 0f70d000 cbea86c0 d00d0000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4f9c  00000000 00000000 00000000 00000000 00000000 00000000 0f70e000 cbea8840
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]4fbc  d00d2000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]Process acdb_cb_thread (pid: 93, stack limit = 0xcbeb02f0)
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]Stack: (0xcbeb1f58 to 0xcbeb2000)
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f40:                                                       cbeb1f98 c0c24c7c
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f60: 40000013 00000001 cbea4b60 c00fc358 c0c24a34 c0846828 cbea4b60 c00c96a0
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1f80: c0c24ca8 00000010 00000000 00000000 cbea4b60 c00fc030 cbeb1f98 cbeb1f98
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fa0: 00000000 cc613f30 00000000 cbeb1fd4 c00c8d38 00000000 00000000 00000000
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fc0: 00000000 c00fbde4 c0044154 00000000 00000000 00000000 cbeb1fd8 cbeb1fd8
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]1fe0: 00000000 cc613f30 c00fbd64 c0044154 00000013 c0044154 00000000 00000000
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread][<c025996c>] (__list_add+0x4/0x80) from [<c00fc358>] (prepare_to_wait+0x50/0x94)
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread][<c00fc358>] (prepare_to_wait+0x50/0x94) from [<c00c96a0>] (acdb_calibrate_device+0x968/0xfe4)
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread][<c00c96a0>] (acdb_calibrate_device+0x968/0xfe4) from [<c00fbde4>] (kthread+0x80/0x88)
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread][<c00fbde4>] (kthread+0x80/0x88) from [<c0044154>] (kernel_thread_exit+0x0/0x8)
+<0>[01-01 00:00:01.270614] [93: acdb_cb_thread]Code: e8bd8010 00100100 00200200 e92d4073 (e592c004) 
+<4>[01-01 00:00:01.270614] [93: acdb_cb_thread]---[ end trace a02df2ae35aad64f ]---
+<6>[01-01 00:00:01.270614] [93: acdb_cb_thread]note: acdb_cb_thread[93] exited with preempt_count 1
+<6>[01-01 00:00:01.300635] [81: kworker/u:3]mmc0: new high speed MMC card at address 0001
+<6>[01-01 00:00:01.300635] [81: kworker/u:3]mmcblk0: mmc0:0001 SEM04G 3.68 GiB 
+<6>[01-01 00:00:01.300635] [1: swapper]input: 7k_handset as /devices/virtual/input/input5
+<6>[01-01 00:00:01.300635] [81: kworker/u:3] mmcblk0: p1 p2 p3 p4 < p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 >
+<3>[01-01 00:00:01.310642] [95: khsclntd][YXS]key_code 0x79, key_parm 0x0
+<3>[01-01 00:00:01.310642] [95: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.310642] [95: khsclntd] 	key:143 keycode:121
+<3>[01-01 00:00:01.310642] [95: khsclntd][YXS]key_code 0xff, key_parm 0xff
+<3>[01-01 00:00:01.310642] [95: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.310642] [95: khsclntd] 	key:143 keycode:255
+<3>[01-01 00:00:01.310642] [95: khsclntd][YXS]key_code 0x78, key_parm 0x0
+<3>[01-01 00:00:01.310642] [95: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.310642] [95: khsclntd] 	key:143 keycode:120
+<3>[01-01 00:00:01.310642] [95: khsclntd][YXS]key_code 0xff, key_parm 0xff
+<3>[01-01 00:00:01.310642] [95: khsclntd]--keycode from A9(charger)
+<3>[01-01 00:00:01.310642] [95: khsclntd] 	key:143 keycode:255
+<4>[01-01 00:00:01.330656] [1: swapper]zte log address __log_buf: 0xc0c28134
+<7>[01-01 00:00:01.330656] [1: swapper]msmrtc_tod_proc_result: 11/06/2012 15:18:18 (01)
+<4>[11-06 15:18:18.500000] [1: swapper][alarm] time sync from modem,fix_sync_alarm
+<6>[11-06 15:18:18.500000] [1: swapper]rs30000048 rs30000048.262144: setting system clock to 2012-11-06 15:18:18 UTC (1352215098)
+<3>[11-06 15:18:18.500000] [1: swapper]msm_pm_init: shuangdan_begin to create_proc_entry of zte_alarm
+<3>[11-06 15:18:18.500000] [1: swapper]msm_pm_init: shuangdan_end to create_proc_entry of zte_alarm
+<4>[11-06 15:18:18.500000] [1: swapper]Warning: unable to open an initial console.
+<4>[11-06 15:18:18.500000] [1: swapper]free_initmem:  0xc0008000 to  0xc003d000
+<6>[11-06 15:18:18.500000] [1: swapper]Freeing init memory: 212K
+<4>[11-06 15:18:18.500000] [1: swapper]start to release SPLASH mem
+<4>[11-06 15:18:18.500000] [1: swapper]finish releaseing SPLASH mem
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 496: invalid command '/system/bin/log'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 594: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 596: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 597: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 601: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 602: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.rc: 603: setprop requires 2 arguments
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 114: ignored duplicate definition of service 'rmt_storage'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 121: ignored duplicate definition of service 'hciattach'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 127: ignored duplicate definition of service 'port-bridge'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 129: ignored duplicate definition of service 'qmuxd'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 134: ignored duplicate definition of service 'netmgrd'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 146: ignored duplicate definition of service 'btwlancoex'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 162: ignored duplicate definition of service 'wiperiface'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 167: ignored duplicate definition of service 'gpsone_daemon'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 172: ignored duplicate definition of service 'fm_dl'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 186: ignored duplicate definition of service 'qcom-sh'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 190: ignored duplicate definition of service 'qcom-post-boot'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 197: ignored duplicate definition of service 'getlog'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 204: ignored duplicate definition of service 'bttestmode'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 229: ignored duplicate definition of service 'ckpd'
+<3>[11-06 15:18:18.510007] [1: init]init: /init.qcom.rc: 238: ignored duplicate definition of service 'hdmid'
+<3>[11-06 15:18:18.510007] [1: init]init: could not import file '/system/etc/init.local.rc' from '/init.rc'
+<4>[11-06 15:18:18.510007] [1: init]init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+<4>[11-06 15:18:18.640043] [81: kworker/u:3]mmc2: host does not support reading read-only switch. assuming write-enable.
+<6>[11-06 15:18:18.640043] [81: kworker/u:3]mmc2: new high speed SDHC card at address cf1b
+<6>[11-06 15:18:18.650046] [81: kworker/u:3]mmcblk1: mmc2:cf1b SU16G 14.8 GiB 
+<6>[11-06 15:18:18.660049] [81: kworker/u:3] mmcblk1: p1 p2 p3
+<3>[11-06 15:18:19.790767] [1: init]init: cannot open '/initlogo.rle'
+<4>[11-06 15:18:19.820784] [1: init]EXT4-fs (mmcblk0p15): warning: maximal mount count reached, running e2fsck is recommended
+<6>[11-06 15:18:19.830786] [1: init]EXT4-fs (mmcblk0p15): recovery complete
+<6>[11-06 15:18:19.830786] [1: init]EXT4-fs (mmcblk0p15): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[11-06 15:18:19.890802] [1: init]init: exec: pid 100 exited with return code 127: Unknown error: 32512
+<3>[11-06 15:18:19.900805] [1: init]init: exec: pid 102 exited with return code 127: Unknown error: 32512
+<4>[11-06 15:18:20.621224] [1: init]EXT4-fs (mmcblk0p18): warning: maximal mount count reached, running e2fsck is recommended
+<7>[11-06 15:18:20.631229] [1: init]EXT4-fs (mmcblk0p18): ext4_orphan_cleanup: deleting unreferenced inode 708
+<6>[11-06 15:18:20.631229] [1: init]EXT4-fs (mmcblk0p18): 1 orphan inode deleted
+<6>[11-06 15:18:20.631229] [1: init]EXT4-fs (mmcblk0p18): recovery complete
+<6>[11-06 15:18:20.641235] [1: init]EXT4-fs (mmcblk0p18): mounted filesystem with ordered data mode. Opts: noauto_da_alloc
+<3>[11-06 15:18:20.651240] [1: init]init: exec: pid 105 exited with return code 127: Unknown error: 32512
+<4>[11-06 15:18:20.681258] [1: init]EXT4-fs (mmcblk0p7): warning: maximal mount count reached, running e2fsck is recommended
+<6>[11-06 15:18:20.681258] [1: init]EXT4-fs (mmcblk0p7): recovery complete
+<6>[11-06 15:18:20.681258] [1: init]EXT4-fs (mmcblk0p7): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[11-06 15:18:20.691264] [1: init]init: exec: pid 108 exited with return code 127: Unknown error: 32512
+<4>[11-06 15:18:20.701270] [1: init]EXT4-fs (mmcblk0p17): warning: maximal mount count reached, running e2fsck is recommended
+<6>[11-06 15:18:20.701270] [1: init]EXT4-fs (mmcblk0p17): recovery complete
+<6>[11-06 15:18:20.701270] [1: init]EXT4-fs (mmcblk0p17): mounted filesystem with ordered data mode. Opts: barrier=1
+<3>[11-06 15:18:20.761307] [1: init]android_usb: already disabled
+<3>[11-06 15:18:20.761307] [1: init]usb:enable_store,enabled=1
+<3>[11-06 15:18:20.761307] [1: init]usb:enable_store idProduct=1038
+<6>[11-06 15:18:20.761307] [1: init]adb_bind_config
+<3>[11-06 15:18:20.761307] [1: init]usb android_bind_enabled_functions: adb success
+<6>[11-06 15:18:20.771314] [71: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x20
+<6>[11-06 15:18:20.771314] [113: adbd]adb_open
+<6>[11-06 15:18:21.001475] [71: kworker/0:2]android_work: sent uevent USB_STATE=CONNECTED
+<3>[11-06 15:18:21.121567] [1: init]init: service 'console' requires console
+<6>[11-06 15:18:21.131575] android_usb gadget: high speed config #1: android
+<6>[11-06 15:18:21.131575] [71: kworker/0:2]msm_hsusb msm_hsusb: msm72k_udc: online flags 0x20
+<3>[11-06 15:18:21.181615] [1: init]init: cannot find '/system/bin/time_daemon', disabling 'time_daemon'
+<6>[11-06 15:18:21.191623] [71: kworker/0:2]android_work: sent uevent USB_STATE=CONFIGURED
+<6>[11-06 15:18:21.211639] [134: rild]warning: `rild' uses 32-bit capabilities (legacy support in use)
+<4>[11-06 15:18:21.892235] [162: rild]pm_monitor_open exit
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]rmt_storage_event_open_cb: open callback received
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]open partition /boot/modem_fs1 handle=1
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]rmt_storage_event_user_data_cb: send user data callback received
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]rmt_storage_event_open_cb: open callback received
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]open partition /boot/modem_fs2 handle=2
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]rmt_storage_event_user_data_cb: send user data callback received
+<6>[11-06 15:18:22.272591] [32: krmt_storagecln]rmt_storage_event_write_iovec_cb: write iovec callback received
+<4>[11-06 15:18:22.572877] [200: SurfaceFlinger]msm_fb_open yichangming  3
+<4>[11-06 15:18:22.572877] [200: SurfaceFlinger]spi_init
+<4>[11-06 15:18:22.572877] [200: SurfaceFlinger]![ZYF] lcdc_set_bl level=5, 1
+<4>[11-06 15:18:22.642944] [200: SurfaceFlinger][LY] send_bkl_address 
+<4>[11-06 15:18:22.642944] [200: SurfaceFlinger][LY] send_bkl_data 
+<6>[11-06 15:18:24.454701] [183: rmt_storage]rmt_storage_ioctl: send status ioctl
+<4>[11-06 15:18:24.614858] [200: SurfaceFlinger]msm_fb_open yichangming  3
+<4>[11-06 15:18:24.614858] [200: SurfaceFlinger]msm_fb_release yichangming  3
+<6>[11-06 15:18:33.043080] [359: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 64.
+<6>[11-06 15:18:33.043080] [359: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 0.
+<6>[11-06 15:18:33.053090] [359: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set red = 0.
+<6>[11-06 15:18:33.053090] [359: er.ServerThread][ZHY@pmic-leds]: msm_pmic_bl_led_set:  set green = 64.
+<6>[11-06 15:18:33.053090] [359: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<4>[11-06 15:18:33.073109] [370: mScreenBrightne][ZYF] lcdc_set_bl level=13, 1
+<4>[11-06 15:18:33.073109] [370: mScreenBrightne][LY] send_bkl_address 
+<4>[11-06 15:18:33.073109] [370: mScreenBrightne][LY] send_bkl_data 
+<7>[11-06 15:18:33.423451] [382: BluetoothAdapte]bcm_power
+<6>[11-06 15:18:34.384388] [359: er.ServerThread]acc_open
+<6>[11-06 15:18:34.384388] [359: er.ServerThread]acc_release
+<6>[11-06 15:18:34.524525] [359: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<6>[11-06 15:18:34.534535] [359: er.ServerThread][ZHY@pmic-vib]:  vibrator_enable,0 ms,off now.
+<6>[11-06 15:18:38.308217] [486: d.process.media]mtp_open
+<4>[11-06 15:18:38.358265] [527: m.android.phone]select 486 (d.process.media), adj 5, size 5153, to kill
+<4>[11-06 15:18:38.358265] [527: m.android.phone]send sigkill to 486 (d.process.media), adj 5, size 5153
+<4>[11-06 15:18:38.378285] [488: GC]signo is 9
+<4>[11-06 15:18:38.378285] [490: Signal Catcher]signo is 9
+<4>[11-06 15:18:38.398304] [491: JDWP]signo is 9
+<4>[11-06 15:18:38.398304] [493: Compiler]signo is 9
+<4>[11-06 15:18:38.398304] [494: ReferenceQueueD]signo is 9
+<4>[11-06 15:18:38.408314] [495: FinalizerDaemon]signo is 9
+<4>[11-06 15:18:38.418324] [496: FinalizerWatchd]signo is 9
+<4>[11-06 15:18:38.418324] [499: Binder_2]signo is 9
+<4>[11-06 15:18:38.418324] [502: thumbs thread]signo is 9
+<4>[11-06 15:18:38.418324] [497: Binder_1]signo is 9
+<4>[11-06 15:18:38.428334] [565: MtpServer]signo is 9
+<4>[11-06 15:18:38.428334] [486: d.process.media]signo is 9
+<6>[11-06 15:18:38.458363] [486: d.process.media]mtp_release
+<4>[11-06 15:18:42.051869] [357: Binder_1]select 582 (android.smspush), adj 1, size 4078, to kill
+<4>[11-06 15:18:42.051869] [357: Binder_1]send sigkill to 582 (android.smspush), adj 1, size 4078
+<4>[11-06 15:18:42.051869] [582: android.smspush]signo is 9
+<4>[11-06 15:18:42.051869] [583: GC]signo is 9
+<4>[11-06 15:18:42.051869] [587: Signal Catcher]signo is 9
+<4>[11-06 15:18:42.051869] [588: JDWP]signo is 9
+<4>[11-06 15:18:42.051869] [589: Compiler]signo is 9
+<4>[11-06 15:18:42.051869] [590: ReferenceQueueD]signo is 9
+<4>[11-06 15:18:42.051869] [591: FinalizerDaemon]signo is 9
+<4>[11-06 15:18:42.051869] [592: FinalizerWatchd]signo is 9
+<4>[11-06 15:18:42.051869] [593: Binder_1]signo is 9
+<4>[11-06 15:18:42.051869] [594: Binder_2]signo is 9
+<4>[11-06 15:18:42.782582] [393: hci_qcomm_init]signo is 9
+<4>[11-06 15:18:42.782582] [394: hci_qcomm_init]signo is 9
+<4>[11-06 15:18:42.782582] [395: hci_qcomm_init]signo is 9
+<4>[11-06 15:18:42.782582] [396: hci_qcomm_init]signo is 9
+<4>[11-06 15:18:42.782582] [397: hci_qcomm_init]signo is 9
+<4>[11-06 15:18:45.525258] [527: m.android.phone]select 511 (putmethod.latin), adj 2, size 4468, to kill
+<4>[11-06 15:18:45.525258] [527: m.android.phone]send sigkill to 511 (putmethod.latin), adj 2, size 4468
+<4>[11-06 15:18:45.525258] [511: putmethod.latin]signo is 9
+<4>[11-06 15:18:45.525258] [513: GC]signo is 9
+<4>[11-06 15:18:45.525258] [516: Signal Catcher]signo is 9
+<4>[11-06 15:18:45.525258] [517: JDWP]signo is 9
+<4>[11-06 15:18:45.525258] [518: Compiler]signo is 9
+<4>[11-06 15:18:45.525258] [519: ReferenceQueueD]signo is 9
+<4>[11-06 15:18:45.525258] [523: FinalizerDaemon]signo is 9
+<4>[11-06 15:18:45.525258] [525: FinalizerWatchd]signo is 9
+<4>[11-06 15:18:45.525258] [526: Binder_1]signo is 9
+<4>[11-06 15:18:45.525258] [532: Binder_2]signo is 9
+<4>[11-06 15:18:45.535267] [652: Thread-28]signo is 9
+<3>[11-06 15:18:48.658314] [1: init]init: sys_prop: permission denied uid:1003  name:service.bootanim.exit
