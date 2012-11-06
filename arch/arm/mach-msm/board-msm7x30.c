@@ -68,7 +68,6 @@ when          who    what, where, why                      	comment tag
 #include <mach/qdsp5v2/audio_dev_ctl.h>
 #include <mach/msm_battery.h>
 #include <mach/rpc_server_handset.h>
-#include <mach/msm_tsif.h>
 #include <mach/socinfo.h>
 #include <mach/msm_memtypes.h>
 #include <linux/cyttsp.h>
@@ -2937,7 +2936,6 @@ static int msm_qsd_spi_dma_config(void)
 	spi_mux = (ioread32(ADMH0_GP_CTL) & (0x3 << 12)) >> 12;
 
 	qsd_spi_resources[4].start  = DMOV_USB_CHAN;
-	qsd_spi_resources[4].end    = DMOV_TSIF_CHAN;
 
 	switch (spi_mux) {
 	case (1):
@@ -4582,9 +4580,6 @@ static struct platform_device *devices[] __initdata = {
 #ifdef CONFIG_MSM_VPE
 	&msm_vpe_device,
 #endif
-#if defined(CONFIG_TSIF) || defined(CONFIG_TSIF_MODULE)
-	&msm_device_tsif,
-#endif
 #ifdef CONFIG_MSM_SDIO_AL
 	&msm_device_sdio_al,
 #endif
@@ -5011,12 +5006,6 @@ out:
 	GPIO_CFG(36, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA)
 #define MBP_MODE_CTRL_2 \
 	GPIO_CFG(34, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA)
-#define TSIF_EN \
-	GPIO_CFG(35, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN,	GPIO_CFG_2MA)
-#define TSIF_DATA \
-	GPIO_CFG(36, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN,	GPIO_CFG_2MA)
-#define TSIF_CLK \
-	GPIO_CFG(34, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA)
 
 static struct msm_gpio mbp_cfg_data[] = {
 	{GPIO_CFG(44, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_16MA),
@@ -5685,30 +5674,6 @@ static void msm7x30_init_uart2(void)
 }
 #endif
 
-/* TSIF begin */
-#if defined(CONFIG_TSIF) || defined(CONFIG_TSIF_MODULE)
-
-#define TSIF_B_SYNC      GPIO_CFG(37, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA)
-#define TSIF_B_DATA      GPIO_CFG(36, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA)
-#define TSIF_B_EN        GPIO_CFG(35, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA)
-#define TSIF_B_CLK       GPIO_CFG(34, 1, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA)
-
-static const struct msm_gpio tsif_gpios[] = {
-	{ .gpio_cfg = TSIF_B_CLK,  .label =  "tsif_clk", },
-	{ .gpio_cfg = TSIF_B_EN,   .label =  "tsif_en", },
-	{ .gpio_cfg = TSIF_B_DATA, .label =  "tsif_data", },
-	{ .gpio_cfg = TSIF_B_SYNC, .label =  "tsif_sync", },
-};
-
-static struct msm_tsif_platform_data tsif_platform_data = {
-	.num_gpios = ARRAY_SIZE(tsif_gpios),
-	.gpios = tsif_gpios,
-	.tsif_pclk = "iface_clk",
-	.tsif_ref_clk = "ref_clk",
-};
-#endif /* defined(CONFIG_TSIF) || defined(CONFIG_TSIF_MODULE) */
-/* TSIF end   */
-
 static struct msm_spm_platform_data msm_spm_data __initdata = {
 	.reg_base_addr = MSM_SAW_BASE,
 
@@ -6125,9 +6090,7 @@ static void __init msm7x30_init(void)
 #endif
 	msm_uart_dm1_pdata.wakeup_irq = gpio_to_irq(136);
 	msm_device_uart_dm1.dev.platform_data = &msm_uart_dm1_pdata;
-#if defined(CONFIG_TSIF) || defined(CONFIG_TSIF_MODULE)
-	msm_device_tsif.dev.platform_data = &tsif_platform_data;
-#endif
+
 	if (machine_is_msm7x30_fluid()) {
 		msm_adc_pdata.dev_names = msm_adc_fluid_device_names;
 		msm_adc_pdata.num_adc = ARRAY_SIZE(msm_adc_fluid_device_names);
