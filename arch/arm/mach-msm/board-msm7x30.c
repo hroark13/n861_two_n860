@@ -728,6 +728,15 @@ static const unsigned int surf_keymap[] = {
 	KEY(0, 5, KEY_RESERVED),
 	KEY(0, 6, KEY_RESERVED),
 	KEY(0, 7, KEY_RESERVED),
+
+	KEY(1, 0, KEY_OK),		//first camera
+	KEY(1, 1, KEY_RESERVED),
+	KEY(1, 2, KEY_CAMERA),	//second camrea
+	KEY(1, 3, KEY_RESERVED),
+	KEY(1, 4, KEY_RESERVED),
+	KEY(1, 5, KEY_RESERVED),
+	KEY(1, 6, KEY_RESERVED),
+	KEY(1, 7, KEY_RESERVED),
 };
 
 static struct matrix_keymap_data surf_keymap_data = {
