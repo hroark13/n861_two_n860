@@ -94,7 +94,6 @@ when          who    what, where, why                      	comment tag
 #include <mach/qdsp5v2/audio_dev_ctl.h>
 #include <mach/sdio_al.h>
 #include "smd_private.h"
-#include <linux/bma150.h>
 
 #include "board-msm7x30-regulator.h"
 #include "pm.h"
@@ -162,7 +161,6 @@ void msm7x30_ts_init(void);
 
 #define PMIC_GPIO_WLAN_EXT_POR  22 /* PMIC GPIO NUMBER 23 */
 
-#define BMA150_GPIO_INT 1
 
 #define HAP_LVL_SHFT_MSM_GPIO 24
 
@@ -2772,76 +2770,7 @@ static struct msm_hdmi_platform_data adv7520_hdmi_data = {
 	.check_hdcp_hw_support = hdmi_check_hdcp_hw_support,
 };
 
-#ifdef CONFIG_BOSCH_BMA150
 
-static struct regulator_bulk_data sensors_ldo[] = {
-	{ .supply = "gp7", .min_uV = 1800000, .max_uV = 1800000 },
-	{ .supply = "gp6", .min_uV = 3050000, .max_uV = 3100000 },
-};
-
-static int __init sensors_ldo_init(void)
-{
-	int rc;
-
-	rc = regulator_bulk_get(NULL, ARRAY_SIZE(sensors_ldo), sensors_ldo);
-
-	if (rc) {
-		pr_err("%s: could not get regulators: %d\n", __func__, rc);
-		goto out;
-	}
-
-	rc = regulator_bulk_set_voltage(ARRAY_SIZE(sensors_ldo), sensors_ldo);
-
-	if (rc) {
-		pr_err("%s: could not set voltages: %d\n", __func__, rc);
-		goto reg_free;
-	}
-
-	return 0;
-
-reg_free:
-	regulator_bulk_free(ARRAY_SIZE(sensors_ldo), sensors_ldo);
-out:
-	return rc;
-}
-
-static int sensors_ldo_set(int on)
-{
-	int rc = on ?
-		regulator_bulk_enable(ARRAY_SIZE(sensors_ldo), sensors_ldo) :
-		regulator_bulk_disable(ARRAY_SIZE(sensors_ldo), sensors_ldo);
-
-	if (rc)
-		pr_err("%s: could not %sable regulators: %d\n",
-				__func__, on ? "en" : "dis", rc);
-
-	return rc;
-}
-
-static int sensors_ldo_enable(void)
-{
-	return sensors_ldo_set(1);
-}
-
-static void sensors_ldo_disable(void)
-{
-	sensors_ldo_set(0);
-}
-
-static struct bma150_platform_data bma150_data = {
-	.power_on = sensors_ldo_enable,
-	.power_off = sensors_ldo_disable,
-};
-
-static struct i2c_board_info bma150_board_info[] __initdata = {
-	{
-		I2C_BOARD_INFO("bma150", 0x38),
-		.flags = I2C_CLIENT_WAKE,
-		.irq = MSM_GPIO_TO_INT(BMA150_GPIO_INT),
-		.platform_data = &bma150_data,
-	},
-};
-#endif
 
 static struct i2c_board_info msm_i2c_board_info[] = {
 	{
@@ -3500,100 +3429,6 @@ static int hdmi_cec_power(int on)
 		regulator_bulk_disable(ARRAY_SIZE(hdmi_cec_regs),
 				hdmi_cec_regs);
 }
-
-#if defined(CONFIG_FB_MSM_HDMI_ADV7520_PANEL) || defined(CONFIG_BOSCH_BMA150)
-/* there is an i2c address conflict between adv7520 and bma150 sensor after
- * power up on fluid. As a solution, the default address of adv7520's packet
- * memory is changed as soon as possible
- */
-static int __init fluid_i2c_address_fixup(void)
-{
-	unsigned char wBuff[16];
-	unsigned char rBuff[16];
-	struct i2c_msg msgs[3];
-	int res;
-	int rc = -EINVAL;
-	struct i2c_adapter *adapter;
-
-	if (machine_is_msm7x30_fluid()) {
-		adapter = i2c_get_adapter(0);
-		if (!adapter) {
-			pr_err("%s: invalid i2c adapter\n", __func__);
-			return PTR_ERR(adapter);
-		}
-
-		/* turn on LDO8 */
-		rc = hdmi_core_power(1, 0);
-		if (rc) {
-			pr_err("%s: could not enable hdmi core regs: %d",
-					__func__, rc);
-			goto adapter_put;
-		}
-
-		/* change packet memory address to 0x74 */
-		wBuff[0] = 0x45;
-		wBuff[1] = 0x74;
-
-		msgs[0].addr = ADV7520_I2C_ADDR;
-		msgs[0].flags = 0;
-		msgs[0].buf = (unsigned char *) wBuff;
-		msgs[0].len = 2;
-
-		res = i2c_transfer(adapter, msgs, 1);
-		if (res != 1) {
-			pr_err("%s: error writing adv7520\n", __func__);
-			goto ldo8_disable;
-		}
-
-		/* powerdown adv7520 using bit 6 */
-		/* i2c read first */
-		wBuff[0] = 0x41;
-
-		msgs[0].addr = ADV7520_I2C_ADDR;
-		msgs[0].flags = 0;
-		msgs[0].buf = (unsigned char *) wBuff;
-		msgs[0].len = 1;
-
-		msgs[1].addr = ADV7520_I2C_ADDR;
-		msgs[1].flags = I2C_M_RD;
-		msgs[1].buf = rBuff;
-		msgs[1].len = 1;
-		res = i2c_transfer(adapter, msgs, 2);
-		if (res != 2) {
-			pr_err("%s: error reading adv7520\n", __func__);
-			goto ldo8_disable;
-		}
-
-		/* i2c write back */
-		wBuff[0] = 0x41;
-		wBuff[1] = rBuff[0] | 0x40;
-
-		msgs[0].addr = ADV7520_I2C_ADDR;
-		msgs[0].flags = 0;
-		msgs[0].buf = (unsigned char *) wBuff;
-		msgs[0].len = 2;
-
-		res = i2c_transfer(adapter, msgs, 1);
-		if (res != 1) {
-			pr_err("%s: error writing adv7520\n", __func__);
-			goto ldo8_disable;
-		}
-
-		/* for successful fixup, we release the i2c adapter */
-		/* but leave ldo8 on so that the adv7520 is not repowered */
-		i2c_put_adapter(adapter);
-		pr_info("%s: fluid i2c address conflict resolved\n", __func__);
-	}
-	return 0;
-
-ldo8_disable:
-	hdmi_core_power(0, 0);
-adapter_put:
-	i2c_put_adapter(adapter);
-	return rc;
-}
-fs_initcall_sync(fluid_i2c_address_fixup);
-#endif
 
 static bool hdmi_check_hdcp_hw_support(void)
 {
@@ -6333,9 +6168,6 @@ static void __init msm7x30_init(void)
 #endif
 
 	atv_dac_power_init();
-#ifdef CONFIG_BOSCH_BMA150 
-	sensors_ldo_init();
-#endif
 	hdmi_init_regs();
 	msm_fb_add_devices();
 	msm_pm_set_platform_data(msm_pm_data, ARRAY_SIZE(msm_pm_data));
@@ -6359,12 +6191,6 @@ static void __init msm7x30_init(void)
 
 	if (!machine_is_msm8x55_svlte_ffa() && !machine_is_msm7x30_fluid())
 		marimba_pdata.tsadc = &marimba_tsadc_pdata;
-
-#ifdef CONFIG_BOSCH_BMA150
-	if (machine_is_msm7x30_fluid())
-		i2c_register_board_info(0, bma150_board_info,
-					ARRAY_SIZE(bma150_board_info));
-#endif
 
 	i2c_register_board_info(2, msm_marimba_board_info,
 			ARRAY_SIZE(msm_marimba_board_info));
