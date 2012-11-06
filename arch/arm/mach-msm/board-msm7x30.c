@@ -95,20 +95,6 @@ when          who    what, where, why                      	comment tag
 #include "board-msm7x30-regulator.h"
 #include "pm.h"
 
-
-#ifdef CONFIG_SENSORS_AKM8962C 
-#include <linux/akm8962_new.h>
-#endif
-#ifdef CONFIG_SENSORS_ST_LIS3DHTR 
-#include <linux/lis3dh.h>
-#endif
-#ifdef CONFIG_MXC_MMA8452
-#include <linux/mma854x.h> 
-#endif
-#ifdef CONFIG_SENSORS_KXTIK 
-#include <linux/kxtik.h> 
-#endif
-
 #include <linux/lis302dl.h> 
 #include <linux/pmic8058-othc.h>  
 #include <mach/zte_memlog.h>
@@ -578,100 +564,15 @@ static struct msm_ssbi_platform_data msm7x30_ssbi_pm8058_pdata = {
 };
 #endif
 
-#ifdef CONFIG_SENSORS_AKM8962C 
-struct akm8962_platform_data akm_platform_data_8962 ={
-	.layout			 = 5,
-	.gpio_DRDY		 = 18,
+static struct lis302dl_platform_data gsensor = {
+	.gpio_intr1 =  37,
+	.gpio_intr2 =  49,
+	.scale      =  2 ,
+	.int_active_low = 1,
 };
-#endif
-
-#ifdef CONFIG_MXC_MMA8452
-struct mma8452_platform_data mma8452_pdata = {
-   .axis_map_cordination = 5,
-};
-#endif
-#ifdef CONFIG_SENSORS_KXTIK 
-
-#define KXTIK_DEVICE_MAP  3
-
-#define KXTIK_MAP_X (KXTIK_DEVICE_MAP-1)%2 
-#define KXTIK_MAP_Y KXTIK_DEVICE_MAP%2 
-#define KXTIK_NEG_X (((KXTIK_DEVICE_MAP+2)/2)%2)
-#define KXTIK_NEG_Y (((KXTIK_DEVICE_MAP+5)/4)%2)
-#define KXTIK_NEG_Z (KXTIK_DEVICE_MAP-1)/4
-
-struct kxtik_platform_data kxtik_pdata = { 
-  .min_interval = 100, 
-  .poll_interval  = 200,
- 
-  .axis_map_x  = KXTIK_MAP_X, 
-  .axis_map_y  = KXTIK_MAP_Y, 
-  .axis_map_z  = 2, 
- 
-  .negate_x  = KXTIK_NEG_X, 
-  .negate_y  = KXTIK_NEG_Y, 
-  .negate_z  = KXTIK_NEG_Z, 
- 
-  .res_12bit  = RES_12BIT, 
-  .g_range  = KXTIK_G_2G, 
-
-}; 
-#endif /* CONFIG_SENSORS_KXTIK */ 
-
-#ifdef CONFIG_SENSORS_ST_LIS3DHTR
-struct lis3dh_acc_platform_data lis3dhtr_pdata = {
-	.poll_interval = 100,
-	.min_interval = 10, 
-    /* measure range */ 
-	.g_range = LIS3DH_ACC_G_2G,
-    /*layout of lis3dhtr*/
-	.axis_map_x = 0,
-	.axis_map_y = 1,
-	.axis_map_z = 2,
-
-	.negate_x = 1,
-	.negate_y = 0,
-	.negate_z = 1,
-	//end of layout 
-	.gpio_int1 = -1,
-	.gpio_int2 = -1,
-	.power_on = NULL,
-	.power_off = NULL,
-};
-#endif
 
 static struct i2c_board_info msm_camera_boardinfo[] __initdata = {
 
-#ifdef CONFIG_SENSORS_AKM8962C 
-	{
-		.type = "akm8962",
-		.addr = 0x0c,
-		//.flag = I2C_CLIENT_WAKE,
-		.platform_data = &akm_platform_data_8962,
-		.irq = MSM_GPIO_TO_INT(85),
-	},
-#endif
-#ifdef CONFIG_MXC_MMA8452
-    { 
-    	.type = "mma8452", 
-	    .platform_data = &mma8452_pdata,  
-    	.addr = 0x1C,     // MMA8452 i2c slave address 
-    }, 
-#endif
-#ifdef CONFIG_SENSORS_KXTIK
-	{ 
-		I2C_BOARD_INFO("kxtik", KXTIK_I2C_ADDR), 
-    	.platform_data = &kxtik_pdata,  
-    	.irq = MSM_GPIO_TO_INT(37), // Replace with appropriate GPIO setup 
-  },
-#endif
-#ifdef CONFIG_SENSORS_ST_LIS3DHTR
-	{ 
-		.type = "lis3dhtr",
-		.platform_data = &lis3dhtr_pdata,
-		.addr = 0x18,
-  },
-#endif
 #ifdef CONFIG_SENSORS_AKM8962
 	{
 		I2C_BOARD_INFO("akm8962", 0x0c),
@@ -681,7 +582,7 @@ static struct i2c_board_info msm_camera_boardinfo[] __initdata = {
 	{
 		.type = "lis302dl",
 		.addr = 0x1c,
-		//.platform_data = &gsensor,
+		.platform_data = &gsensor,
 	},
 #endif
 #ifdef CONFIG_SENSORS_ADXL34X
