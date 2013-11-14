@@ -195,10 +195,12 @@ static struct tagtable __tagtable_##fn __tag = { tag, fn }
 #define NR_BANKS 8
 
 struct membank {
-	phys_addr_t start;
-	unsigned long size;
-	unsigned int highmem;
+        unsigned long start;
+        unsigned long size;
+        unsigned short node;
+        unsigned short highmem;
 };
+
 
 struct meminfo {
 	int nr_banks;

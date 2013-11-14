@@ -102,18 +102,18 @@ when          who    what, where, why                      	comment tag
 void msm7x30_ts_init(void); 
 
 
-//#define MSM_PMEM_SF_SIZE	0x1F00000
-#define MSM_PMEM_SF_SIZE	(40*1024*1024)
+
+#define MSM_PMEM_SF_SIZE	0x1700000
 
 #ifdef CONFIG_FB_MSM_TRIPLE_BUFFER
 #define MSM_FB_SIZE            0x780000
 #else
 #define MSM_FB_SIZE            0x500000
 #endif
-#define MSM_PMEM_ADSP_SIZE      0x0 // 0x3200000//PMEM ->5M
-#define MSM_FLUID_PMEM_ADSP_SIZE	0x0 // 0x2800000
+#define MSM_PMEM_ADSP_SIZE      0x1800000
+#define MSM_FLUID_PMEM_ADSP_SIZE	0x1900000
 #define PMEM_KERNEL_EBI0_SIZE   0x600000
-#define MSM_PMEM_AUDIO_SIZE     0x0 // 0x200000
+#define MSM_PMEM_AUDIO_SIZE     0x200000
 
 #define MSM_FB_OVERLAY0_WRITEBACK_SIZE roundup((544 * 960 * 3 * 2), 4096)
 #define PMIC_GPIO_INT		27
@@ -153,6 +153,9 @@ void msm7x30_ts_init(void);
 
 #define DDR1_BANK_BASE 0X20000000
 #define DDR2_BANK_BASE 0X40000000
+
+#define MSM_HIGHMEM_BASE        0x35100000
+#define MSM_HIGHMEM_SIZE        0x0AF00000
 
 static unsigned int phys_add = DDR2_BANK_BASE;
 unsigned long ebi1_phys_offset = DDR2_BANK_BASE;
@@ -5988,35 +5991,6 @@ static void __init msm7x30_init_early(void)
 	msm7x30_allocate_memory_regions();
 }
 
-#if defined(CONFIG_ZTE_PLATFORM) && defined(CONFIG_F3_LOG)
-  unsigned int len = 0;
-  smem_global *global_tmp = (smem_global *)(MSM_RAM_LOG_BASE + PAGE_SIZE) ;
-
-  len = global_tmp->f3log;
-
-  pr_info("length for f3 log is %d ++ \n", len);
-
-  if (len > 12)
-  {
-    len = 12;
-  }
-  else
-  {
-    len = len/2*2;
-  }
-    
-  pr_info("length = %d -- \n", len);
-  size = len;
-    
-  if (size)
-  {
-    reserve_bootmem(SDLOG_MEM_BASE, size * 0x100000, BOOTMEM_DEFAULT);
-  }
-
-  addr = phys_to_virt(SDLOG_MEM_BASE);
-  pr_info("allocating %lu M at %p (%lx physical) for F3\n",size, addr, __pa(addr));
-
-#endif
 
 #ifdef CONFIG_ZTE_PLATFORM
 #define ATAG_ZTEFTM 0x5d53cd73
@@ -6053,11 +6027,28 @@ EXPORT_SYMBOL(get_ftm_from_tag);
 
 #endif
 
+static void __init hroark_fixup(struct machine_desc *desc, struct tag *tags,
+				 char **cmdline, struct meminfo *mi)
+{
+	mi->nr_banks = 2;
+	mi->bank[0].start = 0x00200000;
+	mi->bank[0].node = 0;
+	mi->bank[0].size = 256 * SZ_1M;
+	mi->bank[1].start = 0x40000000;
+	mi->bank[1].node = 1;
+	mi->bank[1].size = 256 * SZ_1M;
+
+}
+
+
+
+
+
+
 MACHINE_START(ARTHUR, "arthur")
 	.boot_params = PLAT_PHYS_OFFSET + 0x100,
-#ifdef CONFIG_ZTE_PLATFORM
-		.fixup			= zte_fixup, 
-#endif
+	.fixup = zte_fixup, 
+	.fixup = hroark_fixup, 
 	.map_io = msm7x30_map_io,
 	.reserve = msm7x30_reserve,
 	.init_irq = msm7x30_init_irq,
