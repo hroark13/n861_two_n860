@@ -4223,7 +4223,18 @@ static struct platform_device android_pmem_device = {
 	.dev = { .platform_data = &android_pmem_pdata },
 };
 
-//#ifndef CONFIG_SPI_QSD 
+//#ifndef CONFIG_SPI_QSD
+#if defined(CONFIG_MACH_ARTHUR) 
+static int lcdc_gpio_array_num[] = {
+				2, /* lcd_bkl_drv */				
+				120, /* lcd_id */
+				121,/* lcd_sdo */
+				122,/* lcd_cs */
+				123,/* lcd_sdi */
+				124,/* lcd_clk */
+				180,/* lcd_rst */
+				};
+#else
 static int lcdc_gpio_array_num[] = {
 				2, /* lcd_bkl_drv */				
 				120, /* lcd_id */
@@ -4233,6 +4244,7 @@ static int lcdc_gpio_array_num[] = {
 				124,/* lcd_clk */
 				180,/* lcd_rst */
 				};
+#endif
 
 static struct msm_gpio lcdc_gpio_config_data[] = {
 	{ GPIO_CFG(2, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_bkl_drv" },
@@ -4247,14 +4259,16 @@ static struct msm_gpio lcdc_gpio_config_data[] = {
   #error not board type defined here
 #endif
 	{ GPIO_CFG(180, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_rst" },
-	{ GPIO_CFG(123, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdo" },
 	{ GPIO_CFG(122, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_cs" },
 #if defined(CONFIG_MACH_WARP2)
 	{ GPIO_CFG(121, 0, GPIO_CFG_INPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
+	{ GPIO_CFG(123, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdo" },
 #elif defined(CONFIG_MACH_SEAN)
 	{ GPIO_CFG(121, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
+	{ GPIO_CFG(123, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdo" },
 #elif defined(CONFIG_MACH_ARTHUR)
-	{ GPIO_CFG(121, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
+	{ GPIO_CFG(123, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdi" },
+	{ GPIO_CFG(121, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcd_spi_sdo" },
 #else
   #error not board type defined here
 #endif
