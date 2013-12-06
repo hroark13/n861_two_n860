@@ -227,8 +227,13 @@ int msm_dmov_exec_cmd(unsigned id, unsigned int cmdptr);
 #define DMOV_SDC3_CHAN        8
 #define DMOV_SDC3_CRCI        12
 
+#if defined(CONFIG_MACH_ARTHUR)
+#define DMOV_SDC4_CHAN        8
+#define DMOV_SDC4_CRCI        13
+#else
 #define DMOV_SDC4_CHAN        4
 #define DMOV_SDC4_CRCI        13
+#endif
 
 #define DMOV_TSIF_CHAN        10
 #define DMOV_TSIF_CRCI        10
