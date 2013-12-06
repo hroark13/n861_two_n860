@@ -65,7 +65,7 @@ ldo15_put:
 }
 
 struct atmel_i2c_platform_data atmel_data = {
-#if defined(CONFIG_MACH_SEAN)
+if (defined(CONFIG_MACH_SEAN))||(defined(CONFIG_ARTHUR))
 	.version = 0x16,
 	.source = 1,
 	.abs_x_min = 0,
