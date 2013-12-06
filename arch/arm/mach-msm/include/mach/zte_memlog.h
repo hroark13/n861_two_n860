@@ -45,7 +45,12 @@ typedef struct {
 
   unsigned char reset_flag;
   unsigned char boot_success;
+#if defined(CONFIG_MACH_ARTHUR)
+// THIS SHIT CAUSES WARP NOT TO BOOT -HROARK
+#else
   unsigned char power_off_charge;
+#endif
+
 	power_off_supply_status power_off_charge_info;
 
   unsigned char pm_reason;
@@ -56,9 +61,22 @@ typedef struct {
   unsigned int mboard_id;
 
  unsigned int key_is_on; 
+
+#if defined(CONFIG_MACH_ARTHUR)
+// THIS SHIT CAUSES WARP NOT TO BOOT -HROARK
+#else
  unsigned int rtc_alarm;
+#endif
+
+
+
   struct smem_batt_chg_t batchginfo;
+
+#if defined(CONFIG_MACH_ARTHUR)
+// SECBOOT PREVENTS WARP FROM BOOTING -HROARK
+#else
   unsigned int secboot_enable;
+#endif
 
 } smem_global;
 

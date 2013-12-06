@@ -155,7 +155,15 @@ void msm7x30_ts_init(void);
 #endif
 #endif
 
+
+#if defined(CONFIG_MACH_ARTHUR)
+// SECBOOT PREVENTS WARP FROM BOOTING  -HROARK
+#else
 static int g_zte_secboot_mode;
+#endif
+
+
+
 
 #define ADV7520_I2C_ADDR	0x39
 
@@ -8061,7 +8069,9 @@ extern void __init msm_init_pmic_vibrator(void);
 
 #ifdef CONFIG_ZTE_PLATFORM
 
-
+#if defined(CONFIG_MACH_ARTHUR)
+// SECBOOT PREVENTS WARP FROM BOOTING  -HROARK
+#else
 static void zte_get_secboot_value(void)
 {
   smem_global *pglobal= ioremap(SMEM_LOG_GLOBAL_BASE, sizeof(smem_global));
@@ -8076,6 +8086,8 @@ int zte_is_secboot_mode(void)
 }
 
 EXPORT_SYMBOL(zte_is_secboot_mode);
+#endif
+
 
 static void set_zte_board_id_type(void)
 {
@@ -8130,8 +8142,11 @@ static void __init msm7x30_init(void)
 #ifdef CONFIG_ZTE_PLATFORM
 	zte_ftm_set_value(g_zte_ftm_flag_fixup);
        set_zte_board_id_type();
+#if defined(CONFIG_MACH_ARTHUR)
+// SECBOOT PREVENTS WARP FROM BOOTING  -HROARK
+#else
       zte_get_secboot_value();
-
+#endif
 #endif
 #ifdef CONFIG_BCM_BT
 	bt_power_init();
@@ -8190,7 +8205,6 @@ static void __init msm7x30_init(void)
 	msm_add_host(0, &msm_usb_host_pdata);
 #endif
 	wlan_init_power(); 
-
 	msm_init_pmic_vibrator();
 
 	msm7x30_init_mmc();
