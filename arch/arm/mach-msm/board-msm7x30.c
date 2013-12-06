@@ -815,11 +815,15 @@ static struct pm8058_pwm_pdata pm8058_pwm_data = {
 #ifdef CONFIG_LEDS_GPIO	
 
 static struct gpio_led android_led_list[] = {
-	/*
+#if defined(CONFIG_MACH_ARTHUR)
 	{
 		.name = "button-backlight",
 		.gpio = 125,
-	},*/
+	},
+#else
+// fix for warp button back light - HROARK
+#endif
+
 	#ifdef CONFIG_ZTE_SPOTLIGHTS_LEDS_GPIO
 	{
 		//.name = "spotlight",flashlight
