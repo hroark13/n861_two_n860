@@ -247,6 +247,7 @@ obj-$(CONFIG_ARCH_MSM9615) += board-9615.o devices-9615.o board-9615-regulator.o
 obj-$(CONFIG_ARCH_MSM9615) += clock-local.o clock-9615.o acpuclock-9615.o clock-rpm.o
 obj-$(CONFIG_ARCH_MSMCOPPER) += board-copper.o board-dt.o
 obj-$(CONFIG_MACH_SEAN) += board-zte-wifi.o board-zte-ts.o
+obj-$(CONFIG_MACH_ARTHUR) += board-zte-wifi.o board-zte-ts.o
 obj-$(CONFIG_MACH_WARP2) += board-zte-wifi.o board-zte-ts.o
 
 obj-$(CONFIG_MACH_SAPPHIRE) += board-sapphire.o board-sapphire-gpio.o
