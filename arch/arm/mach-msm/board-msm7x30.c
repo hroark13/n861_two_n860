@@ -8539,6 +8539,18 @@ static void __init msm7x30_fixup(struct machine_desc *desc, struct tag *tags,
 #endif 
 }
 
+#ifdef (CONFIG_MACH_ARTHUR)
+static void __init ddr_fixup(struct machine_desc *desc, struct tag *tags,
+                                 char **cmdline, struct meminfo *mi)
+{
+        mi->nr_banks = 2;
+        mi->bank[0].start = 0x00200000;
+        mi->bank[0].size = 256 * SZ_1M;
+        mi->bank[1].start = 0x40000000;
+        mi->bank[1].size = 256 * SZ_1M;
+}
+#endif
+
 MACHINE_START(MSM7X30_SURF, "QCT MSM7X30 SURF")
 	.boot_params = PLAT_PHYS_OFFSET + 0x100,
 	.map_io = msm7x30_map_io,
@@ -8647,6 +8659,7 @@ MACHINE_START(ARTHUR, "arthur")
 	.timer = &msm_timer,
 	.init_early = msm7x30_init_early,
 	.handle_irq = vic_handle_irq,
+	.fixup = ddr_fixup, 
 MACHINE_END
 
 MACHINE_START(WARP2, "warp2")
