@@ -4318,7 +4318,6 @@ static struct platform_device lcdc_panel_device = {
 #elif defined(CONFIG_MACH_ARTHUR)
 	.name   = "lcdc_panel_wvga",
 #endif
-#endif
 	.id     = 0,
 	.dev    = {
 		.platform_data = &lcdc_panel_data,
@@ -5321,7 +5320,8 @@ static struct msm_gpio lcd_panel_gpios[] = {
 	{ GPIO_CFG(46, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_cs0" },
 	{ GPIO_CFG(47, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_mosi" },
 	{ GPIO_CFG(48, 0, GPIO_CFG_INPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_miso" },
-#endif 
+#endif
+#endif
 
 	{ GPIO_CFG(90, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_pclk" },
 	{ GPIO_CFG(91, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_en" },
@@ -8056,7 +8056,8 @@ static struct file_operations debug_global_file_ops = {
 	.read = debug_global_read,
 };
 
-extern void __init msm_init_pmic_vibrator(void); 
+//   hroark temp disable to fix compile errors
+//extern void __init msm_init_pmic_vibrator(void); 
 
 
 #ifdef CONFIG_ZTE_PLATFORM
@@ -8191,7 +8192,8 @@ static void __init msm7x30_init(void)
 #endif
 	wlan_init_power(); 
 
-	msm_init_pmic_vibrator();
+//   hroark temp disable to fix compile errors
+//	msm_init_pmic_vibrator();
 
 	msm7x30_init_mmc();
 	msm7x30_init_nand();
@@ -8527,29 +8529,12 @@ EXPORT_SYMBOL(get_ftm_from_tag);
 static void __init msm7x30_fixup(struct machine_desc *desc, struct tag *tags,
 				 char **cmdline, struct meminfo *mi)
 {
-#if 0 
-	for (; tags->hdr.size; tags = tag_next(tags)) {
-		if (tags->hdr.tag == ATAG_MEM && tags->u.mem.start ==
-							DDR1_BANK_BASE) {
-				ebi1_phys_offset = DDR1_BANK_BASE;
-				phys_add = DDR1_BANK_BASE;
-				break;
-		}
-	}
-#endif 
+	mi->nr_banks = 2;
+	mi->bank[0].start = 0x00200000;
+	mi->bank[0].size = 256 * SZ_1M;
+	mi->bank[1].start = 0x40000000;
+	mi->bank[1].size = 256 * SZ_1M;
 }
-
-#ifdef (CONFIG_MACH_ARTHUR)
-static void __init ddr_fixup(struct machine_desc *desc, struct tag *tags,
-                                 char **cmdline, struct meminfo *mi)
-{
-        mi->nr_banks = 2;
-        mi->bank[0].start = 0x00200000;
-        mi->bank[0].size = 256 * SZ_1M;
-        mi->bank[1].start = 0x40000000;
-        mi->bank[1].size = 256 * SZ_1M;
-}
-#endif
 
 MACHINE_START(MSM7X30_SURF, "QCT MSM7X30 SURF")
 	.boot_params = PLAT_PHYS_OFFSET + 0x100,
@@ -8659,7 +8644,7 @@ MACHINE_START(ARTHUR, "arthur")
 	.timer = &msm_timer,
 	.init_early = msm7x30_init_early,
 	.handle_irq = vic_handle_irq,
-	.fixup = ddr_fixup, 
+	.fixup = msm7x30_fixup, 
 MACHINE_END
 
 MACHINE_START(WARP2, "warp2")
@@ -8675,4 +8660,5 @@ MACHINE_START(WARP2, "warp2")
 	.init_early = msm7x30_init_early,
 	.handle_irq = vic_handle_irq,
 MACHINE_END
+
 
