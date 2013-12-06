@@ -8056,8 +8056,7 @@ static struct file_operations debug_global_file_ops = {
 	.read = debug_global_read,
 };
 
-//   hroark temp disable to fix compile errors
-//extern void __init msm_init_pmic_vibrator(void); 
+extern void __init msm_init_pmic_vibrator(void); 
 
 
 #ifdef CONFIG_ZTE_PLATFORM
@@ -8192,8 +8191,7 @@ static void __init msm7x30_init(void)
 #endif
 	wlan_init_power(); 
 
-//   hroark temp disable to fix compile errors
-//	msm_init_pmic_vibrator();
+	msm_init_pmic_vibrator();
 
 	msm7x30_init_mmc();
 	msm7x30_init_nand();
