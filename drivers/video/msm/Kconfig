@@ -201,6 +201,11 @@ config  FB_MSM_LCDC_HVGA_SEAN
 	bool 
 	select FB_MSM_LCDC_PANEL	
 	default n
+
+config  FB_MSM_LCDC_WVGA_ARTHUR
+	bool 
+	select FB_MSM_LCDC_PANEL	
+	default n
 	
 config  FB_MSM_LCDC_QHD_WARP2
 	bool 
@@ -359,6 +364,13 @@ config FB_MSM_LCDC_HVGA_PANEL_SEAN
 	select FB_MSM_LCDC_HVGA_SEAN
 	---help---
 	Support for LCDC HVGA (320x480) panel panel
+
+config FB_MSM_LCDC_WVGA_PANEL_ARTHUR
+        depends on FB_MSM_LCDC_HW
+        bool "LCDC HIMAX WVGA Panel ARTHUR"
+        select FB_MSM_LCDC_WVGA_ARTHUR
+        ---help---
+        Support for LCDC ARTHUR WVGA (480x800) panel
 	
 config FB_MSM_LCDC_QHD_PANEL_WARP2
 	depends on FB_MSM_LCDC_HW
