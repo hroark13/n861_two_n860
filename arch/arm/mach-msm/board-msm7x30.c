@@ -470,6 +470,9 @@ static struct platform_device msm_proccomm_regulator_dev = {
 #endif
 
 /*virtual key support */
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 static ssize_t tma300_vkeys_show(struct kobject *kobj,
 			struct kobj_attribute *attr, char *buf)
 {
@@ -624,7 +627,7 @@ static struct cyttsp_platform_data cyttsp_data = {
 	.irq_gpio = CYTTSP_TS_GPIO_IRQ,
 	.correct_fw_ver = 2,
 };
-
+#endif
 static int pm8058_pwm_config(struct pwm_device *pwm, int ch, int on)
 {
 	struct pm_gpio pwm_gpio_config = {
@@ -958,6 +961,9 @@ static struct msm_ssbi_platform_data msm7x30_ssbi_pm8058_pdata = {
 };
 #endif
 
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 static struct i2c_board_info cy8info[] __initdata = {
 	{
 		I2C_BOARD_INFO(CY_I2C_NAME, 0x24),
@@ -967,6 +973,7 @@ static struct i2c_board_info cy8info[] __initdata = {
 #endif /* CY_USE_TIMER */
 	},
 };
+#endif
 #ifdef CONFIG_SENSORS_AKM8962C 
 struct akm8962_platform_data akm_platform_data_8962 ={
 	.layout			 = 5,
@@ -4948,6 +4955,9 @@ static struct platform_device mddi_toshiba_device = {
 	}
 };
 
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 static unsigned wega_reset_gpio =
 	GPIO_CFG(180, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA);
 
@@ -5251,7 +5261,11 @@ static int display_common_power(int on)
 
 	return rc;
 }
-
+#endif
+#endif
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 static int msm_fb_mddi_sel_clk(u32 *clk_rate)
 {
 	*clk_rate *= 2;
@@ -5314,7 +5328,7 @@ static struct msm_panel_common_pdata mdp_pdata = {
 	.mem_hid = MEMTYPE_EBI0,
 };
 /**end**/
-#if 0 
+#if 0
 static int lcd_panel_spi_gpio_num[] = {
 			45, /* spi_clk */
 			46, /* spi_cs  */
@@ -5339,7 +5353,7 @@ static struct msm_gpio lcd_panel_gpios[] = {
 	{ GPIO_CFG(23, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red0" },
 	{ GPIO_CFG(24, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red1" },
 	{ GPIO_CFG(25, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red2" },
-#if defined(CONFIG_MACH_SEAN)
+#if defined(CONFIG_MACH_SEAN) ||defined(CONFIG_MACH_ARTHUR)
 #ifndef CONFIG_SPI_QSD
 	{ GPIO_CFG(45, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_clk" },
 	{ GPIO_CFG(46, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_cs0" },
@@ -5348,18 +5362,17 @@ static struct msm_gpio lcd_panel_gpios[] = {
 #endif
 #endif
 #if defined(CONFIG_MACH_ARTHUR)
-#ifndef CONFIG_SPI_QSD
-	{ GPIO_CFG(45, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_clk" },
-	{ GPIO_CFG(46, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_cs0" },
-	{ GPIO_CFG(47, 0, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_mosi" },
-	{ GPIO_CFG(48, 0, GPIO_CFG_INPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_2MA), "spi_miso" },
-#endif
-#endif
+	{ GPIO_CFG(90, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_pclk" },
+	{ GPIO_CFG(91, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_en" },
+	{ GPIO_CFG(92, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_vsync" },
+	{ GPIO_CFG(93, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_hsync" },
+#else
 
 	{ GPIO_CFG(90, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_pclk" },
 	{ GPIO_CFG(91, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_en" },
 	{ GPIO_CFG(92, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_vsync" },
 	{ GPIO_CFG(93, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_6MA), "lcdc_hsync" },
+#endif
 	{ GPIO_CFG(94, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_grn2" },
 	{ GPIO_CFG(95, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_grn3" },
 	{ GPIO_CFG(96, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_grn4" },
@@ -5377,7 +5390,6 @@ static struct msm_gpio lcd_panel_gpios[] = {
 	{ GPIO_CFG(108, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red6" },
 	{ GPIO_CFG(109, 1, GPIO_CFG_OUTPUT,  GPIO_CFG_NO_PULL, GPIO_CFG_4MA), "lcdc_red7" },
 };
-
 #if defined(CONFIG_MACH_SEAN) ||defined(CONFIG_MACH_ARTHUR)
 #ifdef CONFIG_ZTE_PLATFORM
 // not used it
@@ -5524,6 +5536,10 @@ static struct lcdc_platform_data lcdc_pdata = {
 	.lcdc_power_save   = lcdc_panel_power,
 };
 
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
+
 static struct regulator *atv_s4, *atv_ldo9;
 
 static int __init atv_dac_power_init(void)
@@ -5595,6 +5611,7 @@ static struct tvenc_platform_data atv_pdata = {
 	.poll		 = 1,
 	.pm_vid_en	 = atv_dac_power,
 };
+#endif
 #endif
 static void __init msm_fb_add_devices(void)
 {
@@ -7945,6 +7962,9 @@ static struct platform_device flip_switch_device = {
 	}
 };
 
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 static struct regulator_bulk_data regs_tma300[] = {
 	{ .supply = "gp6", .min_uV = 3050000, .max_uV = 3100000 },
 	{ .supply = "gp7", .min_uV = 1800000, .max_uV = 1800000 },
@@ -8063,6 +8083,7 @@ static struct i2c_board_info cy8ctma300_board_info[] = {
 		.platform_data = &cy8ctma300_pdata,
 	}
 };
+#endif
 
 static ssize_t debug_global_read(struct file *file, char __user *buf,
 				    size_t len, loff_t *offset)
@@ -8244,8 +8265,11 @@ static void __init msm7x30_init(void)
 		spi_register_board_info(lcdc_toshiba_spi_board_info,
 			ARRAY_SIZE(lcdc_toshiba_spi_board_info));
 #endif
-
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 	atv_dac_power_init();
+#endif
 #ifdef CONFIG_BOSCH_BMA150 
 	sensors_ldo_init();
 #endif
@@ -8273,9 +8297,13 @@ static void __init msm7x30_init(void)
 	if (!machine_is_msm8x55_svlte_ffa() && !machine_is_msm7x30_fluid())
 		marimba_pdata.tsadc = &marimba_tsadc_pdata;
 
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 	if (machine_is_msm7x30_fluid())
 		i2c_register_board_info(0, cy8info,
 					ARRAY_SIZE(cy8info));
+#endif
 #ifdef CONFIG_BOSCH_BMA150
 	if (machine_is_msm7x30_fluid())
 		i2c_register_board_info(0, bma150_board_info,
@@ -8311,7 +8339,9 @@ static void __init msm7x30_init(void)
 		platform_device_register(&flip_switch_device);
 
 	pm8058_gpios_init();
-
+#if defined(CONFIG_MACH_ARTHUR)
+// NOT USED  -HROARK
+#else
 	if (machine_is_msm7x30_fluid()) {
 		/* Initialize platform data for fluid v2 hardware */
 		if (SOCINFO_VERSION_MAJOR(
@@ -8322,7 +8352,7 @@ static void __init msm7x30_init(void)
 		i2c_register_board_info(0, cy8ctma300_board_info,
 			ARRAY_SIZE(cy8ctma300_board_info));
 	}
-
+#endif
 	if (machine_is_msm8x55_svlte_surf() || machine_is_msm8x55_svlte_ffa()) {
 		rc = gpio_tlmm_config(usb_hub_gpio_cfg_value, GPIO_CFG_ENABLE);
 		if (rc)
